@@ -1,0 +1,8 @@
+car:
+  make: Toyota
+  model: Camry
+  year: 2022
+  color: blue
+  registration:
+    plate_number: ABC-123
+    state: CA

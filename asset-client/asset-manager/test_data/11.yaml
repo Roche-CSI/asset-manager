@@ -1,0 +1,5 @@
+customer:
+  name: Emily
+  address: 123 Main St
+  city: San Francisco
+  loyalty_points: 150

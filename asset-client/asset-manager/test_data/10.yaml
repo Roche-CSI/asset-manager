@@ -1,0 +1,13 @@
+order:
+  id: 12345
+  items:
+    - item1:
+        quantity: 2
+        price: 10.99
+    - item2:
+        quantity: 1
+        price: 25.50
+    - item3:
+        quantity: 3
+        price: 5.99
+  total: 94.45

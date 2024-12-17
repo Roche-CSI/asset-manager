@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asset-plugin-s3"
+version = "1.0.0"
+description = "S3 backend provider for asset-manager"
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "@2024 Roche Sequencing Solution" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "aioboto3<=10.2.0",
+    "asset-contents==1.*",
+    "asset-pluggy==1.*",
+    "asset-utils==1.*",
+    "backoff==2.2.*",
+    "pyopenssl==24.0.*",
+    "speedtest-cli==2.1.*"
+]
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false

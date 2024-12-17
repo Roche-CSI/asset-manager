@@ -1,0 +1,79 @@
+# parallelism parameters for annotator1, annotator2, annotator3, annotator4, annotator5
+# annotator6 and annotator7 don't use the parallelism parameters
+# number of parallel processes to run
+n_parallel: 8
+# batch-size of single-doc pubtator files to be compacted to form a multi-doc pubtator file
+n_chunks: 45
+
+version: "2.0"
+
+# While making pubtators from annotation outputs, don't abort if there are overlapping
+# annotations in the same document. Warn and discard overlapping annotations
+no_abort_on_overlap: false
+
+# make iob components of post-annotation pubtator files at root_output_dir/<annotator>/components
+# If this flag is true, then `no_abort_on_overlap` has to be `false`
+produce_iob_components: true
+
+# post annotation, annotations not belonging to this list will be filtered out.
+# Eg: If `allowed_entity_types: "gene|chemical"` annotations other than `gene` and \
+# `chemical` will be filtered out
+allowed_entity_types: gene|chemical
+
+virtualenvs:
+    annotator6: /opt/envs/annotator6_cpu
+    annotator1: /opt/envs/common_env
+    annotator2: /opt/envs/common_env
+    annotator3: /opt/envs/common_env
+    annotator4: /opt/envs/common_env
+    annotator5: /opt/envs/common_env
+    annotator7: /opt/envs/gpu_env
+
+conda_virtualenvs:
+    annotator6: advanced
+    annotator1: advanced
+    annotator2: advanced
+    annotator3: advanced
+    annotator4: advanced
+    annotator5: advanced
+    annotator7: advanced_gpu
+
+abbrev_proc_path: /opt/toolkits/Ab3P/identify_abbr
+
+normalization:
+    config: /opt/ontology/norm_config/20211025/cair_ontologies.cfg
+    field_index: 8
+
+annotator:
+    annotator7:
+        url: git@anonymized.com:anon/annotator7-repo.git
+        local_folder: /opt/toolkits/annotator7
+    annotator4:
+        url: git@anonymized.com:anon/annotator4-repo.git
+        local_folder: /opt/toolkits/annotator4
+    annotator1:
+        url: git@anonymized.com:anon/annotator1-repo.git
+        local_folder: /opt/toolkits/annotator1
+    annotator2:
+        url: git@anonymized.com:anon/annotator2-repo.git
+        local_folder: /opt/toolkits/annotator2
+    annotator3:
+        url: git@anonymized.com:anon/annotator3-repo.git
+        local_folder: /opt/toolkits/annotator3
+    annotator6:
+        repo_dir: /opt/toolkits/annotator6
+        # user copy of prediction configuration file containing model definitions
+        bulk_predict_yaml_file: /opt/toolkits/annotator6/config/bulk_predict.yaml
+
+common:
+    common_tool1:
+        url: http://anonymized.com/anon/common_tool1-repo
+        local_folder: /opt/toolkits/common_tool1
+    common_tool2:
+        url: git@anonymized.com:anon/common_tool2-repo.git
+        local_folder: /opt/toolkits/common_tool2
+        jar_path: target/common_tool2-2.0.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+    common_tool3:
+        url: git@anonymized.com:anon/common_tool3-repo.git
+        local_folder: /opt/toolkits/common_tool3

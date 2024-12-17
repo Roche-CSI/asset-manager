@@ -1,0 +1,43 @@
+# Sample Configuration File
+
+application:
+  name: SampleApp
+  version: 1.0.0
+  description: A sample YAML configuration for testing purposes
+
+server:
+  host: localhost
+  port: 8080
+  use_ssl: false
+
+database:
+  type: postgresql
+  host: db.example.com
+  port: 5432
+  name: sampledb
+  user: dbuser
+  password: securepassword
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  handlers:
+    - console
+    - file
+
+features:
+  enable_feature_x: true
+  enable_feature_y: false
+
+users:
+  - name: Alice
+    role: admin
+    email: alice@example.com
+  - name: Bob
+    role: user
+    email: bob@example.com
+
+paths:
+  input: /data/input
+  output: /data/output
+  temp: /data/temp

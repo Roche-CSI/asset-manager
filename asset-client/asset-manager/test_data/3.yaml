@@ -1,0 +1,8 @@
+product:
+  name: Laptop
+  price: 1200
+  brand: XYZ
+  specs:
+    - RAM: 8GB
+    - Storage: 512GB SSD
+    - Processor: Intel i7

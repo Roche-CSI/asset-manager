@@ -1,0 +1,46 @@
+# Fresh node/server setup instructions to run the mkdocs job #
+# 0. Ensure pip and python are installed. Python > 3.5 and pip > 20.0.0
+# 1. pip install mkdocs
+# 2. pip install mkdocs-include-markdown-plugin
+# 3. pip install mkdocs-mermaid2-plugin
+# 4. pip install mkdocs-codeinclude-plugin
+
+# git remote set-url origin git@github-os:Roche-CSI/asset-manager.git
+# git@github.com:Roche-CSI/asset-manager.git
+
+site_name: Asset Manager
+theme:
+  name: readthedocs
+  features:
+    - content.code.copy
+    - content.code.select
+extra_css: [ css/extra.css ]
+repo_url: https://github.com/Roche-CSI/asset-manager.git
+site_author: mahantis-roche
+site_url: https://github.com/Roche-CSI/asset-manager.git
+
+nav:
+  - Home: home/index.md
+  - Quick Start: user_guide/index.md
+  - Hello World: user_guide/hello_world.md
+  - Python API: python_api/index.md
+  - Case Studies: case_studies/index.md
+  - Overview: overview.md
+  - Conceptual Model: concepts/index.md
+  - Architecture: architecture.md
+  - Implementation: implementation/index.md
+
+#  - About: about.md
+#  - Annotator Containers: containers.md
+#  - BigQuery: bigquery.md
+#  - Annotation Workflow: annotation.md
+#  - Annotator Profiles: annotator_profiles.md
+
+plugins:
+  - include-markdown
+  - search
+  - mermaid2
+  - codeinclude
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js

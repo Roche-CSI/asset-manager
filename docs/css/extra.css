@@ -1,0 +1,27 @@
+/*@import "https://unpkg.com/@stackoverflow/stacks/dist/css/stacks.min.css";*/
+
+.image {
+    /*border: 1px solid lightblue;*/
+}
+
+img {
+    height: auto;
+    width: auto;
+    border: 1px solid lightblue;
+    transition: transform ease-in-out 0.3s;
+}
+
+/*"https://unpkg.com/@stackoverflow/stacks/dist/css/stacks.min.css"; */
+.code {
+    border-radius: 5px;
+    color: rgb(47, 51, 55);
+    background-color: rgb(246, 246, 246);
+    font-size: 13px;
+    line-height: 17px;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    overflow: auto;
+    padding: 12px;
+    border: 1px solid #a9a9a930;
+}

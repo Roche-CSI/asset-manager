@@ -1,0 +1,2 @@
+#### asset init <'class-name'>
+

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asset-manager"
+version = "1.0.0"
+description = "asset-manager command line tool"
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "@2024 Roche Sequencing Solution" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "asset-contents==1.0.0",
+    "asset-core==1.0.0",
+    "asset-db==1.0.0",
+    "asset-pluggy==1.0.0",
+    "asset-plugin-gcr==1.0.0",
+    "asset-plugin-gcs==1.0.0",
+    "asset-plugin-posix==1.0.0",
+    "asset-plugin-s3==1.0.0",
+    "asset-utils==1.0.0",
+    "markupsafe==2.1.*",
+    "protobuf==4.21.*",
+]
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false
+
+[project.scripts]
+asset = "asset_manager.app:run"
+ama = "asset_manager.app:run"
