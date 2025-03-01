@@ -1,0 +1,192 @@
+[
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_001",
+            "id": "gs:md5_placeholder_001",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data1.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 20937449
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_001==::example_data/data1.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_002",
+            "id": "gs:md5_placeholder_002",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data2.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 1715983
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_002==::example_data/data2.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_003",
+            "id": "gs:md5_placeholder_003",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data3.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 1717421
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_003==::example_data/data3.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_004",
+            "id": "gs:md5_placeholder_004",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data4.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 142793598
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_004==::example_data/data4.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_005",
+            "id": "gs:md5_placeholder_005",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data5.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 980879
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_005==::example_data/data5.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_006",
+            "id": "gs:md5_placeholder_006",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data6.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 939215
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_006==::example_data/data6.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_007",
+            "id": "gs:md5_placeholder_007",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data7.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 939759
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_007==::example_data/data7.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_008",
+            "id": "gs:md5_placeholder_008",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data8.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 939871
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_008==::example_data/data8.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_009",
+            "id": "gs:md5_placeholder_009",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data9.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 88209609
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_009==::example_data/data9.h5",
+        "url_id": null
+    },
+    {
+        "content": {
+            "created_at": null,
+            "created_by": null,
+            "hash": "md5_placeholder_010",
+            "id": "gs:md5_placeholder_010",
+            "meta": {
+                "proxy": false,
+                "src": "gs://placeholder/path/to/data10.h5",
+                "type": "gcs"
+            },
+            "mime_type": "application/octet-stream",
+            "size": 1718640
+        },
+        "created_at": "2023/01/01 00-00-00 +0000",
+        "created_by": "user1",
+        "id": "gs:md5_placeholder_010==::example_data/data10.h5",
+        "url_id": null
+    }
+]

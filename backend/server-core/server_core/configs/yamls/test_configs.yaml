@@ -1,0 +1,9 @@
+DATABASE:
+  database: asset_test
+  user: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+DOMAIN:
+  DOMAIN_NAME: my-domain.com

@@ -1,0 +1,17 @@
+DATABASE:
+  database: asset_dev
+  #  database: asset_sb_copy
+  user: postgres
+  password: postgres
+  host: localhost
+  #  host: host.docker.internal # for docker build
+  port: 5432
+
+SERVER:
+  BASE_URL: http://localhost:5000
+
+FRONTEND:
+  BASE_URL: http://localhost:3000
+
+DOMAIN:
+  DOMAIN_NAME: my-domain.com

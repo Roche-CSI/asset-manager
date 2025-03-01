@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asset-server-core"
+version = "1.0.0"
+description = "Asset Server Core"
+readme = "README.md"
+authors = [
+    "swarup.mahanti@roche.com"
+]
+maintainers = [
+    "swarup.mahanti@roche.com"
+]
+license = { text = "@2025 Roche Sequencing Solution" }
+requires-python = "==3.10.*"
+dependencies = [
+    "aioshutil==1.3",
+    "elasticsearch==8.15.1",
+    "Flask==2.1.1",
+    "Flask-Admin==1.6.0",
+    "Flask-Cors==3.0.10",
+    "Flask-Dance==7.0.0",
+    "Flask-Login==0.6.3",
+    "google-auth-oauthlib==0.5.2",
+    "Jinja2==3.0.1",
+    "packaging==23.1",
+    "peewee==3.14.8",
+    "psycopg2==2.9.2",
+    "sentence-transformers==3.2.1",
+    "Werkzeug==2.0.1",
+    "wtf-peewee==3.0.3",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages]
+find = { }
+
+[tool.setuptools.package-data]
+"server_core" = [
+    "configs/yamls/*.yaml",
+    "templates/**",
+    "static/**"
+]

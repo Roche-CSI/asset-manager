@@ -1,0 +1,144 @@
+{
+  "id": "00000000-0000-0000-0000-000000000002",
+  "asset_class": {
+    "id": "00000000-0000-0000-0000-000000000003",
+    "name": "game_of_thrones"
+  },
+  "seq_id": "seq_1234567890",
+  "owner": "user1",
+  "version": {
+    "id": "00000000-0000-0000-0000-000000000004",
+    "number": "v1.0.0",
+    "patch": null,
+    "parent": null,
+    "commit_hash": "abcdef1234567890abcdef1234567890",
+    "commit_message": "Initial commit",
+    "created_by": "user1",
+    "created_at": "2022-01-01T00:00:00Z"
+  },
+  "refs": [],
+  "top_hash": "abcdef1234567890abcdef1234567890",
+  "alias": "alias_placeholder",
+  "objects": [
+    {
+      "id": "gs:md_placeholder_md5_000==::acm_data/wv1.5e14_0.0065/raw_000/main.log",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/06/14 11-18-53 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_000==",
+        "mime_type": "text/plain",
+        "hash": "md_placeholder_md5_000==",
+        "size": 56839,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_001==::example_data/.DS_Store",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_001==",
+        "mime_type": "application/octet-stream",
+        "hash": "md5_placeholder_md5_content_001",
+        "size": 10244,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_002==::example_data/parameters.json",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_002==",
+        "mime_type": "application/json",
+        "hash": "md5_placeholder_md5_content_002",
+        "size": 11333,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_003==::example_data/commands.json",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_003==",
+        "mime_type": "application/json",
+        "hash": "md5_placeholder_md5_content_003",
+        "size": 505,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_004==::example_data/circuit/occal/occal.cir",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_004==",
+        "mime_type": "application/octet-stream",
+        "hash": "md5_placeholder_md5_content_004",
+        "size": 5297,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_005==::example_data/circuit/occal/sim_uw.json",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_005==",
+        "mime_type": "application/json",
+        "hash": "md5_placeholder_md5_content_005",
+        "size": 18950,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_006==::example_data/circuit/vmzero_bright/vmzero_bright.cir",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_006==",
+        "mime_type": "application/octet-stream",
+        "hash": "md5_placeholder_md5_content_006",
+        "size": 5305,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_007==::example_data/circuit/vmzero_bright/sim_uw.json",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2022/01/01 00-00-00 -0700",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_007==",
+        "mime_type": "application/json",
+        "hash": "md5_placeholder_md5_content_007",
+        "size": 5204,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    }
+  ]
+}

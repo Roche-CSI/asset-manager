@@ -1,0 +1,136 @@
+{
+  "id": "00000000-0000-0000-0000-000000000001",
+  "asset_class": {
+    "id": "00000000-0000-0000-0000-000000000002",
+    "name": "yaml_assets",
+    "project": "00000000-0000-0000-0000-000000000003"
+  },
+  "seq_id": "seq_placeholder_1234567890",
+  "owner": "user1",
+  "version": {
+    "id": null,
+    "number": "version_placeholder",
+    "patch": null,
+    "parent": null,
+    "commit_hash": "commit_placeholder_hash",
+    "commit_message": null,
+    "created_by": null,
+    "created_at": null
+  },
+  "refs": null,
+  "top_hash": "00000000-0000-0000-0000-000000000002",
+  "alias": null,
+  "objects": [
+    {
+      "id": "gs:md5_placeholder_md5_001==::example_data/git_commit_info_ckpt0.yml",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_001==",
+        "mime_type": "application/x-yaml",
+        "hash": "md5_placeholder_md5_001==",
+        "size": 97,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_002==::example_data/run_config_ckpt0.yml",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_002==",
+        "mime_type": "application/x-yaml",
+        "hash": "md5_placeholder_md5_002==",
+        "size": 7447,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_003==::example_data/model.yml",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_003==",
+        "mime_type": "application/x-yaml",
+        "hash": "md5_placeholder_md5_003==",
+        "size": 473,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_004==::example_data/training.yml",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_004==",
+        "mime_type": "application/x-yaml",
+        "hash": "md5_placeholder_md5_004==",
+        "size": 8102,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_005==::example_data/model.h5",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_005==",
+        "mime_type": "application/x-hdf5",
+        "hash": "md5_placeholder_md5_005==",
+        "size": 193704,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_006==::example_data/graph_version.txt",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_006==",
+        "mime_type": "text/plain",
+        "hash": "md5_placeholder_md5_006==",
+        "size": 2,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5_placeholder_md5_007==::example_data/summary_dict.json",
+      "url_id": null,
+      "created_by": "user1",
+      "created_at": "2023/01/01 00-00-00 +0000",
+      "content": {
+        "id": "gs:md5_placeholder_md5_content_007==",
+        "mime_type": "application/json",
+        "hash": "md5_placeholder_md5_007==",
+        "size": 778,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    }
+  ],
+  "created_by": "user1",
+  "created_at": "2023/01/01 00-00-00 -0800",
+  "modified_by": null,
+  "modified_at": null,
+  "tags": null,
+  "frozen": false
+}

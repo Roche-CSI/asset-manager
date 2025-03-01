@@ -1,0 +1,135 @@
+[
+  {
+    "id": "gs:md5_placeholder_001==::ai_jobs/hparam_test/hparam.yml",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_001==",
+      "mime_type": "application/octet-stream",
+      "hash": "md5_placeholder_001==",
+      "size": 560,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/hparam.yml",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  },
+  {
+    "id": "gs:md5_placeholder_002==::dl-training-example/user_inputs/config.yaml",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_002==",
+      "mime_type": "application/octet-stream",
+      "hash": "md5_placeholder_002==",
+      "size": 7508,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/config.yaml",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  },
+  {
+    "id": "gs:md5_placeholder_003==::dl-training-example/mr1_eval/eval_config.json",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_003==",
+      "mime_type": "application/json",
+      "hash": "md5_placeholder_003==",
+      "size": 7089,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/eval_config.json",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  },
+  {
+    "id": "gs:md5_placeholder_004==::dl-training-example/cumulus/reanalysis.csv",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_004==",
+      "mime_type": "text/csv",
+      "hash": "md5_placeholder_004==",
+      "size": 181,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/reanalysis.csv",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  },
+  {
+    "id": "gs:md5_placeholder_005==::dl-training-example/user_inputs/model_graph_config.yaml",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_005==",
+      "mime_type": "application/octet-stream",
+      "hash": "md5_placeholder_005==",
+      "size": 49,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/model_graph_config.yaml",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  },
+  {
+    "id": "gs:md5_placeholder_006==::dl-training-example/0/0/hparam.yml",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_006==",
+      "mime_type": null,
+      "hash": "md5_placeholder_006==",
+      "size": 560,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/hparam.yml",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  },
+  {
+    "id": "gs:md5_placeholder_007==::dl-training-example/variables.json",
+    "url_id": null,
+    "created_by": "user1",
+    "created_at": "2023/01/01 00-00-00 +0000",
+    "content": {
+      "id": "gs:md5_placeholder_007==",
+      "mime_type": "application/json",
+      "hash": "md5_placeholder_007==",
+      "size": 16609,
+      "meta": {
+        "type": "gcs",
+        "src": "gs://placeholder-bucket/path/to/variables.json",
+        "proxy": false
+      },
+      "created_by": null,
+      "created_at": null
+    }
+  }
+]

@@ -1,0 +1,2387 @@
+[
+    {
+        "alias": "DRPM_X_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1685635200.0,
+        "created_by": "Dr. John Doe",
+        "description": "Random Forest model to predict patient response to Drug X",
+        "id": "MDL002",
+        "leaf_version": {
+            "created_at": 1686830400.0,
+            "id": "22",
+            "num_objects": 20,
+            "size": 17800000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "HER2",
+                    "ER",
+                    "PR"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "30-80",
+                    "comorbidities": [
+                        "diabetes",
+                        "hypertension"
+                    ],
+                    "ethnicity": [
+                        "Caucasian",
+                        "African American",
+                        "Hispanic"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "RECIST",
+                    "treatment_types": [
+                        "chemotherapy",
+                        "radiation"
+                    ]
+                }
+            },
+            "collection_method": "RNA-seq",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1234/example.doi"
+            },
+            "data_quality": {
+                "completion_rate": 95,
+                "contamination_level": 1.5,
+                "duplication_rate": 10,
+                "seq_quality_score": 30
+            },
+            "platform": "Illumina",
+            "publication_info": {
+                "publication_status": "published",
+                "related_publications": [
+                    {
+                        "doi": "10.1234/abc123",
+                        "journal": "Journal of Oncology",
+                        "title": "Impact of Gene Expression in Breast Cancer",
+                        "year": 2024
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "GEX001"
+            },
+            "sample_size": 100,
+            "study_design": "Cohort study",
+            "top_hash": "b2c3d4e5f6g7h8i9j0k1"
+        },
+        "modified_at": 1686830700.0,
+        "modified_by": "Dr. John Doe",
+        "name": "machine_learning_model/2",
+        "num_versions": 21,
+        "owner": "AI/ML Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug_response_prediction_project",
+        "project_status": "active",
+        "project_title": "Drug Response Prediction Project",
+        "root_version": {
+            "created_at": 1685635200.0,
+            "id": "1",
+            "num_objects": 18,
+            "size": 15000000
+        },
+        "seq_id": 2,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "drug response",
+            "random forest",
+            "predictive model",
+            "pharmacogenomics"
+        ],
+        "title": "Drug Response Prediction Model"
+    },
+    {
+        "alias": "SARSCOV2_SPIKE_2023",
+        "class_id": "Structural Biology",
+        "class_name": "protein_structure",
+        "class_status": "active",
+        "class_title": "Protein Structure",
+        "class_type": "model",
+        "created_at": 1678442100.0,
+        "created_by": "Dr. Emily Chen",
+        "description": "Cryo-EM structure of SARS-CoV-2 spike protein",
+        "id": "PRT003",
+        "leaf_version": {
+            "created_at": 1678442100.0,
+            "id": "550e8400-e29b-41d4-a716-446655440000",
+            "num_objects": 2,
+            "size": 100000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "BRCA1",
+                    "TP53",
+                    "KRAS"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "25-75",
+                    "comorbidities": [
+                        "heart disease",
+                        "obesity"
+                    ],
+                    "ethnicity": [
+                        "Asian",
+                        "Native American",
+                        "Mixed"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "WHO criteria",
+                    "treatment_types": [
+                        "immunotherapy",
+                        "targeted therapy"
+                    ]
+                }
+            },
+            "collection_method": "Whole Exome Sequencing",
+            "data_access": {
+                "access_level": "open",
+                "data_use_agreement": false,
+                "doi": "10.5678/example.doi"
+            },
+            "data_quality": {
+                "completion_rate": 92,
+                "contamination_level": 0.8,
+                "duplication_rate": 5,
+                "seq_quality_score": 28
+            },
+            "platform": "PacBio",
+            "publication_info": {
+                "publication_status": "in press",
+                "related_publications": [
+                    {
+                        "doi": "10.5678/xyz456",
+                        "journal": "Cancer Research Journal",
+                        "title": "Genomic Insights in Cancer Progression",
+                        "year": 2023
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "GENE002"
+            },
+            "sample_size": 150,
+            "study_design": "Case-Control Study",
+            "top_hash": "a1b2c3d4e5f6g7h8i9j0"
+        },
+        "modified_at": 1678442100.0,
+        "modified_by": "Dr. Emily Chen",
+        "name": "protein_structure/3",
+        "num_versions": 1,
+        "owner": "Structural Biology Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "sars-cov-2_structural_analysis",
+        "project_status": "active",
+        "project_title": "SARS-CoV-2 Structural Analysis",
+        "root_version": {
+            "created_at": 1678442100.0,
+            "id": "550e8400-e29b-41d4-a716-446655440000",
+            "num_objects": 2,
+            "size": 100000000
+        },
+        "seq_id": 3,
+        "status": "active",
+        "tags": [
+            "SARS-CoV-2",
+            "spike protein",
+            "cryo-EM",
+            "structural biology",
+            "virology"
+        ],
+        "title": "SARS-CoV-2 Spike Protein Structure"
+    },
+    {
+        "alias": "T2D_GWAS_2023",
+        "class_id": "Genomic Association",
+        "class_name": "gwas_data",
+        "class_status": "deprecated",
+        "class_title": "GWAS Data",
+        "class_type": "data",
+        "created_at": 1689857400.0,
+        "created_by": "Dr. Michael Johnson",
+        "description": "Genome-wide association study results for Type 2 Diabetes",
+        "id": "GWAS004",
+        "leaf_version": {
+            "created_at": 1689857400.0,
+            "id": "550e8400-e29b-41d4-a716-446655440001",
+            "num_objects": 2,
+            "size": 500000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "PD-L1",
+                    "VEGF",
+                    "EGFR"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "40-90",
+                    "comorbidities": [
+                        "asthma",
+                        "chronic kidney disease"
+                    ],
+                    "ethnicity": [
+                        "Hispanic",
+                        "Caucasian",
+                        "Asian"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "Choi criteria",
+                    "treatment_types": [
+                        "chemotherapy",
+                        "immunotherapy"
+                    ]
+                }
+            },
+            "collection_method": "Microarray",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.9101/example.doi"
+            },
+            "data_quality": {
+                "completion_rate": 98,
+                "contamination_level": 0.5,
+                "duplication_rate": 3,
+                "seq_quality_score": 32
+            },
+            "platform": "Affymetrix",
+            "publication_info": {
+                "publication_status": "submitted",
+                "related_publications": [
+                    {
+                        "doi": "10.9101/abc789",
+                        "journal": "Journal of Clinical Oncology",
+                        "title": "Novel Biomarkers in Cancer Treatment",
+                        "year": 2025
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "MICRO003"
+            },
+            "sample_size": 200,
+            "study_design": "Cross-Sectional Study",
+            "top_hash": "c1d2e3f4g5h6i7j8k9l0"
+        },
+        "modified_at": 1689857400.0,
+        "modified_by": "Dr. Michael Johnson",
+        "name": "gwas_data/4",
+        "num_versions": 1,
+        "owner": "Genetics Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "type_2_diabetes_genetic_study",
+        "project_status": "active",
+        "project_title": "Type 2 Diabetes Genetic Study",
+        "root_version": {
+            "created_at": 1689857400.0,
+            "id": "550e8400-e29b-41d4-a716-446655440001",
+            "num_objects": 2,
+            "size": 500000000
+        },
+        "seq_id": 4,
+        "status": "active",
+        "tags": [
+            "GWAS",
+            "type 2 diabetes",
+            "genetic association",
+            "genomics",
+            "metabolic disorders"
+        ],
+        "title": "Type 2 Diabetes GWAS Results"
+    },
+    {
+        "alias": "ADR_PRED_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1691226300.0,
+        "created_by": "Dr. Sarah Lee",
+        "description": "Neural network model to predict adverse drug reactions",
+        "id": "MDL005",
+        "leaf_version": {
+            "created_at": 1691226300.0,
+            "id": "550e8400-e29b-41d4-a716-446655440002",
+            "num_objects": 2,
+            "size": 200000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "IL-6",
+                    "TNF-alpha",
+                    "CRP"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "18-65",
+                    "comorbidities": [
+                        "rheumatoid arthritis",
+                        "osteoporosis"
+                    ],
+                    "ethnicity": [
+                        "African American",
+                        "Caucasian",
+                        "Asian"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "ACR20",
+                    "treatment_types": [
+                        "immunosuppressants",
+                        "biologics"
+                    ]
+                }
+            },
+            "collection_method": "Single-cell RNA-seq",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1111/example.doi"
+            },
+            "data_quality": {
+                "completion_rate": 97,
+                "contamination_level": 0.3,
+                "duplication_rate": 2,
+                "seq_quality_score": 35
+            },
+            "platform": "10x Genomics",
+            "publication_info": {
+                "publication_status": "under review",
+                "related_publications": [
+                    {
+                        "doi": "10.1111/def456",
+                        "journal": "Nature Immunology",
+                        "title": "Novel Biomarkers in Autoimmune Diseases",
+                        "year": 2024
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "GWAS004"
+            },
+            "sample_size": 300,
+            "study_design": "Randomized Controlled Trial",
+            "top_hash": "e5f6g7h8i9j0k1l2m3n4"
+        },
+        "modified_at": 1691226300.0,
+        "modified_by": "Dr. Sarah Lee",
+        "name": "machine_learning_model/5",
+        "num_versions": 1,
+        "owner": "AI/ML Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "adverse_drug_reaction_study",
+        "project_status": "active",
+        "project_title": "Adverse Drug Reaction Study",
+        "root_version": {
+            "created_at": 1691226300.0,
+            "id": "550e8400-e29b-41d4-a716-446655440002",
+            "num_objects": 2,
+            "size": 200000000
+        },
+        "seq_id": 5,
+        "status": "deprecated",
+        "tags": [
+            "adverse drug reactions",
+            "neural network",
+            "predictive model",
+            "pharmacovigilance",
+            "machine learning"
+        ],
+        "title": "Adverse Drug Reaction Predictor"
+    },
+    {
+        "alias": "LCPA_2023",
+        "class_id": "Proteomics",
+        "class_name": "proteomics_data",
+        "class_status": "active",
+        "class_title": "Proteomics Data",
+        "class_type": "data",
+        "created_at": 1694516400.0,
+        "created_by": "Dr. Robert Kim",
+        "description": "Mass spectrometry data from 50 lung cancer samples",
+        "id": "PROT006",
+        "leaf_version": {
+            "created_at": 1694516400.0,
+            "id": "550e8400-e29b-41d4-a716-446655440003",
+            "num_objects": 51,
+            "size": 1000000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "PSA",
+                    "PSMA",
+                    "hK2"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "50-85",
+                    "comorbidities": [
+                        "hypertension",
+                        "diabetes"
+                    ],
+                    "ethnicity": [
+                        "Caucasian",
+                        "African American",
+                        "Hispanic"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "PCWG3 criteria",
+                    "treatment_types": [
+                        "hormone therapy",
+                        "radiation therapy"
+                    ]
+                }
+            },
+            "collection_method": "Mass Spectrometry",
+            "data_access": {
+                "access_level": "open",
+                "data_use_agreement": false,
+                "doi": "10.2222/example.doi"
+            },
+            "data_quality": {
+                "completion_rate": 99,
+                "contamination_level": 0.1,
+                "duplication_rate": 1,
+                "seq_quality_score": 40
+            },
+            "platform": "Thermo Fisher Q Exactive",
+            "publication_info": {
+                "publication_status": "published",
+                "related_publications": [
+                    {
+                        "doi": "10.2222/ghi789",
+                        "journal": "Molecular Cancer Research",
+                        "title": "Proteomic Profiling in Prostate Cancer",
+                        "year": 2025
+                    }
+                ]
+            },
+            "refs": null,
+            "sample_size": 500,
+            "study_design": "Longitudinal Study",
+            "top_hash": "f6g7h8i9j0k1l2m3n4o5"
+        },
+        "modified_at": 1694516400.0,
+        "modified_by": "Dr. Robert Kim",
+        "name": "proteomics_data/6",
+        "num_versions": 1,
+        "owner": "Proteomics Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "lung_cancer_proteome_analysis",
+        "project_status": "deprecated",
+        "project_title": "Lung Cancer Proteome Analysis",
+        "root_version": {
+            "created_at": 1694516400.0,
+            "id": "550e8400-e29b-41d4-a716-446655440003",
+            "num_objects": 51,
+            "size": 1000000000
+        },
+        "seq_id": 6,
+        "status": "active",
+        "tags": [
+            "lung cancer",
+            "proteomics",
+            "mass spectrometry",
+            "oncology",
+            "biomarkers"
+        ],
+        "title": "Lung Cancer Proteome Analysis"
+    },
+    {
+        "alias": "DTIP_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1696172400.0,
+        "created_by": "Dr. David Wang",
+        "description": "Graph neural network for predicting drug-target interactions",
+        "id": "MDL007",
+        "leaf_version": {
+            "created_at": 1697382000.0,
+            "id": "550e8400-e29b-41d4-a716-446655440005",
+            "num_objects": 2,
+            "size": 350000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "HDAC",
+                    "p300",
+                    "H3K27ac"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "20-70",
+                    "comorbidities": [
+                        "obesity",
+                        "hyperlipidemia"
+                    ],
+                    "ethnicity": [
+                        "Asian",
+                        "Caucasian",
+                        "Middle Eastern"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "iRECIST",
+                    "treatment_types": [
+                        "epigenetic therapy",
+                        "immunotherapy"
+                    ]
+                }
+            },
+            "collection_method": "ChIP-seq",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.3333/example.doi"
+            },
+            "data_quality": {
+                "completion_rate": 96,
+                "contamination_level": 0.4,
+                "duplication_rate": 4,
+                "seq_quality_score": 38
+            },
+            "platform": "Illumina NovaSeq",
+            "publication_info": {
+                "publication_status": "in press",
+                "related_publications": [
+                    {
+                        "doi": "10.3333/jkl012",
+                        "journal": "Nature Genetics",
+                        "title": "Epigenetic Signatures in Cancer Progression",
+                        "year": 2024
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "PROT006"
+            },
+            "sample_size": 250,
+            "study_design": "Case-Control Study",
+            "top_hash": "g7h8i9j0k1l2m3n4o5p6"
+        },
+        "modified_at": 1697382000.0,
+        "modified_by": "Dr. David Wang",
+        "name": "machine_learning_model/7",
+        "num_versions": 2,
+        "owner": "AI/ML Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug-target_interaction_study",
+        "project_status": "obsolete",
+        "project_title": "Drug-Target Interaction Study",
+        "root_version": {
+            "created_at": 1696172400.0,
+            "id": "550e8400-e29b-41d4-a716-446655440004",
+            "num_objects": 2,
+            "size": 300000000
+        },
+        "seq_id": 7,
+        "status": "active",
+        "tags": [
+            "drug-target interaction",
+            "graph neural network",
+            "machine learning",
+            "drug discovery",
+            "bioinformatics"
+        ],
+        "title": "Drug-Target Interaction Predictor"
+    },
+    {
+        "alias": "TSP_A_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1685721600,
+        "created_by": "Dr. Jane Smith",
+        "description": "Gradient Boosting model to predict drug-induced liver injury (DILI)",
+        "id": "MDL003",
+        "leaf_version": {
+            "created_at": 1686744000,
+            "id": "15",
+            "num_objects": 17,
+            "size": 12000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "ALT",
+                    "AST",
+                    "ALP"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "20-70",
+                    "comorbidities": [
+                        "Hepatitis C",
+                        "Liver cirrhosis"
+                    ],
+                    "ethnicity": [
+                        "Caucasian",
+                        "Asian",
+                        "African American"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "Liver function tests",
+                    "treatment_types": [
+                        "Drug A",
+                        "Drug B"
+                    ]
+                }
+            },
+            "collection_method": "Clinical data",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.5678/example.doi"
+            },
+            "data_quality": {
+                "data_completeness": 85,
+                "missing_data_imputation": "Mean imputation",
+                "validation_rate": 90
+            },
+            "platform": "Electronic Health Records",
+            "publication_info": {
+                "publication_status": "submitted",
+                "related_publications": [
+                    {
+                        "doi": "10.5678/def456",
+                        "journal": "Hepatology",
+                        "title": "Predicting Drug-Induced Liver Injury",
+                        "year": 2023
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "CLI001"
+            },
+            "sample_size": 500,
+            "study_design": "Case-control study",
+            "top_hash": "a1b2c3d4e5f6g7h8i9"
+        },
+        "modified_at": 1686744300,
+        "modified_by": "Dr. Jane Smith",
+        "name": "machine_learning_model/3",
+        "num_versions": 14,
+        "owner": "Safety Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug_safety_prediction_project",
+        "project_status": "active",
+        "project_title": "Drug Safety Prediction Project",
+        "root_version": {
+            "created_at": 1685721600,
+            "id": "1",
+            "num_objects": 15,
+            "size": 10000000
+        },
+        "seq_id": 3,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "toxicity prediction",
+            "gradient boosting",
+            "DILI",
+            "pharmacovigilance"
+        ],
+        "title": "Toxicity Prediction Model"
+    },
+    {
+        "alias": "PDM_W_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1685808000,
+        "created_by": "Dr. Robert Jones",
+        "description": "Deep learning model to recommend optimal drug dosage based on patient genetics",
+        "id": "MDL004",
+        "leaf_version": {
+            "created_at": 1686657600,
+            "id": "50",
+            "num_objects": 55,
+            "size": 55000000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "CYP2D6",
+                    "CYP2C19",
+                    "VKORC1"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "18-85",
+                    "comorbidities": [
+                        "Atrial fibrillation",
+                        "Coronary artery disease"
+                    ],
+                    "ethnicity": [
+                        "Caucasian",
+                        "Asian",
+                        "African American",
+                        "Hispanic"
+                    ]
+                },
+                "treatment_information": {
+                    "response_evaluation": "INR, platelet aggregation",
+                    "treatment_types": [
+                        "Warfarin",
+                        "Clopidogrel"
+                    ]
+                }
+            },
+            "collection_method": "Genotyping",
+            "data_access": {
+                "access_level": "controlled",
+                "data_use_agreement": true,
+                "doi": "10.7890/example.doi"
+            },
+            "data_quality": {
+                "call_rate": 98,
+                "genotyping_accuracy": 99,
+                "sample_contamination": 0.5
+            },
+            "platform": "Affymetrix",
+            "publication_info": {
+                "publication_status": "in press",
+                "related_publications": [
+                    {
+                        "doi": "10.7890/ghi789",
+                        "journal": "Pharmacogenomics",
+                        "title": "Personalized Drug Dosage using Deep Learning",
+                        "year": 2024
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "GEN002"
+            },
+            "sample_size": 2000,
+            "study_design": "Randomized controlled trial",
+            "top_hash": "j1k2l3m4n5o6p7q8r9"
+        },
+        "modified_at": 1686657900,
+        "modified_by": "Dr. Robert Jones",
+        "name": "machine_learning_model/4",
+        "num_versions": 49,
+        "owner": "Clinical Pharmacology Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "personalized_dosage_project",
+        "project_status": "active",
+        "project_title": "Personalized Dosage Project",
+        "root_version": {
+            "created_at": 1685808000,
+            "id": "1",
+            "num_objects": 50,
+            "size": 50000000
+        },
+        "seq_id": 4,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "personalized medicine",
+            "deep learning",
+            "pharmacogenetics",
+            "drug dosage"
+        ],
+        "title": "Personalized Medicine Model"
+    },
+    {
+        "alias": "BDM_AD_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1685894400,
+        "created_by": "Dr. Sarah Lee",
+        "description": "Unsupervised learning model for identifying novel biomarkers for Alzheimer's disease",
+        "id": "MDL005",
+        "leaf_version": {
+            "created_at": 1686571200,
+            "id": "10",
+            "num_objects": 28,
+            "size": 27500000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "Amyloid beta",
+                    "Tau protein"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "60-90",
+                    "comorbidities": [
+                        "Cardiovascular disease"
+                    ],
+                    "ethnicity": [
+                        "Caucasian",
+                        "African American"
+                    ]
+                }
+            },
+            "collection_method": "Proteomics",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1111/example.doi"
+            },
+            "data_quality": {
+                "protein_identification_rate": 80,
+                "quantification_accuracy": 95
+            },
+            "platform": "Mass spectrometry",
+            "publication_info": {
+                "publication_status": "unpublished"
+            },
+            "refs": {
+                "dataset": "PRO003"
+            },
+            "sample_size": 300,
+            "study_design": "Cross-sectional study",
+            "top_hash": "s1t2u3v4w5x6y7z8"
+        },
+        "modified_at": 1686571500,
+        "modified_by": "Dr. Sarah Lee",
+        "name": "machine_learning_model/5",
+        "num_versions": 9,
+        "owner": "Biomarker Research Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "alzheimer's_biomarker_project",
+        "project_status": "active",
+        "project_title": "Alzheimer's Biomarker Project",
+        "root_version": {
+            "created_at": 1685894400,
+            "id": "1",
+            "num_objects": 25,
+            "size": 25000000
+        },
+        "seq_id": 5,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "biomarker discovery",
+            "unsupervised learning",
+            "Alzheimer's disease",
+            "omics"
+        ],
+        "title": "Biomarker Discovery Model"
+    },
+    {
+        "alias": "CTO_P3_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1685980800,
+        "created_by": "Dr. David Brown",
+        "description": "Reinforcement learning model to optimize patient recruitment and trial design",
+        "id": "MDL006",
+        "leaf_version": {
+            "created_at": 1686484800,
+            "id": "5",
+            "num_objects": 12,
+            "size": 5500000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": false,
+                "trial_phase": "Phase III"
+            },
+            "collection_method": "Simulated data",
+            "data_access": {
+                "access_level": "public",
+                "doi": "10.2222/example.doi"
+            },
+            "data_quality": {
+                "simulation_accuracy": 98,
+                "validation_method": "Cross-validation"
+            },
+            "platform": "Cloud computing",
+            "publication_info": {
+                "publication_status": "in preparation"
+            },
+            "refs": {
+                "dataset": "SIM001"
+            },
+            "sample_size": 10000,
+            "study_design": "Simulation study",
+            "top_hash": "9r8q7p6o5n4m3l2k1"
+        },
+        "modified_at": 1686485100,
+        "modified_by": "Dr. David Brown",
+        "name": "machine_learning_model/6",
+        "num_versions": 4,
+        "owner": "Clinical Operations Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "clinical_trial_optimization_project",
+        "project_status": "active",
+        "project_title": "Clinical Trial Optimization Project",
+        "root_version": {
+            "created_at": 1685980800,
+            "id": "1",
+            "num_objects": 10,
+            "size": 5000000
+        },
+        "seq_id": 6,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "clinical trial optimization",
+            "reinforcement learning",
+            "patient recruitment",
+            "trial design"
+        ],
+        "title": "Clinical Trial Optimization Model"
+    },
+    {
+        "alias": "DTI_LC_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1686067200,
+        "created_by": "Dr. Emily Green",
+        "description": "Graph neural network model to identify novel drug targets for cancer therapy",
+        "id": "MDL007",
+        "leaf_version": {
+            "created_at": 1686398400,
+            "id": "2",
+            "num_objects": 6,
+            "size": 1100000
+        },
+        "metadata": {
+            "additional_info": {
+                "cancer_type": "Lung cancer",
+                "ethics_approval": false
+            },
+            "collection_method": "Protein-protein interaction network",
+            "data_access": {
+                "access_level": "public",
+                "doi": "10.3333/example.doi"
+            },
+            "data_quality": {
+                "network_completeness": 90,
+                "validation_method": "Literature validation"
+            },
+            "platform": "Computational platform",
+            "publication_info": {
+                "publication_status": "published"
+            },
+            "refs": {
+                "dataset": "PPI001"
+            },
+            "sample_size": "N/A",
+            "study_design": "In silico study",
+            "top_hash": "z8y7x6w5v4u3t2s1"
+        },
+        "modified_at": 1686398700,
+        "modified_by": "Dr. Emily Green",
+        "name": "machine_learning_model/7",
+        "num_versions": 1,
+        "owner": "Target Discovery Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug_target_identification_project",
+        "project_status": "active",
+        "project_title": "Drug Target Identification Project",
+        "root_version": {
+            "created_at": 1686067200,
+            "id": "1",
+            "num_objects": 5,
+            "size": 1000000
+        },
+        "seq_id": 7,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "drug target identification",
+            "graph neural network",
+            "cancer therapy",
+            "network biology"
+        ],
+        "title": "Drug Target Identification Model"
+    },
+    {
+        "alias": "AEP_NLP_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1686153600,
+        "created_by": "Dr. Kevin White",
+        "description": "Natural language processing (NLP) model to predict adverse events from clinical text",
+        "id": "MDL008",
+        "leaf_version": {
+            "created_at": 1686312000,
+            "id": "50",
+            "num_objects": 1100,
+            "size": 110000000
+        },
+        "metadata": {
+            "additional_info": {
+                "adverse_events_studied": [
+                    "Myocardial infarction",
+                    "Stroke",
+                    "Anaphylaxis"
+                ],
+                "ethics_approval": true,
+                "patient_demographics": {
+                    "age_range": "18+",
+                    "comorbidities": [
+                        "Various"
+                    ],
+                    "ethnicity": [
+                        "Diverse"
+                    ]
+                }
+            },
+            "collection_method": "Clinical notes",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.4444/example.doi"
+            },
+            "data_quality": {
+                "annotation_accuracy": 95,
+                "text_quality": "High"
+            },
+            "platform": "Text mining platform",
+            "publication_info": {
+                "publication_status": "submitted"
+            },
+            "refs": {
+                "dataset": "TXT001"
+            },
+            "sample_size": 50000,
+            "study_design": "Retrospective study",
+            "top_hash": "k1l2m3n4o5p6q7r8"
+        },
+        "modified_at": 1686312300,
+        "modified_by": "Dr. Kevin White",
+        "name": "machine_learning_model/8",
+        "num_versions": 49,
+        "owner": "Drug Safety Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "adverse_event_prediction_project",
+        "project_status": "active",
+        "project_title": "Adverse Event Prediction Project",
+        "root_version": {
+            "created_at": 1686153600,
+            "id": "1",
+            "num_objects": 1000,
+            "size": 100000000
+        },
+        "seq_id": 8,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "adverse event prediction",
+            "natural language processing",
+            "clinical text",
+            "pharmacovigilance"
+        ],
+        "title": "Adverse Event Prediction Model"
+    },
+    {
+        "alias": "DRP_ID_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1686240000,
+        "created_by": "Dr. Mark Black",
+        "description": "Knowledge graph-based model to identify existing drugs for new therapeutic indications",
+        "id": "MDL009",
+        "leaf_version": {
+            "created_at": 1686153600,
+            "id": "3",
+            "num_objects": 3,
+            "size": 550000
+        },
+        "metadata": {
+            "additional_info": {
+                "disease_area": "Infectious diseases",
+                "ethics_approval": false
+            },
+            "collection_method": "Drug-disease associations",
+            "data_access": {
+                "access_level": "public",
+                "doi": "10.5555/example.doi"
+            },
+            "data_quality": {
+                "knowledge_base_completeness": 95,
+                "validation_method": "Literature validation"
+            },
+            "platform": "Knowledge graph platform",
+            "publication_info": {
+                "publication_status": "in preparation"
+            },
+            "refs": {
+                "dataset": "KG001"
+            },
+            "sample_size": "N/A",
+            "study_design": "In silico study",
+            "top_hash": "r8q7p6o5n4m3l2k1j"
+        },
+        "modified_at": 1686153900,
+        "modified_by": "Dr. Mark Black",
+        "name": "machine_learning_model/9",
+        "num_versions": 2,
+        "owner": "Drug Discovery Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug_repurposing_project",
+        "project_status": "active",
+        "project_title": "Drug Repurposing Project",
+        "root_version": {
+            "created_at": 1686240000,
+            "id": "1",
+            "num_objects": 2,
+            "size": 500000
+        },
+        "seq_id": 9,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "drug repurposing",
+            "knowledge graph",
+            "therapeutic indications",
+            "drug discovery"
+        ],
+        "title": "Drug Repurposing Model"
+    },
+    {
+        "alias": "PKPD_C_2023",
+        "class_id": "Math Model",
+        "class_name": "mathematical_model",
+        "class_status": "active",
+        "class_title": "Mathematical Model",
+        "class_type": "model",
+        "created_at": 1686326400,
+        "created_by": "Dr. Lisa Gray",
+        "description": "Mathematical model to simulate drug absorption, distribution, metabolism, and excretion (ADME)",
+        "id": "MDL010",
+        "leaf_version": {
+            "created_at": 1686326400,
+            "id": "1",
+            "num_objects": 1,
+            "size": 100000
+        },
+        "metadata": {
+            "additional_info": {
+                "animal_model": "Mouse",
+                "drug_administered": "Drug C",
+                "ethics_approval": true
+            },
+            "collection_method": "Blood sampling",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.6666/example.doi"
+            },
+            "data_quality": {
+                "assay_accuracy": 99,
+                "measurement_precision": 0.1
+            },
+            "platform": "Laboratory analysis",
+            "publication_info": {
+                "publication_status": "unpublished"
+            },
+            "refs": {
+                "dataset": "PKPD001"
+            },
+            "sample_size": 100,
+            "study_design": "Preclinical study",
+            "top_hash": "o5n4m3l2k1j9r8q7"
+        },
+        "modified_at": 1686326400,
+        "modified_by": "Dr. Lisa Gray",
+        "name": "mathematical_model/10",
+        "num_versions": 0,
+        "owner": "DMPK Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "pk/pd_modeling_project",
+        "project_status": "active",
+        "project_title": "PK/PD Modeling Project",
+        "root_version": {
+            "created_at": 1686326400,
+            "id": "1",
+            "num_objects": 1,
+            "size": 100000
+        },
+        "seq_id": 10,
+        "status": "active",
+        "tags": [
+            "pk/pd modeling",
+            "pharmacokinetics",
+            "pharmacodynamics",
+            "drug metabolism",
+            "adme"
+        ],
+        "title": "Pharmacokinetic/Pharmacodynamic (PK/PD) Model"
+    },
+    {
+        "alias": "PSM_ONC_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1686412800,
+        "created_by": "Dr. Maria White",
+        "description": "Clustering model to identify patient subgroups based on clinical and molecular characteristics",
+        "id": "MDL011",
+        "leaf_version": {
+            "created_at": 1686240000,
+            "id": "25",
+            "num_objects": 55,
+            "size": 27500000
+        },
+        "metadata": {
+            "additional_info": {
+                "biomarkers_studied": [
+                    "KRAS",
+                    "BRAF",
+                    "EGFR"
+                ],
+                "disease_area": "Oncology",
+                "ethics_approval": true
+            },
+            "collection_method": "Clinical data and genomic sequencing",
+            "data_access": {
+                "access_level": "controlled",
+                "data_use_agreement": true,
+                "doi": "10.7777/example.doi"
+            },
+            "data_quality": {
+                "data_completeness": 90,
+                "sequencing_depth": 30
+            },
+            "platform": "Integrated data platform",
+            "publication_info": {
+                "publication_status": "published",
+                "related_publications": [
+                    {
+                        "doi": "10.7777/jkl456",
+                        "journal": "Journal of Clinical Oncology",
+                        "title": "Patient Stratification in Oncology",
+                        "year": 2024
+                    }
+                ]
+            },
+            "refs": {
+                "dataset": "ONC001"
+            },
+            "sample_size": 2000,
+            "study_design": "Retrospective study",
+            "top_hash": "p6o5n4m3l2k1j9r8"
+        },
+        "modified_at": 1686240300,
+        "modified_by": "Dr. Maria White",
+        "name": "machine_learning_model/11",
+        "num_versions": 24,
+        "owner": "Precision Medicine Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "patient_stratification_project",
+        "project_status": "active",
+        "project_title": "Patient Stratification Project",
+        "root_version": {
+            "created_at": 1686412800,
+            "id": "1",
+            "num_objects": 50,
+            "size": 25000000
+        },
+        "seq_id": 11,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "patient stratification",
+            "clustering",
+            "precision medicine",
+            "biomarkers"
+        ],
+        "title": "Patient Stratification Model"
+    },
+    {
+        "alias": "DSP_BC_2023",
+        "class_id": "ML Model",
+        "class_name": "machine_learning_model",
+        "class_status": "active",
+        "class_title": "Machine Learning Model",
+        "class_type": "model",
+        "created_at": 1686499200,
+        "created_by": "Dr. James Green",
+        "description": "Predicts synergistic effects of drug combinations using cell line screening data",
+        "id": "MDL012",
+        "leaf_version": {
+            "created_at": 1686412800,
+            "id": "10",
+            "num_objects": 110,
+            "size": 5500000
+        },
+        "metadata": {
+            "additional_info": {
+                "cancer_type": "Breast cancer",
+                "drug_combinations": [
+                    "Drug A + Drug B",
+                    "Drug C + Drug D"
+                ],
+                "ethics_approval": false
+            },
+            "collection_method": "High-throughput screening",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.8888/example.doi"
+            },
+            "data_quality": {
+                "replicate_consistency": 95,
+                "screening_quality": "High"
+            },
+            "platform": "Automated screening platform",
+            "publication_info": {
+                "publication_status": "submitted"
+            },
+            "refs": {
+                "dataset": " HTS001"
+            },
+            "sample_size": 1000,
+            "study_design": "Experimental study",
+            "top_hash": "n4m3l2k1j9r8q7p6"
+        },
+        "modified_at": 1686413100,
+        "modified_by": "Dr. James Green",
+        "name": "machine_learning_model/12",
+        "num_versions": 9,
+        "owner": "Oncology Research Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug_synergy_prediction_project",
+        "project_status": "active",
+        "project_title": "Drug Synergy Prediction Project",
+        "root_version": {
+            "created_at": 1686499200,
+            "id": "1",
+            "num_objects": 100,
+            "size": 5000000
+        },
+        "seq_id": 12,
+        "status": "active",
+        "tags": [
+            "machine learning",
+            "drug synergy",
+            "combination therapy",
+            "cancer research",
+            "high-throughput screening"
+        ],
+        "title": "Drug Combination Synergy Prediction Model"
+    },
+    {
+        "alias": "GEA_MEL_2023",
+        "class_id": "Bioinfo Analysis",
+        "class_name": "bioinformatics_analysis",
+        "class_status": "active",
+        "class_title": "Bioinformatics Analysis",
+        "class_type": "model",
+        "created_at": 1686585600,
+        "created_by": "Dr. Alex Smith",
+        "description": "Differential gene expression analysis to identify biomarkers for response to immunotherapy",
+        "id": "MDL013",
+        "leaf_version": {
+            "created_at": 1686499200,
+            "id": "5",
+            "num_objects": 22,
+            "size": 11000000
+        },
+        "metadata": {
+            "additional_info": {
+                "cancer_type": "Melanoma",
+                "ethics_approval": true,
+                "treatment_response": [
+                    "Responder",
+                    "Non-responder"
+                ]
+            },
+            "collection_method": "RNA-seq",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.9999/example.doi"
+            },
+            "data_quality": {
+                "alignment_rate": 95,
+                "seq_quality_score": 30
+            },
+            "platform": "Illumina",
+            "publication_info": {
+                "publication_status": "in press"
+            },
+            "refs": {
+                "dataset": "RNA002"
+            },
+            "sample_size": 200,
+            "study_design": "Cohort study",
+            "top_hash": "m3l2k1j9r8q7p6o5"
+        },
+        "modified_at": 1686499500,
+        "modified_by": "Dr. Alex Smith",
+        "name": "bioinformatics_analysis/13",
+        "num_versions": 4,
+        "owner": "Bioinformatics Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "immunotherapy_biomarker_project",
+        "project_status": "active",
+        "project_title": "Immunotherapy Biomarker Project",
+        "root_version": {
+            "created_at": 1686585600,
+            "id": "1",
+            "num_objects": 20,
+            "size": 10000000
+        },
+        "seq_id": 13,
+        "status": "active",
+        "tags": [
+            "bioinformatics",
+            "gene expression",
+            "immunotherapy",
+            "biomarkers",
+            "RNA-seq"
+        ],
+        "title": "Gene Expression Analysis Model"
+    },
+    {
+        "alias": "DSM_E_2023",
+        "class_id": "RWE Analysis",
+        "class_name": "real-world_evidence_analysis",
+        "class_status": "active",
+        "class_title": "Real-World Evidence Analysis",
+        "class_type": "model",
+        "created_at": 1686672000,
+        "created_by": "Dr. Beth Johnson",
+        "description": "Real-world evidence (RWE) analysis to detect post-market safety signals for a new drug",
+        "id": "MDL014",
+        "leaf_version": {
+            "created_at": 1686672000,
+            "id": "1",
+            "num_objects": 10000,
+            "size": 1000000000
+        },
+        "metadata": {
+            "additional_info": {
+                "adverse_events": [
+                    "Cardiovascular events",
+                    "Renal failure"
+                ],
+                "drug_monitored": "Drug E",
+                "ethics_approval": true
+            },
+            "collection_method": "Electronic health records",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1000/example.doi"
+            },
+            "data_quality": {
+                "data_coverage": "National",
+                "validation_method": "External validation"
+            },
+            "platform": "RWE data platform",
+            "publication_info": {
+                "publication_status": "unpublished"
+            },
+            "refs": {
+                "dataset": "RWE001"
+            },
+            "sample_size": 100000,
+            "study_design": "Observational study",
+            "top_hash": "l2k1j9r8q7p6o5n4"
+        },
+        "modified_at": 1686672000,
+        "modified_by": "Dr. Beth Johnson",
+        "name": "real-world_evidence_analysis/14",
+        "num_versions": 0,
+        "owner": "Epidemiology Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "drug_safety_monitoring_project",
+        "project_status": "active",
+        "project_title": "Drug Safety Monitoring Project",
+        "root_version": {
+            "created_at": 1686672000,
+            "id": "1",
+            "num_objects": 10000,
+            "size": 1000000000
+        },
+        "seq_id": 14,
+        "status": "active",
+        "tags": [
+            "drug safety",
+            "real-world evidence",
+            "pharmacovigilance",
+            "post-market surveillance",
+            "epidemiology"
+        ],
+        "title": "Drug Safety Monitoring Model"
+    },
+    {
+        "alias": "DPM_MS_2023",
+        "class_id": "Stat Model",
+        "class_name": "statistical_model",
+        "class_status": "active",
+        "class_title": "Statistical Model",
+        "class_type": "model",
+        "created_at": 1686758400,
+        "created_by": "Dr. Carol Williams",
+        "description": "Longitudinal analysis to model disease progression in multiple sclerosis (MS)",
+        "id": "MDL015",
+        "leaf_version": {
+            "created_at": 1686672000,
+            "id": "10",
+            "num_objects": 55,
+            "size": 2750000
+        },
+        "metadata": {
+            "additional_info": {
+                "disease_measured": "Expanded Disability Status Scale (EDSS)",
+                "ethics_approval": true
+            },
+            "collection_method": "Clinical assessments",
+            "data_access": {
+                "access_level": "controlled",
+                "data_use_agreement": true,
+                "doi": "10.1111/example2.doi"
+            },
+            "data_quality": {
+                "assessment_frequency": "Monthly",
+                "inter-rater reliability": 0.9
+            },
+            "platform": "Clinical trial platform",
+            "publication_info": {
+                "publication_status": "in preparation"
+            },
+            "refs": {
+                "dataset": "MS001"
+            },
+            "sample_size": 500,
+            "study_design": "Longitudinal study",
+            "top_hash": "k1j9r8q7p6o5n4m3"
+        },
+        "modified_at": 1686672300,
+        "modified_by": "Dr. Carol Williams",
+        "name": "statistical_model/15",
+        "num_versions": 9,
+        "owner": "Neurology Research Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "ms_progression_modeling_project",
+        "project_status": "active",
+        "project_title": "MS Progression Modeling Project",
+        "root_version": {
+            "created_at": 1686758400,
+            "id": "1",
+            "num_objects": 50,
+            "size": 2500000
+        },
+        "seq_id": 15,
+        "status": "active",
+        "tags": [
+            "disease modeling",
+            "multiple sclerosis",
+            "longitudinal analysis",
+            "clinical trials",
+            "disease progression"
+        ],
+        "title": "Disease Progression Modeling"
+    },
+    {
+        "alias": "CSS_CARD_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1686844800,
+        "created_by": "Dr. David Lee",
+        "description": "Predictive model to identify optimal clinical trial sites based on patient demographics and investigator experience",
+        "id": "MDL016",
+        "leaf_version": {
+            "created_at": 1686758400,
+            "id": "5",
+            "num_objects": 12,
+            "size": 550000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": false,
+                "therapeutic_area": "Cardiology"
+            },
+            "collection_method": "Clinical trial databases",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1212/example3.doi"
+            },
+            "data_quality": {
+                "data_completeness": 95,
+                "validation_method": "Internal validation"
+            },
+            "platform": "Data analytics platform",
+            "publication_info": {
+                "publication_status": "unpublished"
+            },
+            "refs": {
+                "dataset": "CTDB001"
+            },
+            "sample_size": 1000,
+            "study_design": "Retrospective analysis",
+            "top_hash": "j9r8q7p6o5n4m3l2"
+        },
+        "modified_at": 1686758700,
+        "modified_by": "Dr. David Lee",
+        "name": "predictive_model/16",
+        "num_versions": 4,
+        "owner": "Clinical Operations Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "clinical_trial_optimization_project",
+        "project_status": "active",
+        "project_title": "Clinical Trial Optimization Project",
+        "root_version": {
+            "created_at": 1686844800,
+            "id": "1",
+            "num_objects": 10,
+            "size": 500000
+        },
+        "seq_id": 16,
+        "status": "active",
+        "tags": [
+            "clinical trial optimization",
+            "site selection",
+            "patient recruitment",
+            "investigator experience",
+            "healthcare analytics"
+        ],
+        "title": "Clinical Trial Site Selection Model"
+    },
+    {
+        "alias": "PTR_CARD_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689456000,
+        "created_by": "Dr. Emily Clark",
+        "description": "Model to forecast patient dropout rates in clinical trials based on behavioral and demographic factors",
+        "id": "MDL017",
+        "leaf_version": {
+            "created_at": 1689369600,
+            "id": "3",
+            "num_objects": 11,
+            "size": 500000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": true,
+                "therapeutic_area": "Oncology"
+            },
+            "collection_method": "Electronic Health Records",
+            "data_access": {
+                "access_level": "public",
+                "data_use_agreement": false,
+                "doi": "10.1212/example4.doi"
+            },
+            "data_quality": {
+                "data_completeness": 92,
+                "validation_method": "Cross-validation"
+            },
+            "platform": "Machine Learning Platform",
+            "publication_info": {
+                "publication_reference": "Journal of Clinical Trials, 2023",
+                "publication_status": "published"
+            },
+            "refs": {
+                "dataset": "PTRDB002"
+            },
+            "sample_size": 1500,
+            "study_design": "Prospective cohort",
+            "top_hash": "k8t7y6u5i4o3p2a1"
+        },
+        "modified_at": 1689369600,
+        "modified_by": "Dr. Emily Clark",
+        "name": "predictive_model/17",
+        "num_versions": 3,
+        "owner": "Patient Management Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "patient_retention_improvement_project",
+        "project_status": "active",
+        "project_title": "Patient Retention Improvement Project",
+        "root_version": {
+            "created_at": 1689456000,
+            "id": "1",
+            "num_objects": 9,
+            "size": 480000
+        },
+        "seq_id": 17,
+        "status": "active",
+        "tags": [
+            "patient retention",
+            "dropout prediction",
+            "clinical trial management",
+            "behavioral analytics",
+            "healthcare data science"
+        ],
+        "title": "Patient Retention Prediction Model"
+    },
+    {
+        "alias": "AEP_NEURO_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689542400,
+        "created_by": "Dr. Michael Johnson",
+        "description": "Model to predict the likelihood of adverse events in patients participating in clinical trials",
+        "id": "MDL018",
+        "leaf_version": {
+            "created_at": 1689456000,
+            "id": "4",
+            "num_objects": 16,
+            "size": 620000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": true,
+                "therapeutic_area": "Neurology"
+            },
+            "collection_method": "Survey data and EHR",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1212/example5.doi"
+            },
+            "data_quality": {
+                "data_completeness": 89,
+                "validation_method": "External validation"
+            },
+            "platform": "AI Analytics Platform",
+            "publication_info": {
+                "publication_status": "under review"
+            },
+            "refs": {
+                "dataset": "AEPDB003"
+            },
+            "sample_size": 2000,
+            "study_design": "Randomized controlled trial",
+            "top_hash": "m1n2b3v4c5x6z7a8"
+        },
+        "modified_at": 1689456000,
+        "modified_by": "Dr. Michael Johnson",
+        "name": "predictive_model/18",
+        "num_versions": 5,
+        "owner": "Safety Monitoring Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "patient_safety_enhancement_project",
+        "project_status": "active",
+        "project_title": "Patient Safety Enhancement Project",
+        "root_version": {
+            "created_at": 1689542400,
+            "id": "1",
+            "num_objects": 15,
+            "size": 600000
+        },
+        "seq_id": 18,
+        "status": "active",
+        "tags": [
+            "adverse event prediction",
+            "patient safety",
+            "risk assessment",
+            "clinical trial monitoring",
+            "healthcare analytics"
+        ],
+        "title": "Adverse Event Prediction Model"
+    },
+    {
+        "alias": "COST_GEN_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689628800,
+        "created_by": "Dr. Sarah Martinez",
+        "description": "Model to estimate and optimize the costs associated with conducting clinical trials",
+        "id": "MDL019",
+        "leaf_version": {
+            "created_at": 1689542400,
+            "id": "2",
+            "num_objects": 9,
+            "size": 470000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": false,
+                "therapeutic_area": "General"
+            },
+            "collection_method": "Financial records and budgets",
+            "data_access": {
+                "access_level": "public",
+                "data_use_agreement": false,
+                "doi": "10.1212/example6.doi"
+            },
+            "data_quality": {
+                "data_completeness": 98,
+                "validation_method": "Peer review"
+            },
+            "platform": "Financial Analytics Tool",
+            "publication_info": {
+                "publication_reference": "Health Economics Journal, 2023",
+                "publication_status": "published"
+            },
+            "refs": {
+                "dataset": "COSTDB004"
+            },
+            "sample_size": 500,
+            "study_design": "Economic analysis",
+            "top_hash": "p9o8i7u6y5t4r3e2"
+        },
+        "modified_at": 1689542400,
+        "modified_by": "Dr. Sarah Martinez",
+        "name": "predictive_model/19",
+        "num_versions": 2,
+        "owner": "Financial Planning Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "clinical_trial_budget_optimization",
+        "project_status": "active",
+        "project_title": "Clinical Trial Budget Optimization",
+        "root_version": {
+            "created_at": 1689628800,
+            "id": "1",
+            "num_objects": 8,
+            "size": 450000
+        },
+        "seq_id": 19,
+        "status": "active",
+        "tags": [
+            "cost estimation",
+            "financial modeling",
+            "budget optimization",
+            "clinical trial economics",
+            "healthcare finance"
+        ],
+        "title": "Clinical Trial Cost Estimation Model"
+    },
+    {
+        "alias": "ELIG_ENDO_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689715200,
+        "created_by": "Dr. Laura Nguyen",
+        "description": "Automated model to determine patient eligibility for various clinical trials based on inclusion and exclusion criteria",
+        "id": "MDL020",
+        "leaf_version": {
+            "created_at": 1689628800,
+            "id": "5",
+            "num_objects": 14,
+            "size": 540000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": true,
+                "therapeutic_area": "Endocrinology"
+            },
+            "collection_method": "Patient records and surveys",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1212/example7.doi"
+            },
+            "data_quality": {
+                "data_completeness": 93,
+                "validation_method": "Automated validation"
+            },
+            "platform": "AI Screening Platform",
+            "publication_info": {
+                "publication_status": "in preparation"
+            },
+            "refs": {
+                "dataset": "ESDB005"
+            },
+            "sample_size": 2500,
+            "study_design": "Cross-sectional study",
+            "top_hash": "l0k9j8h7g6f5d4s3"
+        },
+        "modified_at": 1689628800,
+        "modified_by": "Dr. Laura Nguyen",
+        "name": "predictive_model/20",
+        "num_versions": 4,
+        "owner": "Recruitment Automation Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "eligibility_automation_project",
+        "project_status": "active",
+        "project_title": "Eligibility Automation Project",
+        "root_version": {
+            "created_at": 1689715200,
+            "id": "1",
+            "num_objects": 13,
+            "size": 520000
+        },
+        "seq_id": 20,
+        "status": "active",
+        "tags": [
+            "eligibility screening",
+            "patient selection",
+            "automated screening",
+            "clinical trial recruitment",
+            "healthcare AI"
+        ],
+        "title": "Patient Eligibility Screening Model"
+    },
+    {
+        "alias": "DUR_IMMU_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689801600,
+        "created_by": "Dr. Robert King",
+        "description": "Model to predict the total duration of clinical trials based on historical data and trial parameters",
+        "id": "MDL021",
+        "leaf_version": {
+            "created_at": 1689715200,
+            "id": "3",
+            "num_objects": 12,
+            "size": 560000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": false,
+                "therapeutic_area": "Immunology"
+            },
+            "collection_method": "Historical trial data",
+            "data_access": {
+                "access_level": "public",
+                "data_use_agreement": false,
+                "doi": "10.1212/example8.doi"
+            },
+            "data_quality": {
+                "data_completeness": 90,
+                "validation_method": "Time-series validation"
+            },
+            "platform": "Project Analytics Tool",
+            "publication_info": {
+                "publication_reference": "Clinical Trials Journal, 2023",
+                "publication_status": "published"
+            },
+            "refs": {
+                "dataset": "DTEDB006"
+            },
+            "sample_size": 800,
+            "study_design": "Longitudinal study",
+            "top_hash": "q1w2e3r4t5y6u7i8"
+        },
+        "modified_at": 1689715200,
+        "modified_by": "Dr. Robert King",
+        "name": "predictive_model/21",
+        "num_versions": 3,
+        "owner": "Project Management Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "trial_duration_prediction_project",
+        "project_status": "active",
+        "project_title": "Trial Duration Prediction Project",
+        "root_version": {
+            "created_at": 1689801600,
+            "id": "1",
+            "num_objects": 10,
+            "size": 530000
+        },
+        "seq_id": 21,
+        "status": "active",
+        "tags": [
+            "duration estimation",
+            "timeline prediction",
+            "clinical trial planning",
+            "project management",
+            "healthcare analytics"
+        ],
+        "title": "Clinical Trial Duration Estimation Model"
+    },
+    {
+        "alias": "SUC_GASTRO_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689888000,
+        "created_by": "Dr. Karen White",
+        "description": "Model to assess the probability of clinical trial success based on multiple predictive factors",
+        "id": "MDL022",
+        "leaf_version": {
+            "created_at": 1689801600,
+            "id": "6",
+            "num_objects": 15,
+            "size": 630000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": true,
+                "therapeutic_area": "Gastroenterology"
+            },
+            "collection_method": "Clinical trial registries",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1212/example9.doi"
+            },
+            "data_quality": {
+                "data_completeness": 94,
+                "validation_method": "Bootstrap validation"
+            },
+            "platform": "Predictive Analytics Platform",
+            "publication_info": {
+                "publication_status": "in press"
+            },
+            "refs": {
+                "dataset": "SUCDB007"
+            },
+            "sample_size": 1200,
+            "study_design": "Mixed-methods study",
+            "top_hash": "a1s2d3f4g5h6j7k8"
+        },
+        "modified_at": 1689801600,
+        "modified_by": "Dr. Karen White",
+        "name": "predictive_model/22",
+        "num_versions": 5,
+        "owner": "Outcome Analysis Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "trial_success_assessment_project",
+        "project_status": "active",
+        "project_title": "Trial Success Assessment Project",
+        "root_version": {
+            "created_at": 1689888000,
+            "id": "1",
+            "num_objects": 14,
+            "size": 610000
+        },
+        "seq_id": 22,
+        "status": "active",
+        "tags": [
+            "success probability",
+            "trial outcome prediction",
+            "risk assessment",
+            "clinical trial analytics",
+            "healthcare data science"
+        ],
+        "title": "Clinical Trial Success Probability Model"
+    },
+    {
+        "alias": "OUT_DERMA_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1689974400,
+        "created_by": "Dr. Thomas Brown",
+        "description": "Model to predict long-term patient outcomes based on treatment regimens in clinical trials",
+        "id": "MDL023",
+        "leaf_version": {
+            "created_at": 1689888000,
+            "id": "4",
+            "num_objects": 17,
+            "size": 600000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": true,
+                "therapeutic_area": "Dermatology"
+            },
+            "collection_method": "Patient follow-ups and registries",
+            "data_access": {
+                "access_level": "public",
+                "data_use_agreement": false,
+                "doi": "10.1212/example10.doi"
+            },
+            "data_quality": {
+                "data_completeness": 97,
+                "validation_method": "Longitudinal validation"
+            },
+            "platform": "Outcome Analytics Tool",
+            "publication_info": {
+                "publication_reference": "Journal of Patient Outcomes, 2023",
+                "publication_status": "published"
+            },
+            "refs": {
+                "dataset": "OUTDB008"
+            },
+            "sample_size": 1800,
+            "study_design": "Prospective observational",
+            "top_hash": "z9x8c7v6b5n4m3a2"
+        },
+        "modified_at": 1689888000,
+        "modified_by": "Dr. Thomas Brown",
+        "name": "predictive_model/23",
+        "num_versions": 4,
+        "owner": "Outcomes Research Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "patient_outcome_prediction_initiative",
+        "project_status": "active",
+        "project_title": "Patient Outcome Prediction Initiative",
+        "root_version": {
+            "created_at": 1689974400,
+            "id": "1",
+            "num_objects": 16,
+            "size": 580000
+        },
+        "seq_id": 23,
+        "status": "active",
+        "tags": [
+            "outcome prediction",
+            "long-term forecasting",
+            "treatment efficacy",
+            "clinical trial results",
+            "healthcare outcomes"
+        ],
+        "title": "Patient Outcome Prediction Model"
+    },
+    {
+        "alias": "DQA_HEMO_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1690060800,
+        "created_by": "Dr. Angela Davis",
+        "description": "Model to evaluate the quality of data collected during clinical trials, identifying inconsistencies and errors",
+        "id": "MDL024",
+        "leaf_version": {
+            "created_at": 1689974400,
+            "id": "2",
+            "num_objects": 12,
+            "size": 510000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": false,
+                "therapeutic_area": "Hematology"
+            },
+            "collection_method": "Automated data feeds",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1212/example11.doi"
+            },
+            "data_quality": {
+                "data_completeness": 96,
+                "validation_method": "Automated scripts"
+            },
+            "platform": "Data Quality Platform",
+            "publication_info": {
+                "publication_status": "under review"
+            },
+            "refs": {
+                "dataset": "DQA_DB009"
+            },
+            "sample_size": 3000,
+            "study_design": "Descriptive study",
+            "top_hash": "n1b2v3c4x5z6l7k8"
+        },
+        "modified_at": 1689974400,
+        "modified_by": "Dr. Angela Davis",
+        "name": "predictive_model/24",
+        "num_versions": 2,
+        "owner": "Data Management Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "clinical_data_quality_enhancement",
+        "project_status": "active",
+        "project_title": "Clinical Data Quality Enhancement",
+        "root_version": {
+            "created_at": 1690060800,
+            "id": "1",
+            "num_objects": 11,
+            "size": 490000
+        },
+        "seq_id": 24,
+        "status": "active",
+        "tags": [
+            "data quality",
+            "data validation",
+            "error detection",
+            "clinical data management",
+            "healthcare data integrity"
+        ],
+        "title": "Data Quality Assessment Model"
+    },
+    {
+        "alias": "PERF_PULMO_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1690147200,
+        "created_by": "Dr. Steven Harris",
+        "description": "Model to assess and rank clinical trial sites based on performance metrics and historical data",
+        "id": "MDL025",
+        "leaf_version": {
+            "created_at": 1690060800,
+            "id": "4",
+            "num_objects": 11,
+            "size": 520000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": false,
+                "therapeutic_area": "Pulmonology"
+            },
+            "collection_method": "Site performance reports",
+            "data_access": {
+                "access_level": "public",
+                "data_use_agreement": false,
+                "doi": "10.1212/example12.doi"
+            },
+            "data_quality": {
+                "data_completeness": 91,
+                "validation_method": "Statistical validation"
+            },
+            "platform": "Performance Analytics Tool",
+            "publication_info": {
+                "publication_reference": "Clinical Site Management Journal, 2023",
+                "publication_status": "published"
+            },
+            "refs": {
+                "dataset": "SPEDB010"
+            },
+            "sample_size": 600,
+            "study_design": "Comparative analysis",
+            "top_hash": "b1n2m3v4c5x6z7a8"
+        },
+        "modified_at": 1690060800,
+        "modified_by": "Dr. Steven Harris",
+        "name": "predictive_model/25",
+        "num_versions": 3,
+        "owner": "Site Management Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "site_performance_evaluation",
+        "project_status": "active",
+        "project_title": "Site Performance Evaluation",
+        "root_version": {
+            "created_at": 1690147200,
+            "id": "1",
+            "num_objects": 10,
+            "size": 500000
+        },
+        "seq_id": 25,
+        "status": "active",
+        "tags": [
+            "site performance",
+            "evaluation metrics",
+            "performance ranking",
+            "clinical trial sites",
+            "healthcare analytics"
+        ],
+        "title": "Site Performance Evaluation Model"
+    },
+    {
+        "alias": "RECR_PSYCH_2023",
+        "class_id": "Predictive Model",
+        "class_name": "predictive_model",
+        "class_status": "active",
+        "class_title": "Predictive Model",
+        "class_type": "model",
+        "created_at": 1690233600,
+        "created_by": "Dr. Linda Green",
+        "description": "Model to optimize recruitment strategies for clinical trials by analyzing patient engagement and outreach effectiveness",
+        "id": "MDL026",
+        "leaf_version": {
+            "created_at": 1690147200,
+            "id": "5",
+            "num_objects": 15,
+            "size": 580000
+        },
+        "metadata": {
+            "additional_info": {
+                "ethics_approval": true,
+                "therapeutic_area": "Psychiatry"
+            },
+            "collection_method": "Marketing and recruitment data",
+            "data_access": {
+                "access_level": "restricted",
+                "data_use_agreement": true,
+                "doi": "10.1212/example13.doi"
+            },
+            "data_quality": {
+                "data_completeness": 88,
+                "validation_method": "A/B testing"
+            },
+            "platform": "Recruitment Analytics Platform",
+            "publication_info": {
+                "publication_status": "in preparation"
+            },
+            "refs": {
+                "dataset": "RODB011"
+            },
+            "sample_size": 2200,
+            "study_design": "Experimental study",
+            "top_hash": "c1v2b3n4m5k6j7h8"
+        },
+        "modified_at": 1690147200,
+        "modified_by": "Dr. Linda Green",
+        "name": "predictive_model/26",
+        "num_versions": 4,
+        "owner": "Recruitment Strategy Team",
+        "project_id": "03c02c9d-3f7b-44b0-871d-0e7cd0d8d5ce",
+        "project_name": "recruitment_strategy_optimization",
+        "project_status": "active",
+        "project_title": "Recruitment Strategy Optimization",
+        "root_version": {
+            "created_at": 1690233600,
+            "id": "1",
+            "num_objects": 13,
+            "size": 550000
+        },
+        "seq_id": 26,
+        "status": "active",
+        "tags": [
+            "recruitment optimization",
+            "strategy analysis",
+            "patient engagement",
+            "outreach effectiveness",
+            "clinical trial recruitment"
+        ],
+        "title": "Recruitment Strategy Optimization Model"
+    }
+]

@@ -1,0 +1,131 @@
+{
+  "id": "00000000-0000-0000-0000-000000000001",
+  "version": {
+    "id": null,
+    "number": null,
+    "patch": null,
+    "parent": null,
+    "commit_hash": null,
+    "created_by": null,
+    "created_at": null
+  },
+  "seq_id": null,
+  "owner": "user1",
+  "refs": null,
+  "top_hash": null,
+  "alias": null,
+  "objects": [
+    {
+      "id": "gs:md5$placeholder_md5_000==::test_data/imgs/photo-1504198453319-5ce911bafcde.jpg",
+      "created_by": "user1",
+      "created_at": "2021-12-04T16-42-27-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_000==",
+        "mime_type": "image/jpeg",
+        "size": 8829152,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_001==::example_data/.DS_Store",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_001==",
+        "mime_type": null,
+        "size": 6148,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_002==::example_data/2.txt",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_002==",
+        "mime_type": "text/plain",
+        "size": 1267675,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_003==::example_data/imgs/photo-001.jpg",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_003==",
+        "mime_type": "image/jpeg",
+        "size": 8829152,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_004==::example_data/imgs/photo-002.jpg",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_004==",
+        "mime_type": "image/jpeg",
+        "size": 9961945,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_005==::example_data/imgs/photo-003.jpg",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_005==",
+        "mime_type": "image/jpeg",
+        "size": 3604423,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_006==::example_data/imgs/photo-004.jpg",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_006==",
+        "mime_type": "image/jpeg",
+        "size": 4020617,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    },
+    {
+      "id": "gs:md5$placeholder_md5_007==::example_data/imgs/photo-005.jpg",
+      "created_by": "user1",
+      "created_at": "2023-01-01T00-00-00-PST",
+      "content": {
+        "id": "gs:md5$placeholder_md5_content_007==",
+        "mime_type": "image/jpeg",
+        "size": 12853831,
+        "meta": {},
+        "created_by": null,
+        "created_at": null
+      }
+    }
+  ],
+  "created_by": null,
+  "created_at": null,
+  "modified_by": null,
+  "modified_at": null,
+  "asset_class": {
+    "id": null,
+    "name": "genetics"
+  }
+}
