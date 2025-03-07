@@ -1,0 +1,32 @@
+@use "src/assets/scss/variables";
+
+.overlayContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 37, 41, 0.7);
+  z-index: 10;
+  border-radius: variables.$border-radius;
+  display: flex;
+  align-items: center;
+}
+
+.alert {
+  margin: auto;
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.spinnerContainer {
+  @extend .overlayContainer;
+  background-color: rgba(232, 232, 232, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerLabel {
+  margin-left: 4px;
+}

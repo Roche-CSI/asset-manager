@@ -1,0 +1,12 @@
+.mySelect {
+  & [class*="container"] {
+    //border: 4px solid blue;
+    & [class*="control"] {
+      box-sizing: border-box;
+      background-color: rgb(232, 232, 232);
+      //& [class*="valueContainer"] {
+      //  background-color: #bbbbbb;
+      //}
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.copyButton {
+  float: left;
+  margin-left: 10px;
+}
+
+.copyIcon {
+  &:hover {
+    color: blue;
+    cursor: pointer;
+
+    + .tooltip {
+      > .tooltipText {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.checkIcon {
+  color: green;
+
+  + .tooltip {
+    > .tooltipText {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  bottom: 20px;
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 80px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 3px 0px 3px 0px;
+  border-radius: 6px;
+  margin-left: 8px;
+  position: absolute;
+  z-index: 1;
+  left: 105%;
+  opacity: 0;
+  transition: opacity 1s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
+}

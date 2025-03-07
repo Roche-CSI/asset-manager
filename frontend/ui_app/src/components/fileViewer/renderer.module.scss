@@ -1,0 +1,49 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+
+//Object data renderer
+.wrapper {
+  text-align: left;
+  background-color: colors.$main-bg-light;
+  border: 2px solid rgb(232, 232, 232);
+  padding: 15px 0px;
+  font-size: 13px;
+}
+
+.field {
+  display: flex;
+  & > div:last-child {
+    margin-left: 10px;
+  }
+  padding: 10px;
+}
+
+.badge {
+  background-color: colors.$second-color-blue;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: colors.$txt-white;
+}
+
+//Yaml renderer
+.yamlContainer {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgb(232, 232, 232);
+  border-bottom-right-radius: variables.$border-radius;
+  border-bottom-left-radius: variables.$border-radius;
+}
+
+.toggles {
+  margin-left: auto;
+  margin-right: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 

@@ -1,0 +1,19 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+
+.layout {
+  color: colors.$txt-color;
+  display: flex;
+}
+
+.layoutContent {
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$second-bg;
+  min-height: 100vh;
+  flex: 1;
+}
+
+.layoutContentMain {
+  margin: 10px 0px 0px 0px;
+}

@@ -1,0 +1,212 @@
+@use "src/assets/scss/mixins";
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+
+.page {
+  display: flex;
+
+  &>div:first-child {
+    margin-right: 20px;
+  }
+}
+
+.textBoxHeader {
+  border-bottom: 1px solid rgb(232, 232, 232);
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.tbHeaderContents {
+  text-align: left;
+  padding: 16px 16px 0px 16px;
+  font-size: 13px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &>*svg {
+    //border: 1px solid red;
+    width: 0.9em;
+    height: 0.9em;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+
+    &:hover {}
+  }
+
+  &>button {
+    padding: 0px;
+
+    &>svg {
+      &:hover {
+        color: colors.$main-color-blue;
+      }
+    }
+  }
+}
+
+.textBoxHeaderItem {
+  display: flex;
+  align-items: flex-start;
+
+  &>h6 {
+    margin: 0px;
+    margin-right: 15px;
+
+    &>p {
+      font-size: 11px;
+      color: colors.$txt-white;
+      text-transform: capitalize;
+      background-color: colors.$main-color-blue;
+      padding: 2px 5px;
+      width: max-content;
+      border-radius: 4px;
+    }
+  }
+
+  &>svg {
+    color: colors.$main-color-blue;
+    transform: scale(1.4);
+    margin-top: 5px;
+    cursor: auto;
+  }
+
+}
+
+.textBoxHeaderIcon {
+  margin-top: -2px;
+  background-color: #ffff;
+  border: 1px solid colors.$main-color;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  font-size: 14px;
+  font-weight: bold;
+  color: colors.$main-color;
+
+  & svg {
+    color: colors.$main-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: colors.$second-bg;
+  }
+}
+
+.textBoxFooter {
+  border-top: 1px solid rgb(232, 232, 232);
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+}
+
+.textBoxFooterItem {
+  margin-bottom: 5px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &>div>span {
+    padding: 0px 10px 0px 10px;
+    text-overflow: ellipsis;
+  }
+}
+
+.icon {
+  //font-size: 1rem;
+  font-size: 20px;
+  color: gray;
+}
+
+.readMeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &>span {
+    margin-left: 10px;
+    color: colors.$txt-color-dark;
+    font-weight: bold;
+  }
+}
+
+.textBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.textBoxBody {
+  //border: 1px solid red;
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 300px;
+  overflow: scroll;
+
+  &>div {
+    &>h6 {
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+}
+
+.card {
+  @include mixins.card;
+  padding: 0px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  height: 65px;
+  padding: 16px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  border-top-right-radius: variables.$border-radius;
+  border-top-left-radius: variables.$border-radius;
+  //border-bottom: none;
+  //layout
+  display: flex;
+  justify-content: space-between;
+  color: colors.$txt-color-dark;
+}
+
+.headerItem {
+  //border: 1px solid red;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+
+  &>span {
+    padding: 0px 10px 0px 5px;
+    text-overflow: ellipsis;
+  }
+}
+
+.userList {
+  margin-left: 20px;
+}
+
+.userListItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.userListIcon {
+  &:hover {
+    cursor: pointer;
+  }
+}

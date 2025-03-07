@@ -1,0 +1,207 @@
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/colors";
+
+.tableWrapper {
+  // overflow: hidden;
+
+  & > table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 14px;
+    // overflow: no-content;
+    border-collapse: collapse;
+    & > thead {
+      background-color: rgb(242, 241, 241);
+      border-collapse: collapse;
+      border-spacing: 0;
+      //background-color: colors.$second-bg;
+      & > tr > th {
+        border-spacing: 0;
+        text-transform: capitalize;
+        padding: 5px 5px 5px 40px;
+        //border: 1px solid red;
+        text-align: left;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(229, 236, 255);
+        // border-top: 1px solid rgb(229, 236, 255);
+        &:first-child {
+          border-left: 1px solid rgb(229, 236, 255);
+          // border-bottom-left-radius: 4px;
+          // border-top-left-radius: 4px;
+        }
+        // &:last-child {
+        //   // border-right: 1px solid rgb(229, 236, 255);
+        //   border-top-right-radius: 4px;
+        //   border-bottom-right-radius: 4px;
+        //   //text-align: right;
+        // }
+      }
+    }
+    //& > th {
+    //  text-transform: capitalize;
+    //  padding: 5px 5px;
+    //  box-sizing: border-box;
+    //}
+    & > tbody > tr {
+      cursor: pointer;
+      text-align: left;
+      border-bottom: 1px solid rgb(232, 232, 232);
+      color: colors.$txt-color-dark;
+      padding-right: 5px;
+      & > td {
+        padding: 5px 5px 5px 10px;
+        // white-space: nowrap;
+        // width: 30px;
+        //& > a {
+        //  text-decoration: none;
+        //}
+        // & > span {
+        //   white-space: normal;
+        //   word-break: break-all;
+        //   display: block;
+        // }
+        &:last-child {
+          //text-align: right;
+        }
+      }
+      &:hover {
+        background-color: rgba(242, 241, 241, 0.869);
+        transition: 0.1s ease-in;
+      }
+    }
+  }
+}
+
+.tablePagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-right: 3px;
+  padding-left: 3px;
+
+  & li {
+    width: 33px;
+  }
+}
+
+.tablePaginationItem ~ .tablePaginationItem {
+  margin-left: 10px;
+}
+
+.tablePaginationItem {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    color: colors.$txt-white;
+    background-color: colors.$second-color;
+  }
+  &.active {
+    background-color: colors.$main-color;
+    color: colors.$txt-white;
+    font-weight: 600;
+  }
+}
+
+.searchCard {
+  margin: 0px 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.daysLabel {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 300;
+  color: colors.$txt-white;
+  background-color: colors.$second-color-blue;
+  border-radius: 30px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  min-width: 70px;
+  text-align: center;
+}
+
+.rowCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  //background-color: #fff;
+  margin: 10px 20px;
+  //border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 4px rgb(31 30 47 / 3%);
+  transition: variables.$transition-cubic;
+  &.odd {
+    background-color: red;
+  }
+  &.even {
+    background-color: blue;
+  }
+}
+
+.rowIcon {
+  //border: 1px solid red;
+  &.cyan {
+    //background-color: #C9F7F5;
+    color: #17a2b8;
+    //color: #189d75;
+  }
+  &.red {
+    //background-color: #FFE2E5;
+    color: #dc3545;
+  }
+  &.purple {
+    //background-color: #EEE5FF;
+    color: orange;
+  }
+}
+
+.rowContainer {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+
+  &.active {
+    background-color: rgba(208, 215, 222, 0.24);
+
+    &:hover {
+      background-color: rgba(208, 215, 222, 0.562);
+    }
+  }    
+}
+
+.nameContainer {
+  width: calc(100% - 30px);
+  display: flex;
+}
+
+.folder {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 30px;
+  text-overflow: ellipsis;
+  color: rgb(139, 137, 137);
+}
+
+.filename {
+  display: inline-block;
+  color: colors.$second-bg-dark;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  text-align: left;
+}
+
+.icon {
+  width: 30px;
+}

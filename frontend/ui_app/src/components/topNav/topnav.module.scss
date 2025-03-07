@@ -1,0 +1,99 @@
+@use "src/assets/scss/variables";
+@use "src/assets/scss/colors";
+
+.topNav {
+  //border: 1px solid blue;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // height: variables.$topnav-height;
+  box-sizing: border-box;
+  border-bottom: 2px solid #E8E8E8;
+}
+
+.topNavRight {
+  display: flex;
+  align-items: center;
+}
+
+
+.notificationItem {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  text-decoration: none;
+  &:hover {
+    background-color: colors.$second-bg;
+    color: colors.$main-color;
+  }
+}
+
+.notificationIcon {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+
+.topNavRightUser {
+  display: flex;
+  align-items: center;
+}
+
+.topNavRightUserImage {
+  color: colors.$main-color-blue;
+  //width: 35px;
+  //height: 35px;
+  display: flex;
+  width: max-content;
+  //border-radius: 50%;
+  overflow: hidden;
+  margin-top: -15px;
+  font-size: 2em;
+  //border: 1px solid red;
+  padding: 0px;
+  & > svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  & > img {
+    display: flex;
+    max-width: 35px;
+    border-radius: 50%;
+    //width: 1.5rem;
+    //height: 1.5em;
+    border: 1px solid red;
+  }
+}
+
+.topNavRightUserName {
+  margin-right: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: colors.$txt-color;
+  margin-top: -12px;
+}
+
+.projectTitle {
+  margin-right: 5px;
+
+  & a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: colors.$txt-color;
+    background-color: colors.$second-bg;
+    border: none;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+
+  & button {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: colors.$txt-color;
+    background-color: colors.$second-bg;
+    border: none;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+}

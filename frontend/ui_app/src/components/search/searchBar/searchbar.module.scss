@@ -1,0 +1,57 @@
+@use "../../../assets/scss/colors";
+@use "../../../assets/scss/variables";
+
+.searchBar {
+  position: relative;
+  height: 40px;
+  width: 500px;
+  background-color: colors.$main-bg;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0px;
+  border-radius: 7px;
+  overflow: hidden;
+  &:focus-within {
+    border: 2px solid colors.$main-color-blue;
+  }
+
+  & > input {
+    height: 100%;
+    width: 100%;
+    padding: 5px 40px 5px 20px;
+    font-size: 1rem;
+    //border-radius: variables.$border-radius;
+    color: colors.$txt-color;
+    background-color: colors.$main-bg;
+    border: none;
+    appearance: none;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.searchIcon {
+  font-size: 1.5rem;
+  height: 100%;
+  box-sizing: border-box;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+  background: colors.$main-color-blue;
+  color: colors.$txt-white;
+}
+
+//.searchBar {
+//  position: relative;
+//  width: 550px;
+//  background: rgb(245, 245, 255);
+//  border: none;
+//  padding: 0.5rem;
+//  height: 15px;
+//  margin: auto;
+//  border-radius: 8px;
+//}

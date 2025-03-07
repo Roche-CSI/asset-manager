@@ -1,0 +1,82 @@
+[
+  {
+    "number": "0.0.0",
+    "commit_hash": "abcdef1234567890abcdef1234567890",
+    "created_by": "user01",
+    "created_at": "2022-01-01 08:00:00.000000",
+    "commit_message": "initial commit",
+    "added": [
+      "fake_data/path1/chunked_raw_data/chunk0000/raw/multi_ubf.h5",
+      "fake_data/path1/raw_000/vmzero_bright.log",
+      "fake_data/path1/raw_000/vmzero_dark.log",
+      "fake_data/path1/circuit/main/main.cir",
+      "fake_data/path1/circuit/vmzero_dark/sim_uw.json",
+      "fake_data/path1/chunked_raw_data/chunk0000/raw/oc_calibration.h5",
+      "fake_data/path1/commands.json",
+      "fake_data/path1/circuit/occal/occal.cir",
+      "fake_data/path1/circuit/vmzero_dark/vmzero_dark.cir",
+      "fake_data/path1/circuit/occal/sim_uw.json",
+      "fake_data/path1/raw_000/occal.log",
+      "fake_data/path1/circuit/main/sim_uw.json",
+      "fake_data/path1/circuit/vmzero_bright/sim_uw.json",
+      "fake_data/path1/raw_000/main.log",
+      "fake_data/path1/circuit/vmzero_bright/vmzero_bright.cir"
+    ],
+    "removed": [],
+    "altered": []
+  },
+  {
+    "number": "0.0.1",
+    "commit_hash": "abcdef1234567890abcdef1234567890",
+    "created_by": "user01",
+    "created_at": "2022-01-01 08:05:00.000000",
+    "commit_message": "second commit",
+    "added": [
+      "fake_data/path1/raw_000/vmzero_bright1.log",
+      "fake_data/path1/raw_000/vmzero_dark2.log",
+      "fake_data/path1/circuit/main/main3.cir"
+    ],
+    "removed": [
+      "fake_data/path1/chunked_raw_data/chunk0000/raw/multi_ubf.h5",
+      "fake_data/path1/circuit/vmzero_dark/sim_uw.json",
+      "fake_data/path1/chunked_raw_data/chunk0000/raw/oc_calibration.h5",
+      "fake_data/path1/circuit/vmzero_dark/vmzero_dark.cir",
+      "fake_data/path1/circuit/occal/sim_uw.json",
+      "fake_data/path1/raw_000/occal.log",
+      "fake_data/path1/circuit/main/sim_uw.json",
+      "fake_data/path1/circuit/vmzero_bright/sim_uw.json",
+      "fake_data/path1/raw_000/main.log",
+      "fake_data/path1/circuit/vmzero_bright/vmzero_bright.cir"
+    ],
+    "altered": [
+      "fake_data/path1/commands.json",
+      "fake_data/path1/circuit/occal/occal1.cir"
+    ]
+  },
+  {
+    "number": "0.0.2",
+    "commit_hash": "abcdef1234567890abcdef1234567890",
+    "created_by": "user01",
+    "created_at": "2022-01-01 08:10:00.000000",
+    "commit_message": "third commit fake_data/path1/circuit/vmzero_dark/sim_uw.json",
+    "added": [
+      "fake_data/path1/chunked_raw_data/chunk0000/raw/multi_ubf.h5",
+      "fake_data/path1/circuit/vmzero_dark/sim_uw.json",
+      "fake_data/path1/chunked_raw_data/chunk0000/raw/oc_calibration.h5"
+    ],
+    "removed": [
+      "fake_data/path1/raw_000/vmzero_bright1.log",
+      "fake_data/path1/raw_000/vmzero_dark2.log",
+      "fake_data/path1/circuit/main/main3.cir"
+    ],
+    "altered": [
+      "fake_data/path1/circuit/vmzero_dark/vmzero_dark.cir",
+      "fake_data/path1/circuit/occal/sim_uw.json",
+      "fake_data/path1/raw_000/occal.log",
+      "fake_data/path1/circuit/main/sim_uw.json",
+      "fake_data/path1/circuit/vmzero_bright/sim_uw.json",
+      "fake_data/path1/raw_000/main.log",
+      "fake_data/path1/circuit/vmzero_bright/vmzero_bright.cir"
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "asset": "11111111-aaaa-bbbb-cccc-000000000001",
+    "commit_hash": "abcd1234abcd1234abcd1234abcd1234",
+    "commit_message": null,
+    "created_at": "2022-02-04 17:41:24.328680",
+    "created_by": "john_doe",
+    "id": 1,
+    "number": "0.0.0",
+    "parent": null,
+    "patch": {
+      "added": [
+        "gs:md5_hash001::test_data/acm_data/wv1.4e14_0.0065/raw_000/vmzero_bright.log",
+        "gs:md5_hash002::test_data/acm_data/wv1.4e14_0.0065/circuit/occal/occal.cir",
+        "gs:md5_hash003::test_data/acm_data/wv1.4e14_0.0065/commands.json",
+        "gs:md5_hash004::test_data/acm_data/wv1.4e14_0.0065/circuit/main/main.cir",
+        "gs:md5_hash005::test_data/acm_data/wv1.4e14_0.0065/circuit/vmzero_bright/sim_uw.json",
+        "gs:md5_hash006::test_data/acm_data/wv1.4e14_0.0065/circuit/main/sim_uw.json",
+        "gs:md5_hash007::test_data/acm_data/wv1.4e14_0.0065/circuit/vmzero_bright/vmzero_bright.cir",
+        "gs:md5_hash008::test_data/acm_data/wv1.4e14_0.0065/circuit/occal/sim_uw.json",
+        "gs:md5_hash009::test_data/acm_data/wv1.4e14_0.0065/chunked_raw_data/chunk0000/raw/multi_ubf.h5",
+        "gs:md5_hash010::test_data/acm_data/wv1.4e14_0.0065/circuit/vmzero_dark/sim_uw.json",
+        "gs:md5_hash011::test_data/acm_data/wv1.4e14_0.0065/chunked_raw_data/chunk0000/raw/oc_calibration.h5",
+        "gs:md5_hash012::test_data/acm_data/wv1.4e14_0.0065/circuit/vmzero_dark/vmzero_dark.cir",
+        "gs:md5_hash013::test_data/acm_data/wv1.4e14_0.0065/raw_000/occal.log"
+      ],
+      "removed": []
+    },
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": []
+  },
+  {
+    "asset": "11111111-aaaa-bbbb-cccc-000000000001",
+    "commit_hash": "abcd1234abcd1234abcd1234abcd1235",
+    "commit_message": null,
+    "created_at": "2022-02-04 17:41:24.328680",
+    "created_by": "john_doe",
+    "id": 3,
+    "number": "0.0.1",
+    "parent": null,
+    "patch": {
+      "added": [
+        "gs:md5_hash014::test_data/acm_data/wv1.4e14_0.0065/raw_000/occal.log"
+      ],
+      "removed": [
+        "gs:md5_hash013::test_data/acm_data/wv1.4e14_0.0065/raw_000/occal.log"
+      ]
+    },
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": []
+  },
+  {
+    "asset": "11111111-aaaa-bbbb-cccc-000000000001",
+    "commit_hash": "abcd1234abcd1234abcd1234abcd1236",
+    "commit_message": null,
+    "created_at": "2022-02-04 17:41:24.328680",
+    "created_by": "john_doe",
+    "id": 7,
+    "number": "0.0.2",
+    "parent": null,
+    "patch": {
+      "added": [
+        "gs:md5_hash015::test_data/acm_data/wv1.4e14_0.0065/raw_000/main.log",
+        "gs:md5_hash016::test_data/acm_data/wv1.4e14_0.0065/raw_000/vmzero_dark.log"
+      ],
+      "removed": [
+        "gs:md5_hash001::test_data/acm_data/wv1.4e14_0.0065/raw_000/vmzero_bright.log"
+      ]
+    },
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": []
+  }
+]

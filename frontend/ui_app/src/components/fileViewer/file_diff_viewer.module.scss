@@ -1,0 +1,132 @@
+@use "src/assets/scss/colors";
+.container {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: auto;
+  border-right: 1px solid #d0d7de;
+}
+
+.diffViewer {
+  height: 90vh;
+  
+  & div[class*="line-numbers"] {
+    padding-right: 10px;
+  }
+
+  & div[class^="cldr"] {
+    &::before {
+      font-size: 12px;
+      margin-left: -5px;
+    }
+  }
+}
+
+.imageViewer {
+  //border: 3px solid blue;
+  box-shadow: colors.$box-shadow-light;
+  & > img {
+    width: 100%;
+  }
+}
+
+.imageDiffViewer {
+  display: flex;
+  flex-direction: row;
+
+  > .imageDiffLeft {
+    width: 48%;
+    box-shadow: colors.$box-shadow-light;
+  }
+
+  > .imageDiffRight {
+    width: 52%;
+    box-shadow: colors.$box-shadow-light;
+  }
+
+  & > div {
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+.header {
+  height: 32px;
+  background-color: rgb(242, 241, 241);
+  border-spacing: 0px;
+  border-bottom: 1px solid #d0d7de;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.filename {
+  @extend .header;
+  padding: 4px 10px 0px 10px;
+  font-size: 14px;
+  font-weight: bold;
+
+  & > span {
+    max-width: 1000px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: rtl;
+  }
+}
+
+.headerItem {
+  padding: 4px 10px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: colors.$second-bg;
+
+  &:first-child {
+    width: 48%;
+    border-right: 1px solid #d0d7de;
+  }
+
+  &:nth-child(2) {
+    width: 52%;
+  }
+
+  & span {
+    margin-left: 2px;
+    color: colors.$txt-color-dark;
+  }
+}
+
+.diffProgressContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.progressContainer {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+
+.alert {
+  margin: auto;
+  width: fit-content;
+  max-width: 600px;
+  font-size: 14px;
+}
+
+.downloadButton {
+  @extend .container;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: colors.$second-bg-light;
+  justify-content: center;
+  align-items: center;
+
+  & > p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}

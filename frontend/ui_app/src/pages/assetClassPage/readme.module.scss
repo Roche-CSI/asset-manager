@@ -1,0 +1,23 @@
+//@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap');
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+
+.readmeModal {
+  //border: 1px solid red;
+  //padding: 30px 100px;
+  & > [class="modal-dialog"] {
+    max-width: none;
+    & > [class="modal-content"] {
+    }
+  }
+}
+
+.headerContent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  & > button {
+    margin-left: 20px;
+  }
+}
+

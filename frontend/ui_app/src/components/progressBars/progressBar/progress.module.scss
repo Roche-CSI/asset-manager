@@ -1,0 +1,8 @@
+@use "../../../assets/scss/colors";
+
+.progressBox {
+  width: 100%;
+  padding: 20px 15px;
+  border: 1px solid colors.$second-color-blue;
+  border-radius: 8px;
+}

@@ -1,0 +1,66 @@
+@use "src/assets/scss/variables";
+@use "src/assets/scss/colors";
+@use "src/assets/scss/mixins";
+
+.viewContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  @include mixins.card;
+}
+
+.versionSelector {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toggleButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.tableContainer {
+  @extend .viewContainer;
+  // height: 730px; // same as grapher's height
+  display: flex;
+  flex-direction: column;
+}
+
+.showAllButton {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.inboundTable {
+  // height: 350px; // table + pagination
+  margin-bottom: 30px;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: variables.$border-radius;
+}
+
+.outboundTable {
+  // height: 350px;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: variables.$border-radius;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+  font-size: 18px;
+  color: colors.$main-color-blue;
+  font-weight: 500;
+  padding: 5px 0px 0px 15px;
+}
+
+.refTable {
+  @extend .inboundTable;
+  border: 1px solid rgb(194, 192, 192);
+}

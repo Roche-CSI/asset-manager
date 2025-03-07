@@ -1,0 +1,12 @@
+export {default as Dashboard} from "./Dashboard";
+export {ClassListPage} from "./classListPage";
+export {AssetPage} from "./assetPage";
+export {default as People} from "./People";
+export {default as Teams} from "./Teams";
+export {default as Profile} from "./Profile";
+export {ProjectsPage} from "./projectsPage";
+export {default as Settings} from "./Settings";
+export {LoginPage} from "./userPages";
+export {AssetClassPage} from "./assetClassPage";
+export {Documentation} from "./documentPage";
+export {IssueTracker} from "./issuePages";

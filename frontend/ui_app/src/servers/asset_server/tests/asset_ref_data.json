@@ -1,0 +1,21 @@
+{
+  "created_at": "2022/02/02 10-00-49 -0800",
+  "created_by": "john_doe",
+  "dst_version": {
+    "asset": "11111111-aaaa-4567-b111-111111111111",
+    "asset_class": "22222222-bbbb-483a-b222-222222222222",
+    "id": 2,
+    "name": "genetics/1/0.0.0"
+  },
+  "id": 1,
+  "soft_delete_at": null,
+  "soft_delete_by": null,
+  "src_version": {
+    "asset": "33333333-cccc-4627-b333-333333333333",
+    "asset_class": "44444444-dddd-481c-b444-444444444444",
+    "id": 1,
+    "name": "acm_data/1/0.0.0"
+  },
+  "status": 1,
+  "tags": []
+}

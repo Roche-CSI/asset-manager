@@ -1,0 +1,63 @@
+@use "src/assets/scss/colors";
+
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  //box-shadow: 0 0 0 1px rgb(16 22 26 / 10%);
+  //border-radius: 4px;
+  & [class*="w-md-editor"] {
+    flex: 1;
+    box-shadow: none;
+    & [class*="w-md-editor-content"] {
+      height: 100% !important;
+    }
+  }
+  & [class*="w-md-editor-text"] {
+    //border: 2px solid green;
+    flex: 1;
+  }
+
+  & > *textarea {
+    cursor: auto;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    width: 100%;
+    //height: 90vh;
+    //border: solid #5B6DCD 10px;
+    //padding: 5px;
+    border-top: none;
+  }
+}
+
+.readmeTab {
+  background-color: #e5eaef;
+  //border-bottom: 1px solid #d0d7de;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tabButton {
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  //border: 1px solid red;
+  font-size: 13px;
+  line-height: 48px;
+  padding: 0px 16px;
+  //padding: 10px;
+  box-sizing: border-box;
+  & > span {
+    margin-left: 10px;
+  }
+  & > svg {
+    transform: scale(1.5);
+  }
+  &.active {
+    background-color: colors.$main-bg-light;
+    color: colors.$main-color-blue;
+    font-weight: bold;
+  }
+}

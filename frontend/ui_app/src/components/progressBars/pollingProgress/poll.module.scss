@@ -1,0 +1,21 @@
+@use "src/assets/scss/colors";
+
+.container {
+  width: 100%;
+  //border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress {
+  width: 90%;
+}
+
+.label {
+  border: 1px solid colors.$main-color-blue;
+  color: colors.$main-color-blue;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+}

@@ -1,0 +1,12 @@
+@use "../../assets/scss/variables";
+@use "../../assets/scss/colors";
+
+.csvContainer {
+  background-color: #fff;
+  
+  & [class*="handsontable"] {
+    & [class*="htDimmed"] {
+      color: #373737;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@use "src/assets/scss/variables";
+@use "src/assets/scss/colors";
+
+.dropdown {
+  position: relative;
+  z-index: 99;
+  & > button {
+    padding: 0px;
+  }
+}
+
+.dropdownToggle {
+  outline: 0;
+  background-color: transparent;
+  position: relative;
+  //height: 50px;
+  min-width: 40px;
+  min-height: 30px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownToggleIcon {
+  font-size: 2.5rem;
+  color: colors.$txt-color;
+  & > img, svg {
+    margin-top: 5px;
+    //border: 1px solid red;
+    vertical-align: top;
+  }
+}
+
+.dropdownToggleBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5px;
+  right: 8px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: colors.$main-color;
+  color: colors.$txt-white;
+  font-size: 0.8rem;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  min-width: max-content;
+  width: 100%;
+  max-width: 400px;
+  background-color: colors.$main-bg;
+  box-shadow: colors.$box-shadow;
+  border-radius: variables.$border-radius;
+  overflow: hidden;
+  transform-origin: top right;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  z-index: 999;
+  &.active {
+    transform: scale(1);
+    transition: transform 0.5s variables.$transition-cubic;
+  }
+  & > a {
+    text-decoration: none;
+    color: colors.$txt-color;
+  }
+}
+
+.dropdownFooter {
+  padding: 20px;
+  text-align: center;
+  color: colors.$txt-color;
+  &:hover {
+    background-color: colors.$second-bg;
+    color: colors.$main-color;
+  }
+  & > a {
+    color: unset;
+    text-decoration: none;
+  }
+}

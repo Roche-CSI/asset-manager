@@ -1,0 +1,328 @@
+@use "src/assets/scss/mixins";
+@use "src/assets/scss/variables";
+@use "src/assets/scss/colors";
+
+.page {
+  display: flex;
+  & [class="col-4"] {
+    padding: 0px 0px 0px 30px;
+  }
+  & [class="col-8"] {
+    padding-left: 0px;
+  }
+}
+
+.spinnerContainer {
+  min-height: 400px;
+}
+
+.versionSelector {
+  // width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: 16px;
+  //margin: -70px 0px 0px -30px; // moving this to outside the box in top and to left
+}
+
+.cardHeader {
+  height: 65px;
+  padding: 16px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  border-top-right-radius: variables.$border-radius;
+  border-top-left-radius: variables.$border-radius;
+  border-bottom: none;
+  //layout
+  display: flex;
+  justify-content: space-between;
+  color: colors.$txt-color-dark;
+}
+
+.infoItems {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tagsForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // align-items: center;
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.tagsItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+  margin-right: -5px;
+
+  & svg {
+    font-size: 2rem;
+  }
+}
+
+.headerItem {
+  //border: 1px solid red;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  & > span {
+    padding: 0px 10px 0px 5px;
+    text-overflow: ellipsis;
+  }
+}
+
+.dropDown {
+  width: 100px;
+  & [class*="container"] {
+    //border: 4px solid blue;
+    & [class*="control"] {
+      cursor: pointer;
+      box-sizing: border-box;
+      font-weight: 600;
+      //background-color: colors.$main-color-blue;
+      //border-radius: variables.$border-radius;
+      border-radius: 6px;
+      background-color: colors.$main-bg-light;
+      //background-color: rgb(232, 232, 232);
+      //background-color: yellow;
+      min-height: 0px;
+      & > div:first-child {
+        //background-color: red;
+        padding-bottom: 0px;
+        padding-top: 0px;
+      }
+      //& [class*="valueContainer"] {
+      //  background-color: red;
+      //}
+      & > div:last-child {
+        //border: 1px solid blue;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        & [class*="indicatorContainer"] {
+          //background-color: purple;
+          padding: 2px 4px;
+        }
+      }
+    }
+  }
+}
+
+.latest {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border: 1px transparent;
+  border-radius: 6px;
+  background-color: rgb(161, 160, 160);
+  margin-left: 16px;
+  padding: 4px 13px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.alias {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 6px;
+  background-color: colors.$main-bg-light;
+  padding: 4px 13px;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.textBoxHeader {
+  border-bottom: 1px solid rgb(232, 232, 232);
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.tbHeaderContents {
+  text-align: left;
+  padding: 16px 16px 0px 16px;
+  font-size: 13px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & > *svg {
+    //border: 1px solid red;
+    width: 0.9em;
+    height: 0.9em;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+    &:hover {
+    }
+  }
+
+  & > button {
+    padding: 0px;
+    & > svg {
+      &:hover {
+        color: colors.$main-color-blue;
+      }
+    }
+  }
+}
+
+.textBoxHeaderItem {
+  display: flex;
+  align-items: flex-start;
+  & > h6 {
+    margin: 0px;
+    margin-right: 15px;
+
+    & > p {
+      font-size: 11px;
+      color: colors.$txt-white;
+      text-transform: capitalize;
+      background-color: colors.$main-color-blue;
+      padding: 2px 5px;
+      width: max-content;
+      border-radius: 4px;
+    }
+  }
+  & > svg {
+    color: colors.$main-color-blue;
+    transform: scale(1.4);
+    margin-top: 5px;
+    cursor: auto;
+  }
+
+}
+
+.textBoxFooter {
+  border-top: 1px solid rgb(232, 232, 232);
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+}
+
+.textBoxFooterItem {
+  margin-bottom: 5px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > div > span {
+    padding: 0px 10px 0px 10px;
+    text-overflow: ellipsis;
+  }
+}
+
+.icon {
+  //font-size: 1rem;
+  font-size: 20px;
+  color: gray;
+}
+
+.readMeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & > span {
+    margin-left: 10px;
+    color: colors.$txt-color-dark;
+    font-weight: bold;
+  }
+}
+
+.textBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.textBoxBody {
+  //border: 1px solid red;
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & > div {
+    & > h6 {
+      font-weight: bold;
+    }
+  }
+}
+
+.card {
+  @include mixins.card;
+  padding: 0px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: none;
+}
+
+.cardHeader {
+  height: 65px;
+  padding: 16px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  border-top-right-radius: variables.$border-radius;
+  border-top-left-radius: variables.$border-radius;
+  //border-bottom: none;
+  //layout
+  display: flex;
+  justify-content: space-between;
+  color: colors.$txt-color-dark;
+}
+
+.headerItem {
+  //border: 1px solid red;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  & > span {
+    padding: 0px 10px 0px 5px;
+    text-overflow: ellipsis;
+  }
+}
+
+.textBoxHeaderIcon {
+  margin-top: -2px;
+  background-color: #ffff;
+  border: 1px solid colors.$main-color;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  font-size: 14px;
+  font-weight: bold;
+  color: colors.$main-color;
+
+  & svg {
+    color: colors.$main-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: colors.$second-bg;
+  }
+}
+
+.tags {
+  margin-bottom: 10px;
+}

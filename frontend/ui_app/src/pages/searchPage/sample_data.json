@@ -1,0 +1,594 @@
+[
+	{
+		"id": "MDL002",
+		"title": "Drug Response Prediction Model",
+		"description": "Random Forest model to predict patient response to Drug X",
+		"tags": [
+			"machine learning",
+			"drug response",
+			"random forest",
+			"predictive model",
+			"pharmacogenomics"
+		],
+		"metadata": {
+			"study_design": "Cohort study",
+			"sample_size": 100,
+			"collection_method": "RNA-seq",
+			"platform": "Illumina",
+			"data_quality": {
+				"seq_quality_score": 30,
+				"completion_rate": 95,
+				"contamination_level": 1.5,
+				"duplication_rate": 10
+			},
+			"additional_info": {
+				"ethics_approval": true,
+				"biomarkers_studied": [
+					"HER2",
+					"ER",
+					"PR"
+				],
+				"treatment_information": {
+					"treatment_types": [
+						"chemotherapy",
+						"radiation"
+					],
+					"response_evaluation": "RECIST"
+				},
+				"patient_demographics": {
+					"age_range": "30-80",
+					"ethnicity": [
+						"Caucasian",
+						"African American",
+						"Hispanic"
+					],
+					"comorbidities": [
+						"diabetes",
+						"hypertension"
+					]
+				}
+			},
+			"data_access": {
+				"access_level": "restricted",
+				"data_use_agreement": true,
+				"doi": "10.1234/example.doi"
+			},
+			"publication_info": {
+				"related_publications": [
+					{
+						"title": "Impact of Gene Expression in Breast Cancer",
+						"journal": "Journal of Oncology",
+						"year": 2024,
+						"doi": "10.1234/abc123"
+					}
+				],
+				"publication_status": "published"
+			},
+			"top_hash": "b2c3d4e5f6g7h8i9j0k1",
+			"refs": {
+				"dataset": "GEX001"
+			}
+		},
+		"class_name": "Machine Learning Model",
+		"class_id": "ML Model",
+		"project_name": "Drug Response Prediction Project",
+		"project_id": "PRJ002",
+		"root_version": {
+			"id": "1",
+			"created_at": 1685635200.0,
+			"size": 15000000,
+			"num_objects": 18
+		},
+		"leaf_version": {
+			"id": "22",
+			"created_at": 1686830400.0,
+			"size": 17800000,
+			"num_objects": 20
+		},
+		"owner": "AI/ML Team",
+		"created_by": "Dr. John Doe",
+		"created_at": 1685635200.0,
+		"modified_by": "Dr. John Doe",
+		"modified_at": 1686830700.0,
+		"alias": "DRPM_X_2023",
+		"seq_id": 2,
+		"name": "Machine Learning Model/2",
+		"num_versions": 21,
+		"status": "active",
+		"class_status": "active",
+		"project_status": "active"
+	},
+	{
+		"id": "PRT003",
+		"title": "SARS-CoV-2 Spike Protein Structure",
+		"description": "Cryo-EM structure of SARS-CoV-2 spike protein",
+		"tags": [
+			"SARS-CoV-2",
+			"spike protein",
+			"cryo-EM",
+			"structural biology",
+			"virology"
+		],
+		"metadata": {
+			"study_design": "Case-Control Study",
+			"sample_size": 150,
+			"collection_method": "Whole Exome Sequencing",
+			"platform": "PacBio",
+			"data_quality": {
+				"seq_quality_score": 28,
+				"completion_rate": 92,
+				"contamination_level": 0.8,
+				"duplication_rate": 5
+			},
+			"additional_info": {
+				"ethics_approval": true,
+				"biomarkers_studied": [
+					"BRCA1",
+					"TP53",
+					"KRAS"
+				],
+				"treatment_information": {
+					"treatment_types": [
+						"immunotherapy",
+						"targeted therapy"
+					],
+					"response_evaluation": "WHO criteria"
+				},
+				"patient_demographics": {
+					"age_range": "25-75",
+					"ethnicity": [
+						"Asian",
+						"Native American",
+						"Mixed"
+					],
+					"comorbidities": [
+						"heart disease",
+						"obesity"
+					]
+				}
+			},
+			"data_access": {
+				"access_level": "open",
+				"data_use_agreement": false,
+				"doi": "10.5678/example.doi"
+			},
+			"publication_info": {
+				"related_publications": [
+					{
+						"title": "Genomic Insights in Cancer Progression",
+						"journal": "Cancer Research Journal",
+						"year": 2023,
+						"doi": "10.5678/xyz456"
+					}
+				],
+				"publication_status": "in press"
+			},
+			"top_hash": "a1b2c3d4e5f6g7h8i9j0",
+			"refs": {
+				"dataset": "GENE002"
+			}
+		},
+		"class_name": "Protein Structure",
+		"class_id": "Structural Biology",
+		"project_name": "SARS-CoV-2 Structural Analysis",
+		"project_id": "PRJ003",
+		"root_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440000",
+			"created_at": 1678442100.0,
+			"size": 100000000,
+			"num_objects": 2
+		},
+		"leaf_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440000",
+			"created_at": 1678442100.0,
+			"size": 100000000,
+			"num_objects": 2
+		},
+		"owner": "Structural Biology Team",
+		"created_by": "Dr. Emily Chen",
+		"created_at": 1678442100.0,
+		"modified_by": "Dr. Emily Chen",
+		"modified_at": 1678442100.0,
+		"alias": "SARSCOV2_SPIKE_2023",
+		"seq_id": 3,
+		"name": "Protein Structure/3",
+		"num_versions": 1,
+		"status": "active",
+		"class_status": "active",
+		"project_status": "active"
+	},
+	{
+		"id": "GWAS004",
+		"title": "Type 2 Diabetes GWAS Results",
+		"description": "Genome-wide association study results for Type 2 Diabetes",
+		"tags": [
+			"GWAS",
+			"type 2 diabetes",
+			"genetic association",
+			"genomics",
+			"metabolic disorders"
+		],
+		"metadata": {
+			"study_design": "Cross-Sectional Study",
+			"sample_size": 200,
+			"collection_method": "Microarray",
+			"platform": "Affymetrix",
+			"data_quality": {
+				"seq_quality_score": 32,
+				"completion_rate": 98,
+				"contamination_level": 0.5,
+				"duplication_rate": 3
+			},
+			"additional_info": {
+				"ethics_approval": true,
+				"biomarkers_studied": [
+					"PD-L1",
+					"VEGF",
+					"EGFR"
+				],
+				"treatment_information": {
+					"treatment_types": [
+						"chemotherapy",
+						"immunotherapy"
+					],
+					"response_evaluation": "Choi criteria"
+				},
+				"patient_demographics": {
+					"age_range": "40-90",
+					"ethnicity": [
+						"Hispanic",
+						"Caucasian",
+						"Asian"
+					],
+					"comorbidities": [
+						"asthma",
+						"chronic kidney disease"
+					]
+				}
+			},
+			"data_access": {
+				"access_level": "restricted",
+				"data_use_agreement": true,
+				"doi": "10.9101/example.doi"
+			},
+			"publication_info": {
+				"related_publications": [
+					{
+						"title": "Novel Biomarkers in Cancer Treatment",
+						"journal": "Journal of Clinical Oncology",
+						"year": 2025,
+						"doi": "10.9101/abc789"
+					}
+				],
+				"publication_status": "submitted"
+			},
+			"top_hash": "c1d2e3f4g5h6i7j8k9l0",
+			"refs": {
+				"dataset": "MICRO003"
+			}
+		},
+		"class_name": "GWAS Data",
+		"class_id": "Genomic Association",
+		"project_name": "Type 2 Diabetes Genetic Study",
+		"project_id": "PRJ004",
+		"root_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440001",
+			"created_at": 1689857400.0,
+			"size": 500000000,
+			"num_objects": 2
+		},
+		"leaf_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440001",
+			"created_at": 1689857400.0,
+			"size": 500000000,
+			"num_objects": 2
+		},
+		"owner": "Genetics Team",
+		"created_by": "Dr. Michael Johnson",
+		"created_at": 1689857400.0,
+		"modified_by": "Dr. Michael Johnson",
+		"modified_at": 1689857400.0,
+		"alias": "T2D_GWAS_2023",
+		"seq_id": 4,
+		"name": "GWAS Data/4",
+		"num_versions": 1,
+		"status": "active",
+		"class_status": "deprecated",
+		"project_status": "active"
+	},
+	{
+		"id": "MDL005",
+		"title": "Adverse Drug Reaction Predictor",
+		"description": "Neural network model to predict adverse drug reactions",
+		"tags": [
+			"adverse drug reactions",
+			"neural network",
+			"predictive model",
+			"pharmacovigilance",
+			"machine learning"
+		],
+		"metadata": {
+			"study_design": "Randomized Controlled Trial",
+			"sample_size": 300,
+			"collection_method": "Single-cell RNA-seq",
+			"platform": "10x Genomics",
+			"data_quality": {
+				"seq_quality_score": 35,
+				"completion_rate": 97,
+				"contamination_level": 0.3,
+				"duplication_rate": 2
+			},
+			"additional_info": {
+				"ethics_approval": true,
+				"biomarkers_studied": [
+					"IL-6",
+					"TNF-alpha",
+					"CRP"
+				],
+				"treatment_information": {
+					"treatment_types": [
+						"immunosuppressants",
+						"biologics"
+					],
+					"response_evaluation": "ACR20"
+				},
+				"patient_demographics": {
+					"age_range": "18-65",
+					"ethnicity": [
+						"African American",
+						"Caucasian",
+						"Asian"
+					],
+					"comorbidities": [
+						"rheumatoid arthritis",
+						"osteoporosis"
+					]
+				}
+			},
+			"data_access": {
+				"access_level": "restricted",
+				"data_use_agreement": true,
+				"doi": "10.1111/example.doi"
+			},
+			"publication_info": {
+				"related_publications": [
+					{
+						"title": "Novel Biomarkers in Autoimmune Diseases",
+						"journal": "Nature Immunology",
+						"year": 2024,
+						"doi": "10.1111/def456"
+					}
+				],
+				"publication_status": "under review"
+			},
+			"top_hash": "e5f6g7h8i9j0k1l2m3n4",
+			"refs": {
+				"dataset": "GWAS004"
+			}
+		},
+		"class_name": "Machine Learning Model",
+		"class_id": "ML Model",
+		"project_name": "Adverse Drug Reaction Study",
+		"project_id": "PRJ005",
+		"root_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440002",
+			"created_at": 1691226300.0,
+			"size": 200000000,
+			"num_objects": 2
+		},
+		"leaf_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440002",
+			"created_at": 1691226300.0,
+			"size": 200000000,
+			"num_objects": 2
+		},
+		"owner": "AI/ML Team",
+		"created_by": "Dr. Sarah Lee",
+		"created_at": 1691226300.0,
+		"modified_by": "Dr. Sarah Lee",
+		"modified_at": 1691226300.0,
+		"alias": "ADR_PRED_2023",
+		"seq_id": 5,
+		"name": "Machine Learning Model/5",
+		"num_versions": 1,
+		"status": "deprecated",
+		"class_status": "active",
+		"project_status": "active"
+	},
+	{
+		"id": "PROT006",
+		"title": "Lung Cancer Proteome Analysis",
+		"description": "Mass spectrometry data from 50 lung cancer samples",
+		"tags": [
+			"lung cancer",
+			"proteomics",
+			"mass spectrometry",
+			"oncology",
+			"biomarkers"
+		],
+		"metadata": {
+			"study_design": "Longitudinal Study",
+			"sample_size": 500,
+			"collection_method": "Mass Spectrometry",
+			"platform": "Thermo Fisher Q Exactive",
+			"data_quality": {
+				"seq_quality_score": 40,
+				"completion_rate": 99,
+				"contamination_level": 0.1,
+				"duplication_rate": 1
+			},
+			"additional_info": {
+				"ethics_approval": true,
+				"biomarkers_studied": [
+					"PSA",
+					"PSMA",
+					"hK2"
+				],
+				"treatment_information": {
+					"treatment_types": [
+						"hormone therapy",
+						"radiation therapy"
+					],
+					"response_evaluation": "PCWG3 criteria"
+				},
+				"patient_demographics": {
+					"age_range": "50-85",
+					"ethnicity": [
+						"Caucasian",
+						"African American",
+						"Hispanic"
+					],
+					"comorbidities": [
+						"hypertension",
+						"diabetes"
+					]
+				}
+			},
+			"data_access": {
+				"access_level": "open",
+				"data_use_agreement": false,
+				"doi": "10.2222/example.doi"
+			},
+			"publication_info": {
+				"related_publications": [
+					{
+						"title": "Proteomic Profiling in Prostate Cancer",
+						"journal": "Molecular Cancer Research",
+						"year": 2025,
+						"doi": "10.2222/ghi789"
+					}
+				],
+				"publication_status": "published"
+			},
+			"top_hash": "f6g7h8i9j0k1l2m3n4o5",
+			"refs": null
+		},
+		"class_name": "Proteomics Data",
+		"class_id": "Proteomics",
+		"project_name": "Lung Cancer Proteome Analysis",
+		"project_id": "PRJ006",
+		"root_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440003",
+			"created_at": 1694516400.0,
+			"size": 1000000000,
+			"num_objects": 51
+		},
+		"leaf_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440003",
+			"created_at": 1694516400.0,
+			"size": 1000000000,
+			"num_objects": 51
+		},
+		"owner": "Proteomics Team",
+		"created_by": "Dr. Robert Kim",
+		"created_at": 1694516400.0,
+		"modified_by": "Dr. Robert Kim",
+		"modified_at": 1694516400.0,
+		"alias": "LCPA_2023",
+		"seq_id": 6,
+		"name": "Proteomics Data/6",
+		"num_versions": 1,
+		"status": "active",
+		"class_status": "active",
+		"project_status": "deprecated"
+	},
+	{
+		"id": "MDL007",
+		"title": "Drug-Target Interaction Predictor",
+		"description": "Graph neural network for predicting drug-target interactions",
+		"tags": [
+			"drug-target interaction",
+			"graph neural network",
+			"machine learning",
+			"drug discovery",
+			"bioinformatics"
+		],
+		"metadata": {
+			"study_design": "Case-Control Study",
+			"sample_size": 250,
+			"collection_method": "ChIP-seq",
+			"platform": "Illumina NovaSeq",
+			"data_quality": {
+				"seq_quality_score": 38,
+				"completion_rate": 96,
+				"contamination_level": 0.4,
+				"duplication_rate": 4
+			},
+			"additional_info": {
+				"ethics_approval": true,
+				"biomarkers_studied": [
+					"HDAC",
+					"p300",
+					"H3K27ac"
+				],
+				"treatment_information": {
+					"treatment_types": [
+						"epigenetic therapy",
+						"immunotherapy"
+					],
+					"response_evaluation": "iRECIST"
+				},
+				"patient_demographics": {
+					"age_range": "20-70",
+					"ethnicity": [
+						"Asian",
+						"Caucasian",
+						"Middle Eastern"
+					],
+					"comorbidities": [
+						"obesity",
+						"hyperlipidemia"
+					]
+				}
+			},
+			"data_access": {
+				"access_level": "restricted",
+				"data_use_agreement": true,
+				"doi": "10.3333/example.doi"
+			},
+			"publication_info": {
+				"related_publications": [
+					{
+						"title": "Epigenetic Signatures in Cancer Progression",
+						"journal": "Nature Genetics",
+						"year": 2024,
+						"doi": "10.3333/jkl012"
+					}
+				],
+				"publication_status": "in press"
+			},
+			"top_hash": "g7h8i9j0k1l2m3n4o5p6",
+			"refs": {
+				"dataset": "PROT006"
+			}
+		},
+		"class_name": "Machine Learning Model",
+		"class_id": "ML Model",
+		"project_name": "Drug-Target Interaction Study",
+		"project_id": "PRJ007",
+		"root_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440004",
+			"created_at": 1696172400.0,
+			"size": 300000000,
+			"num_objects": 2
+		},
+		"leaf_version": {
+			"id": "550e8400-e29b-41d4-a716-446655440005",
+			"created_at": 1697382000.0,
+			"size": 350000000,
+			"num_objects": 2
+		},
+		"owner": "AI/ML Team",
+		"created_by": "Dr. David Wang",
+		"created_at": 1696172400.0,
+		"modified_by": "Dr. David Wang",
+		"modified_at": 1697382000.0,
+		"alias": "DTIP_2023",
+		"seq_id": 7,
+		"name": "Machine Learning Model/7",
+		"num_versions": 2,
+		"status": "active",
+		"class_status": "active",
+		"project_status": "obsolete"
+	}
+]

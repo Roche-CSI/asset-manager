@@ -1,0 +1,72 @@
+@use "src/assets/scss/mixins";
+@use "src/assets/scss/colors";
+
+.page {
+  @include mixins.page;
+}
+
+.pageHeader {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card {
+  @include mixins.card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formHeader {
+  border: 1px colors.$main-color-blue;
+  color: colors.$txt-white;
+}
+
+.formButton {
+  width: 100%;
+  font-weight: bold;
+  background: colors.$main-color-blue;
+}
+
+.arrow {
+  width:30px;
+  height:20px;
+  display: flex;
+  margin-top: -15px;
+}
+
+.formField {
+  font-family: "Mulish", sans-serif !important;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 10px;
+
+  &.form-label {
+    color: colors.$href-color;
+  }
+}
+
+.feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.875em;
+  white-space:pre-wrap; 
+
+  &.valid {
+    color: #198754
+  }
+
+  &.invalid {
+    color: #dc3545
+  }
+}

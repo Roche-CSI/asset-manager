@@ -1,0 +1,14 @@
+{
+  "11111111-aaaa-bbbb-cccc-000000000001": {
+      "id": "11111111-aaaa-bbbb-cccc-000000000001",
+      "name": "project_name",
+      "is_active": true,
+      "staging_url": "gs://dev/john_doe",
+      "remote_url": "gs://dev/john_doe_sb",
+      "can_edit": true,
+      "can_read": true,
+      "can_delete": false,
+      "can_admin_project": true,
+      "credentials_user": "credential_11111111-aaaa-bbbb-cccc-000000000001.json"
+  }
+}

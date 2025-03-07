@@ -1,0 +1,23 @@
+@use "src/assets/scss/colors";
+
+.toastHeader {
+  text-transform: capitalize;
+}
+
+.toastBody {
+  background-color: colors.$main-bg-light;
+  text-align: left;
+  &.success {
+    color: green;
+  }
+  &.info {
+    color: darkcyan;
+  }
+  &.primary {
+    background-color: whitesmoke !important;
+    color: blue;
+  }
+  &.danger {
+    color: red;
+  }
+}

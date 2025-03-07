@@ -1,0 +1,121 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+@use "src/assets/scss/mixins";
+
+.page {
+  padding: 0px 40px;
+}
+
+.pageHeader {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 30px;
+
+  >p>a {
+    margin-left: .2rem;
+  }
+}
+
+.card {
+  @include mixins.card;
+  padding: 0px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.textBoxHeader {
+  border-bottom: 1px solid rgb(232, 232, 232);
+  height: 65px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.tbHeaderContents {
+  text-align: left;
+  padding: 16px 16px 0px 16px;
+  font-size: 13px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &>*svg {
+    width: 0.9em;
+    height: 0.9em;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+  }
+
+  &>button {
+    padding: 0px;
+
+    &>svg {
+      &:hover {
+        color: colors.$main-color-blue;
+      }
+    }
+  }
+}
+
+.readMeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: none;
+
+  &>span {
+    margin-left: 10px;
+    color: colors.$txt-color-dark;
+    font-weight: bold;
+  }
+}
+
+.readmeModal {
+  &>[class="modal-dialog"] {
+    max-width: 1200px;
+  }
+}
+
+.headerContent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  &>button {
+    margin-left: 20px;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 500vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px rgb(16 22 26 / 10%);
+  // border-radius: 4px;
+  & [class*="w-md-editor"] {
+    flex: 1;
+    box-shadow: none;
+    & [class*="w-md-editor-content"] {
+      height: 100% !important;
+    }
+  }
+  & [class*="w-md-editor-text"] {
+    //border: 2px solid green;
+    flex: 1;
+  }
+
+  & > *textarea {
+    cursor: auto;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: none;
+  }
+}

@@ -1,0 +1,234 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+@use "src/assets/scss/mixins";
+
+.page {
+  display: flex;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  &>div:first-child {
+    margin-right: 20px;
+  }
+
+  & [class="col-8"] {
+    padding-left: 0px;
+  }
+}
+
+.card {
+  @include mixins.card;
+  padding: 0px;
+  resize: both;
+  overflow: auto;
+}
+
+.cardHeader {
+  height: 65px;
+  padding: 16px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  border-top-right-radius: variables.$border-radius;
+  border-top-left-radius: variables.$border-radius;
+  border-bottom: none;
+  //layout
+  display: flex;
+  color: colors.$txt-color-dark;
+}
+
+.headerItem {
+  //border: 1px solid red;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+  &>span {
+    padding: 0px 10px 0px 5px;
+    text-overflow: ellipsis;
+  }
+}
+
+.infoHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(242, 241, 241);
+  font-size: 14px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-transform: capitalize;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid rgb(216, 221, 236);
+  border-top: none;
+  padding: 5px 5px 5px 5px;
+
+  > div {
+    padding-left: 5px;
+    border-left: 1px solid rgb(215, 217, 220);
+
+    &:first-child {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      border-left: none;
+      width: 295px;
+    }
+
+    &:nth-child(2) {
+      width: calc(100% - 300px);
+    }
+  }
+}
+
+.compareVersionSelector {
+  flex-grow: 1;
+  margin-left: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectorContainer {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.icon {
+  margin: 0px 5px 0px 5px;
+}
+
+.dropDown {
+  width: 170px;
+
+  & [class*="container"] {
+
+    //border: 4px solid blue;
+    & [class*="control"] {
+      cursor: pointer;
+      box-sizing: border-box;
+      // font-weight: 600;
+      //background-color: colors.$main-color-blue;
+      //border-radius: variables.$border-radius;
+      border-radius: 6px;
+      background-color: colors.$main-bg-light;
+      // background-color: #f6f8fa;
+      //background-color: rgb(232, 232, 232);
+      //background-color: yellow;
+      min-height: 0px;
+
+      &>div:first-child {
+        //background-color: red;
+        padding-bottom: 0px;
+        padding-top: 0px;
+      }
+
+      //& [class*="valueContainer"] {
+      //  background-color: red;
+      //}
+      &>div:last-child {
+        //border: 1px solid blue;
+        padding-bottom: 0px;
+        padding-top: 0px;
+
+        & [class*="indicatorContainer"] {
+          //background-color: purple;
+          padding: 2px 4px;
+        }
+      }
+    }
+  }
+}
+
+.historyContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 95vh;
+  border-collapse: collapse;
+}
+
+.emptyContainer {
+  @extend .historyContainer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.historyTable {
+  width: 300px;
+  border: 1px solid rgb(232, 232, 232);
+}
+
+.historyViewer {
+  width: calc(100% - 100px);
+  border: 1px solid rgb(232, 232, 232);
+  border-collapse: collapse;
+}
+
+.spinnerContainer {
+  @extend .historyContainer
+}
+
+.panelField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.searchBar {
+  height: 30px;
+  width: 60%;
+  background-color: colors.$main-bg;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d7de;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding: 5px 10px 5px 5px;
+  &:focus-within {
+    border: 2px solid colors.$main-color-blue;
+  }
+
+  & > input {
+    padding: 5px 60px 5px 0px;
+    font-size: 1rem;
+    color: colors.$txt-color;
+    background-color: colors.$main-bg;
+    border: none;
+    appearance: none;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .searchIcon {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+.categoryDropDown {
+  width: 60px;
+  margin-left: -35px;
+
+  & [class*="-control"] {
+    height: 28px;
+    min-height: 0px;
+
+    & div {
+      margin-top: -2px;
+    }
+  }
+
+  & [class*="indicatorContainer"] {
+    padding: 0;
+  }
+}

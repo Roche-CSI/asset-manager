@@ -1,0 +1,14 @@
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/colors";
+@use "table_mixin";
+
+.tableWrapper {
+  @include table_mixin.table_wrapper;
+}
+.tablePagination {
+  @include table_mixin.table_pagination;
+
+  & li {
+    width: 33px;
+  }
+}

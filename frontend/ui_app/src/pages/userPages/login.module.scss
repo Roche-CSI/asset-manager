@@ -1,0 +1,141 @@
+@use "src/assets/scss/mixins";
+@use "src/assets/scss/colors";
+
+.page {
+  @include mixins.page;
+}
+
+.card {
+  @include mixins.card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  min-height: 500px;
+  flex-direction: column;
+}
+
+.formHeader {
+  border: 1px colors.$main-color-blue;
+  color: colors.$txt-white;
+}
+
+.userInfo {
+  color: red;
+  //background-color: colors.$main-color-blue;
+  // border: 1px solid rgb(232, 232, 232);
+  padding: 0px 5px;
+  border-radius: 4px;
+}
+
+.formContainer {
+  //border: 1px solid purple;
+}
+
+.formField {
+  padding: 20px;
+  text-align: left;
+  //border: 1px solid blue;
+}
+
+.formButton {
+  width: 100%;
+  font-weight: bold;
+  background: colors.$main-color-blue;
+}
+
+.googleLogin {
+  cursor: pointer;
+  & > img {
+    width: 20px;
+    margin: 5px 15px 5px 5px;
+  }
+
+}
+
+.signup {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  border-top: 1px solid rgba(217, 217, 217, 0.579);
+  padding-top: 20px;
+  color: #494949;
+}
+
+.signupLink {
+  margin-left: 5px;
+  color: colors.$href-color;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.arrow {
+  width:30px;
+  height:20px;
+  display: flex;
+}
+
+.arrow:after {
+  content: "";
+  flex: 1;
+  margin: 0 5px;
+  background-color: rgb(180, 179, 179);
+  clip-path: polygon(0 5px,calc(100% - 10px) 5px,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,calc(100% - 10px) calc(100% - 5px),0 calc(100% - 5px));
+  animation: a3 .5s infinite alternate;
+}
+
+.arrow:after {
+  --s:-1;
+}
+@keyframes a3 {
+  0%  {transform: scaleX(var(--s,1)) translate(-2px)}
+  100%{transform: scaleX(var(--s,1)) translate( 2px)}
+}
+
+.signupWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signupText{
+  // font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.579);
+}
+
+.formField {
+  padding: 5px 20px;
+  font-family: "Mulish", sans-serif !important;
+  font-size: 15px;
+  text-align: left;
+
+  &.form-label {
+    color: colors.$href-color;
+  }
+}
+
+.feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.875em;
+  white-space:pre-wrap; 
+
+  &.valid {
+    color: #198754
+  }
+
+  &.invalid {
+    color: #dc3545
+  }
+}
+
+.spinner {
+  @extend .googleLogin;
+}

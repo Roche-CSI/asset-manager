@@ -1,0 +1,106 @@
+@use "./src/assets/scss/colors";
+@use "./src/assets/scss/variables";
+/**
+theme:
+https://dashboardpack.com/live-demo-preview/?livedemo=378806
+ */
+
+@mixin disabledLink {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+  color: grey;
+}
+
+
+.pageHeader {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  text-align: left;
+  //font-size: 25px;
+  font-weight: 600;
+  & > h3 {
+    margin-right: 20px;
+    &:last-child {
+      color: colors.$main-color-blue;
+    }
+  }
+  /**
+  disable links only using css
+  https://www.tutorialrepublic.com/faq/how-to-disable-a-link-using-only-css.php
+   */
+  & > a {
+    &:last-child {
+      @include disabledLink;
+      text-align: left;
+      //direction: rtl; // ellipsis from beginning
+      overflow: hidden;
+      white-space: prewrap;
+      // text-overflow: ellipsis;
+      // width: 200px;
+    }
+  }
+}
+
+.pageHeaderSubTitle {
+  display: flex;
+  font-size: 14px;
+  color: colors.$txt-color-dark;
+  text-transform: none;
+  > div > * {
+    margin-right: 10px;
+  }
+}
+
+.link {
+  //text-decoration: none;
+  //&:link {
+  //  color: colors.$main-color-blue;
+  //}
+  //&:visited {
+  //  color: colors.$main-color-blue;
+  //}
+  //&:hover {
+  //  color: darkslateblue;
+  //}
+  //&:active {
+  //  color: blue;
+  //}
+}
+
+.page {
+  padding: 0px 20px;
+}
+
+.card {
+  position: relative;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: colors.$main-bg;
+  box-shadow: colors.$box-shadow;
+  //box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 2px;
+  border-radius: variables.$border-radius;
+  box-sizing: border-box;
+  &.fullHeight {
+    height: calc(100% - 30px);
+  }
+
+  & > div ~ div {
+    margin-top: 30px;
+  }
+}
+
+.cardHeader {
+  text-transform: capitalize;
+}
+
+.cardFooter {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.tags {
+  font-size: 13px;
+  margin-bottom: 5px;
+}

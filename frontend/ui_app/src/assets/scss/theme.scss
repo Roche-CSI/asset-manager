@@ -1,0 +1,40 @@
+@use "colors";
+
+.theme-mode-light {
+  $main-bg: colors.$main-bg-light;
+  $second-bg: colors.$second-bg-light;
+  $txt-color: colors.$txt-color-light;
+  $box-shadow: colors.$box-shadow-light;
+}
+
+.theme-mode-dark {
+  $main-bg: colors.$main-bg-dark;
+  $second-bg: colors.$second-bg-dark;
+  $txt-color: colors.$txt-color-dark;
+  $box-shadow: colors.$box-shadow-dark;
+}
+
+.theme-color-blue {
+  $main-color: colors.$main-color-blue;
+  $second-color: colors.$second-color-blue;
+}
+
+.theme-color-red {
+  $main-color: colors.$main-color-red;
+  $second-color: colors.$second-color-red;
+}
+
+.theme-color-cyan {
+  $main-color: colors.$main-color-cyan;
+  $second-color: colors.$second-color-cyan;
+}
+
+.theme-color-green {
+  $main-color: colors.$main-color-green;
+  $second-color: colors.$second-color-green;
+}
+
+.theme-color-orange {
+  $main-color: colors.$main-color-orange;
+  $second-color: colors.$second-color-orange;
+}

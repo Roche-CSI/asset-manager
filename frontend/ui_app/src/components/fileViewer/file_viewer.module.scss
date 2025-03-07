@@ -1,0 +1,107 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+@use "src/assets/scss/mixins";
+
+.viewContainer {
+  height: 100%;
+  width: 100%;
+  resize: both;
+  overflow: auto;
+}
+
+.cardHeader {
+  height: 65px;
+  padding: 16px 100px 16px 30px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  border-top-right-radius: variables.$border-radius;
+  border-top-left-radius: variables.$border-radius;
+  border-bottom: none;
+  //layout
+  display: flex;
+  justify-content: space-between;
+  color: colors.$txt-color-dark;
+}
+
+.headerItem {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  & > span {
+    padding: 0px 10px 0px 5px;
+    text-overflow: ellipsis;
+  }
+}
+
+.fileInfoDivider {
+  width: 1px;
+  height: 18px;
+  margin-top: 5px;
+  margin-right: 3px;
+  vertical-align: middle;
+  border-left: 1px solid #bcc2c8;
+}
+
+.fileViewer {
+  text-align: left;
+  border: 1px solid rgb(232, 232, 232);
+
+  &.yaml {
+    border: none;
+  } 
+}
+
+.imageViewer {
+  //border: 3px solid blue;
+  box-shadow: colors.$box-shadow-light;
+  & > img {
+    width: 100%;
+  }
+}
+
+.nameContainer {
+  float: left;
+}
+
+.fileName {
+  float: left;
+  text-align: left;
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  & > span {
+    background-color: rgb(232, 232, 232);
+    color: colors.$txt-color-dark;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+}
+
+.copyButton {
+  float: left;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+
+.alert {
+  margin-bottom: -1rem;
+
+  & .header {
+    color: colors.$main-color-blue;
+  }
+}
+
+.downloadButton {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: colors.$second-bg-light;
+  justify-content: center;
+  align-items: center;
+
+  & > p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}

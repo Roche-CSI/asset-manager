@@ -1,0 +1,28 @@
+
+$blue: #3b8dc0;
+$gcp_blue: #1a73e8;
+
+.bar_icon {
+  font-size: 24px;
+  color: $blue;
+  margin: auto 10px;
+}
+
+.app_title {
+  color: $blue;
+  font-weight: bold;
+}
+
+.logo {
+  height: 28px;
+  margin: auto 10px auto 10px;
+}
+
+.user_icon {
+  color: whitesmoke;
+  margin: auto 10px auto auto;
+  font-size: 24px;
+  background: $blue;
+  border-radius: 32px;
+  padding: 8px;
+}

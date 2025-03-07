@@ -1,0 +1,11 @@
+.iconWrapper {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  & > svg {
+    //transform: scale(0.2);
+  }
+  padding: 0px;
+  width: 20px;
+  box-sizing: border-box;
+  margin-right: 20px;
+}

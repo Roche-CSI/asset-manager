@@ -1,0 +1,39 @@
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+/*.form-container {*/
+/*  @apply rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark;*/
+/*}*/
+
+/*.row-container {*/
+/*  @apply mb-4.5 flex flex-col gap-6 xl:flex-row;*/
+/*}*/
+
+/*.form-group {*/
+/*  @apply w-full;*/
+/*}*/
+
+/*.form-label {*/
+/*  @apply mb-2.5 block text-black dark:text-white;*/
+/*}*/
+
+/*.form-input {*/
+/*  @apply w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary;*/
+/*}*/
+
+/*.form-select-container {*/
+/*  @apply relative z-20 bg-transparent dark:bg-form-input;*/
+/*}*/
+
+/*.form-select {*/
+/*  @apply relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary;*/
+/*}*/
+
+/*.form-textarea {*/
+/*  @apply w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary;*/
+/*}*/
+
+/*.form-button {*/
+/*  @apply flex w-full justify-center rounded !bg-primary p-3 font-medium text-gray;*/
+/*}*/

@@ -1,0 +1,32 @@
+@use "src/assets/scss/colors";
+
+.iconContainer {
+  padding: 1rem 0rem 0.8rem 0rem;
+  cursor: pointer;
+  width: 200px;
+}
+
+.iconBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    color: colors.$main-color-blue;
+  }
+}
+
+.iconLabel {
+  font-weight: bold;
+  white-space: prewrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.projectIcon {
+  font-size: 4rem;
+  box-sizing: border-box;
+}

@@ -1,0 +1,56 @@
+{
+  "gender": "male",
+  "name": {
+    "title": "Mrs",
+    "first": "user1",
+    "last": "Harper"
+  },
+  "location": {
+    "street": {
+      "number": 6233,
+      "name": "Eason Rd"
+    },
+    "city": "Fayetteville",
+    "state": "Alaska",
+    "country": "United States",
+    "postcode": 23028,
+    "coordinates": {
+      "latitude": "84.9447",
+      "longitude": "15.3947"
+    },
+    "timezone": {
+      "offset": "+3:00",
+      "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+    }
+  },
+  "email": "ramona.harper@example.com",
+  "login": {
+    "uuid": "c5789340-2620-4b9d-ba49-cb5d592f59e0",
+    "username": "organicrabbit761",
+    "password": "deer",
+    "salt": "xlcQI1mP",
+    "md5": "493d3de84f8b25d0e74fc8686576cc37",
+    "sha1": "69ef21dee25213d68438aceecbe03ceb6904b47f",
+    "sha256": "ea2d23270f4f07b360686913f8398da68dfc9c17c7093b6bd5f83d71659aa743"
+  },
+  "dob": {
+    "date": "1964-06-10T06:05:00.037Z",
+    "age": 58
+  },
+  "registered": {
+    "date": "2017-04-26T04:19:03.240Z",
+    "age": 5
+  },
+  "phone": "(519)-369-0071",
+  "cell": "(743)-083-4122",
+  "id": {
+    "name": "SSN",
+    "value": "033-92-1072"
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/women/32.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/women/32.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/32.jpg"
+  },
+  "nat": "US"
+}

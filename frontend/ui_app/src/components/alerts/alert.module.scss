@@ -1,0 +1,21 @@
+@use "src/assets/scss/colors";
+
+.defaultStyle {
+  min-width: 400px;
+}
+
+.header {
+  color: colors.$main-color-blue;
+}
+
+.footer {
+  //border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.alertButton {
+  margin-left: 20px;
+  border-width: 2px;
+  width: 150px;
+}

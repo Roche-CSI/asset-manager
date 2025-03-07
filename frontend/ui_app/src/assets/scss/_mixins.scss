@@ -1,0 +1,17 @@
+@use "colors";
+@use "variables";
+
+@mixin page {
+  padding: 0px 20px;
+}
+
+@mixin card {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: colors.$main-bg;
+  border: 1px solid #c7cdd4;
+  // box-shadow: colors.$box-shadow;
+  //box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 2px;
+  // border-radius: variables.$border-radius;
+  box-sizing: border-box;
+}

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.data-table-common .datatable-search {
+  @apply relative overflow-hidden rounded w-100 !ml-0;
+}
+.data-table-one .datatable-search input {
+  @apply h-[46px] w-full rounded border border-stroke bg-transparent px-5 outline-none focus:border-primary dark:border-strokedark dark:bg-meta-4 dark:focus:border-primary;
+}
+.data-table-common .datatable-selector{
+  @apply relative z-20 inline-flex bg-transparent p-0 font-medium text-body dark:text-bodydark outline-none;
+}
+.data-table-common .datatable-header {
+  @apply w-full sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-stroke py-4.5 px-7.5 dark:border-strokedark flex-col flex sm:gap-x-4 sm:gap-y-0 after:hidden;
+}
+.data-table-common .datatable-header label{
+  @apply inline-flex items-center gap-2.5 font-medium capitalize text-black dark:text-white;
+}
+.data-table-common .datatable-header label select{
+  @apply relative z-20 inline-flex bg-transparent p-0 font-medium text-body dark:text-bodydark outline-none;
+}
+.datatable-table .datatable-sorter {
+  @apply after:hidden before:hidden;
+}
+
+.datatable-table > thead > tr:first-child > th {
+  @apply text-left font-medium border-transparent pt-9 pb-2.5;
+}
+
+.data-table-common > table {
+  @apply !text-body;
+}
+.data-table-common .datatable-table > tbody > tr > td:first-child,
+.data-table-common .datatable-table > thead > tr > th:first-child {
+  @apply pl-8;
+}
+.data-table-common .datatable-table > tbody > tr > td:last-child,
+.data-table-common .datatable-table > thead > tr > th:last-child {
+  @apply pr-8;
+}
+.data-table-common .datatable-table > thead > tr:last-child > th {
+  @apply !border-b border-stroke dark:border-strokedark pb-6;
+}
+.data-table-common .datatable-table > thead > tr:last-child > th input {
+  @apply h-[34px] w-full rounded border border-stroke bg-transparent px-3 text-sm outline-none focus:border-primary dark:border-strokedark dark:bg-meta-4 dark:focus:border-primary;
+}
+.data-table-common .datatable-table > tbody > tr {
+  @apply hover:bg-primary hover:bg-opacity-5;
+}
+.data-table-one .datatable-table > tbody > tr> td:first-child {
+  @apply text-primary dark:text-white;
+}
+.data-table-common .datatable-table > tbody > tr> td {
+  @apply py-5 border-b border-stroke dark:border-strokedark font-medium;
+}
+.data-table-one .datatable-bottom {
+  @apply sm:flex-row-reverse sm:items-center sm:justify-between gap-4 flex-col flex sm:space-x-4 sm:gap-0 after:hidden py-7 px-8;
+}
+.data-table-common .datatable-wrapper.no-footer .datatable-container {
+  @apply border-none;
+}
+.data-table-common .datatable-info {
+  @apply !m-0 font-medium;
+}
+
+.data-table-two .datatable-footer {
+  @apply sm:flex-row sm:items-center sm:justify-between gap-4 flex-col flex sm:space-x-4 sm:gap-0 after:hidden py-7 px-8;
+}
+.data-table-two .data-table-header .datatable-search {
+  @apply relative overflow-hidden rounded w-100 !ml-0;
+}
+.data-table-two .data-table-header .datatable-search input {
+  @apply h-[46px] w-full rounded border border-stroke bg-transparent px-5 outline-none focus:border-primary dark:border-strokedark dark:bg-meta-4 dark:focus:border-primary;
+}
+
+.data-table-two .datatable-footer .datatable-pagination {
+  @apply !m-0 flex flex-row;
+}
+.data-table-two .datatable-footer .datatable-pagination button {
+  @apply cursor-pointer p-0 font-medium text-body dark:text-bodydark flex h-8 w-8 items-center justify-center rounded hover:bg-primary hover:text-white;
+}
+.data-table-two .datatable-footer .datatable-pagination button.datatable-active {
+  @apply bg-primary text-white;
+}
+
+.star-icon {
+  /* @apply fill-orange-400 cursor-pointer ml-auto mr-0; */
+  @apply fill-orange-400 cursor-pointer;
+}
+
+.unstar-icon {
+  /* @apply fill-body hover:fill-orange-400 cursor-pointer ml-auto mr-0; */
+  @apply fill-body hover:fill-orange-400 cursor-pointer;
+}
+
+.icon-path {
+  pointer-events: none;
+}

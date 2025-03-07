@@ -1,0 +1,1 @@
+export {default as ViewWithSideBar} from './old/ViewWithSideBar';

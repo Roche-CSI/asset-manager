@@ -1,0 +1,22 @@
+[
+  {
+    "type": "error",
+    "content": "Curabitur id eros quis nunc suscipit blandit"
+  },
+  {
+    "type": "info",
+    "content": "Duis malesuada justo eu sapien elementum, in semper diam posuere"
+  },
+  {
+    "type": "success",
+    "content": "Donec at nisi sit amet tortor commodo porttitor pretium a erat"
+  },
+  {
+    "type": "alert",
+    "content": "In gravida mauris et nisi"
+  },
+  {
+    "type": "error",
+    "content": "Curabitur id eros quis nunc suscipit blandit"
+  }
+]

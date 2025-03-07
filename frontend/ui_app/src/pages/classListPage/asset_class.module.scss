@@ -1,0 +1,50 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+
+/**
+theme:
+https://dashboardpack.com/live-demo-preview/?livedemo=378806
+ */
+
+.pageHeader {
+  margin-bottom: 20px;
+  width: 210px;
+  //text-transform: capitalize;
+  text-align: left;
+  font-weight: bold;
+}
+
+.page {
+  padding: 0px 20px;
+}
+
+.card {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: colors.$main-bg;
+  //box-shadow: colors.$box-shadow;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 2px;
+  border-radius: variables.$border-radius;
+  box-sizing: border-box;
+  &.fullHeight {
+    height: calc(100% - 30px);
+  }
+
+  & > div ~ div {
+    margin-top: 30px;
+  }
+}
+
+.cardHeader {
+  text-transform: capitalize;
+}
+
+.cardFooter {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.tags {
+  font-size: 11px;
+  margin-bottom: 20px;
+}

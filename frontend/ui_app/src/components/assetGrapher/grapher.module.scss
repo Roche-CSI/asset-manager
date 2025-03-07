@@ -1,0 +1,48 @@
+.graphContainer {
+  width: 100%;
+  height: 700px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+
+  :global {
+    .react-flow__node {
+      background: transparent;
+      border: none;
+      width: auto;
+      box-shadow: none !important; // Explicitly remove shadows
+
+      &-special {
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none !important; // Explicitly remove shadows
+
+        &.selected,
+        &:focus,
+        &:focus-visible {
+          outline: none;
+          border: none;
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    // Add this to ensure no shadows on any react-flow elements
+    .react-flow__node-default,
+    .react-flow__node-input,
+    .react-flow__node-output,
+    .react-flow__node-group {
+      box-shadow: none !important;
+    }
+
+    .react-flow__handle {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .react-flow__node:hover .react-flow__handle {
+      opacity: 1;
+    }
+  }
+}

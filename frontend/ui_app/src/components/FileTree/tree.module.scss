@@ -1,0 +1,77 @@
+@use "src/assets/scss/colors";
+
+.treeContainer {
+  width: 300px;
+  height: 90vh;
+  overflow: scroll;
+}
+
+.fileTree {
+  color: #1F2328;
+  padding: 5px 5px 0px 0px;
+}
+
+.tree {
+  margin-left: 10px;
+  padding-left: 0px;
+}
+
+.children {
+  @extend .tree;
+  border-left: 1px solid rgb(206, 205, 205);
+}
+
+.name {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2px 4px 2px 1px;
+  border: 1px transparent;
+  border-radius: 2px;
+
+  &.active {
+    background-color: rgba(208, 215, 222, 0.24);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(208, 215, 222, 0.562);
+    transition: 0.1s ease-in;
+  }
+
+  > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+  }
+}
+
+.fileName {
+  @extend .name;
+  justify-content: space-between;
+
+  >span {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding-top: 2px;
+  }
+}
+
+.fileIcon {
+  flex: 0 0 15px;
+  font-size: 14px;
+}
+
+.icon {
+  color: #656d76;
+}
+
+.folderIcon {
+  @extend .icon;
+  color: #54aeff;
+}

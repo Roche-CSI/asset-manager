@@ -1,0 +1,36 @@
+@use "src/assets/scss/colors";
+
+@mixin node {
+  color: colors.$main-bg-dark;
+  font-size: 14px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 2px;
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+.srcNode {
+  @include node;
+  //background-color: #3083dc;
+  border: 2px solid #7bdcb5;
+}
+
+.dstNode {
+  @include node;
+  border: 2px solid #fcb900;
+  //background-color: #4e4187;
+}
+
+.rootNode {
+  @include node;
+  // border: 2px solid colors.$main-color;
+  border: 2px solid colors.$second-bg-dark;
+}
+
+.biNode {
+  @include node;
+  border: 2px solid #d37fde;
+}
+

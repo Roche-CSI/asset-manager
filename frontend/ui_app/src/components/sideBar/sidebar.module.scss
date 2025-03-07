@@ -1,0 +1,75 @@
+/**
+https://github.com/safak/youtube/blob/react-admin/src/components/sidebar/sidebar.css
+https://github.com/trananhtuat/tua-react-admin/blob/main/src/components/Routes.jsx
+*/
+@use "src/assets/scss/variables";
+@use "src/assets/scss/colors";
+
+.sidebar {
+  // width: variables.$sidebar-width;
+  width: 20%;
+  height: 100vh;
+  position: sticky;
+  left: 0;
+  top: 0;
+  background-color: colors.$main-bg;
+  box-shadow: colors.$box-shadow;
+  box-sizing: border-box;
+  transition: 1s ease;
+}
+
+.sidebarSmall {
+  @extend .sidebar;
+  width: 5%;
+}
+
+.sidebarLogo {
+  //border: 1px solid red;
+  height: 75px;
+  display: block;
+  margin-bottom: 50px;
+  //text-align: left;
+}
+
+.logoImage {
+  //border: 1px solid blue;
+  & > img {
+    margin: auto;
+    height: 55px;
+    color: colors.$main-color-blue;
+    padding: 0px;
+  }
+}
+
+.logoText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > h6 {
+    color: colors.$main-color-blue;
+  }
+}
+
+.badge {
+  margin-left: 5px;
+  background-color: #6f42c1;
+  //background-color: #388c8a;
+  color: colors.$txt-white;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.sidebarWrapper {
+  padding: 20px;
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}

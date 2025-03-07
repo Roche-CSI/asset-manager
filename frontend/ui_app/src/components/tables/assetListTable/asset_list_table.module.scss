@@ -1,0 +1,317 @@
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/colors";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tableWrapper {
+  overflow-y: auto;
+  padding: 10px;
+
+  & > table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 14px;
+    border: 1px solid rgb(229, 236, 255);
+
+    & > thead {
+      //background-color: colors.$second-bg;
+      & > tr > th {
+        // text-transform: capitalize;
+        padding: 10px 15px;
+        text-align: left;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(229, 236, 255);
+        border-top: 1px solid rgb(229, 236, 255);
+        &:first-child {
+          border-left: 1px solid rgb(229, 236, 255);
+          border-bottom-left-radius: 4px;
+          border-top-left-radius: 4px;
+        }
+        &:last-child {
+          border-right: 1px solid rgb(229, 236, 255);
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          text-align: right;
+        }
+      }
+    }
+
+    & > th {
+      text-transform: capitalize;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    & > tbody > tr {
+      padding: 10px 15px;
+      cursor: pointer;
+      text-align: left;
+      & > td {
+        padding: 10px 15px;
+        &:last-child {
+          text-align: right;
+        }
+        & > a {
+          text-decoration: none;
+        }
+      }
+      &:hover {
+        & > td {
+          padding: 10px 15px;
+          letter-spacing: 0;
+          -webkit-text-stroke: 1px rgb(100, 116, 139); // ref: https://stackoverflow.com/questions/556153/inline-elements-shifting-when-made-bold-on-hover
+        }
+      }
+      &:nth-child(odd) {
+        //color: colors.$main-color-blue;
+        background-color: rgb(232, 232, 232);
+      }
+    }
+  }
+}
+
+.infoField {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tablePagination {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+
+  & li {
+    width: 37px;
+  }
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tablePaginationItem ~ .tablePaginationItem {
+  margin-left: 10px;
+}
+
+.tablePaginationItem {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    color: colors.$txt-white;
+    background-color: colors.$second-color;
+  }
+  &.active {
+    background-color: colors.$main-color;
+    color: colors.$txt-white;
+    font-weight: 600;
+  }
+}
+
+.daysLabel {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 300;
+  color: colors.$txt-white;
+  //background-color: adjust-color(colors.$second-color-blue, $alpha: -0.5);
+  background-color: colors.$second-color-blue;
+  border-radius: 30px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  min-width: 70px;
+  text-align: center;
+}
+
+.rowCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  //background-color: #fff;
+  margin: 10px 20px;
+  //border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 4px rgb(31 30 47 / 3%);
+  transition: variables.$transition-cubic;
+  &.odd {
+    background-color: red;
+  }
+  &.even {
+    background-color: blue;
+  }
+}
+
+.searchField {
+  float: right;
+  position: relative;
+  height: 35px;
+  width: 40%;
+  background-color: colors.$main-bg;
+  display: flex;
+  align-items: center;
+  border: 1px solid #2D1967;
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  &:focus-within {
+    border: 2px solid colors.$main-color-blue;
+  }
+  
+  & input {
+    height: 100%;
+    width: 100%;
+    padding: 5px 10px 5px 20px;
+    font-size: 1rem;
+    color: colors.$txt-color;
+    background-color: colors.$main-bg;
+    border: none;
+    appearance: none;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.tagsFormField {
+  padding: 10px;
+  border: 1px solid #d0d7de;
+  border-radius: variables.$border-radius;
+}
+
+.tagsForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #eee;
+  border-radius: variables.$border-radius;
+  border: 1px transparent;
+  color: rgb(99, 98, 98);
+  padding: 3px 10px;
+  position: relative;
+  margin: 3px;
+  text-decoration: none;
+
+  & .name {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  & svg {
+    color: rgb(207, 206, 206);
+    margin-left: 1px;
+    &:hover {
+      color: rgb(99, 98, 98);
+      cursor: pointer;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 300px;
+  background-color: rgb(127, 125, 125);
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  padding: 3px 0px 3px 0px;
+  border-radius: 6px;
+  margin-left: 40px;
+  position: absolute;
+  margin-top: 3px;
+  z-index: 1;
+  left: 105%;
+  opacity: 0;
+  transition: opacity 1s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent rgb(127, 125, 125) transparent transparent;
+  }
+}
+
+.assetName {
+  display: flex;
+  flex-direction: row;
+
+  & span {
+    &:nth-child(2) {
+      // font-weight: bold;
+    }
+  }
+
+  &:hover {
+    >.assetCopy {
+      opacity: 1.0;
+    }
+  }
+}
+
+.assetCopy {
+  opacity: 0.0;
+}
+
+.copyButton {
+  margin-left: 5px;
+}
+
+.tablePagination {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 10px 0px;
+  font-size: 14px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 8px !important;
+    > button {
+      border: 1px solid #d0d7de;
+      border-radius: 0.25rem;
+    }
+    > span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    input {
+      width: 50px
+    }
+  }
+}
+
+.spinnerContainer {
+  height: 100%;
+}

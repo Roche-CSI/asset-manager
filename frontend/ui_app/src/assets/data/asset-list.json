@@ -1,0 +1,403 @@
+[
+  {
+    "alias": "md5_ABC123xyz==",
+    "asset_class": {
+      "counter": 1,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user01",
+      "id": "00000000-0000-0000-0000-000000000001",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user01",
+      "name": "rnn_mle",
+      "owner": "user01",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user01",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000002",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user01",
+    "owner": "user01",
+    "seq_id": 1,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000001",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000002",
+        "commit_hash": "abcdef1234567890abcdef1234567890",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user01",
+        "id": 1,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gs:md5_ABC123xyz==::config.yaml"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "alias": "md5_DEF456uvw==",
+    "asset_class": {
+      "counter": 1,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user02",
+      "id": "00000000-0000-0000-0000-000000000003",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user02",
+      "name": "rnn_airflow",
+      "owner": "user02",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user02",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000004",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user02",
+    "owner": "user02",
+    "seq_id": 1,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000003",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000004",
+        "commit_hash": "1234567890abcdef1234567890abcdef",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user02",
+        "id": 2,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gs:md5_DEF456uvw==::variables.json",
+            "gs:md5_GHI789rst==::rnn_configs.yaml"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "alias": "md5_GHI789rst==",
+    "asset_class": {
+      "counter": 3,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user03",
+      "id": "00000000-0000-0000-0000-000000000005",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user03",
+      "name": "rnn_model",
+      "owner": "user03",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user03",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000006",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user03",
+    "owner": "user03",
+    "seq_id": 1,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000005",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000006",
+        "commit_hash": "abcdef1234567890abcdef1234567890",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user03",
+        "id": 3,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gs:md5_JKL012uvw==::../tmp/fake/path1/meta.yml",
+            "gs:md5_MNO345xyz==::../tmp/fake/path1/run_config_ckpt0.yml",
+            "gs:md5_PQR678abc==::../tmp/fake/path1/training.yml",
+            "gs:md5_STU901def==::../tmp/fake/path1/git_commit_info_ckpt0.yml",
+            "gs:md5_VWX234ghi==::../tmp/fake/path1/graph_version.txt",
+            "gs:md5_YZA567jkl==::../tmp/fake/path1/model.yml",
+            "gs:md5_BCD890mno==::../tmp/fake/path1/model.h5",
+            "gs:md5_EFG123pqr==::../tmp/fake/path1/summary_dict.json"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "alias": "sha256_1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "asset_class": {
+      "counter": 1,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user04",
+      "id": "00000000-0000-0000-0000-000000000007",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user04",
+      "name": "rnn_image",
+      "owner": "user04",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user04",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000008",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user04",
+    "owner": "user04",
+    "seq_id": 1,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000007",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000008",
+        "commit_hash": "abcdef1234567890abcdef1234567890",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user04",
+        "id": 4,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gcr:sha256_1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef::ml-models/entry-conda-fda9954",
+            "gs:md5_HIJ456klm==::package.yaml"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "alias": "md5_KLM789nop==",
+    "asset_class": {
+      "counter": 3,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user05",
+      "id": "00000000-0000-0000-0000-000000000009",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user05",
+      "name": "rnn_model",
+      "owner": "user05",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user05",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000010",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user05",
+    "owner": "user05",
+    "seq_id": 2,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000009",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000010",
+        "commit_hash": "abcdef1234567890abcdef1234567890",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user05",
+        "id": 5,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gs:md5_LMN890pqr==::../tmp/fake/path2/model.yml",
+            "gs:md5_OPQ123stu==::../tmp/fake/path2/graph_version.txt",
+            "gs:md5_RST456vwx==::../tmp/fake/path2/model.h5",
+            "gs:md5_UVW789yzA==::../tmp/fake/path2/summary_dict.json",
+            "gs:md5_XYZ012bcd==::../tmp/fake/path2/run_config_ckpt0.yml",
+            "gs:md5_DEF345efg==::../tmp/fake/path2/git_commit_info_ckpt0.yml",
+            "gs:md5_HIJ678hij==::../tmp/fake/path2/training.yml",
+            "gs:md5_KLM901klm==::../tmp/fake/path2/meta.yml"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "alias": "md5_NOP234opc==",
+    "asset_class": {
+      "counter": 3,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user06",
+      "id": "00000000-0000-0000-0000-000000000011",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user06",
+      "name": "rnn_model",
+      "owner": "user06",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user06",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000012",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user06",
+    "owner": "user06",
+    "seq_id": 3,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000011",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000012",
+        "commit_hash": "abcdef1234567890abcdef1234567890",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user06",
+        "id": 6,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gs:md5_OPQ345rst==::../tmp/fake/path3/git_commit_info_ckpt0.yml",
+            "gs:md5_RST678uvw==::../tmp/fake/path3/run_config_ckpt0.yml",
+            "gs:md5_UVW901xyz==::../tmp/fake/path3/meta.yml",
+            "gs:md5_XYZ234abc==::../tmp/fake/path3/summary_dict.json",
+            "gs:md5_DEF567def==::../tmp/fake/path3/model.h5",
+            "gs:md5_GHI890ghi==::../tmp/fake/path3/training.yml",
+            "gs:md5_JKL123jkl==::../tmp/fake/path3/graph_version.txt",
+            "gs:md5_MNO456mno==::../tmp/fake/path3/model.yml"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "alias": null,
+    "asset_class": {
+      "counter": 1,
+      "created_at": "2022-01-01 00:00:00.000000",
+      "created_by": "user07",
+      "id": "00000000-0000-0000-0000-000000000013",
+      "modified_at": "2022-01-01 00:00:00.000000",
+      "modified_by": "user07",
+      "name": "lord_of_rings",
+      "owner": "user07",
+      "soft_delete_at": null,
+      "soft_delete_by": null,
+      "status": 1,
+      "tags": []
+    },
+    "created_at": "2022/01/01 00-00-00 -0800",
+    "created_by": "user07",
+    "frozen": false,
+    "id": "00000000-0000-0000-0000-000000000014",
+    "modified_at": "2022/01/01 00-00-00 -0800",
+    "modified_by": "user07",
+    "owner": "user07",
+    "seq_id": 1,
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "status": 1,
+    "tags": [],
+    "top_hash": "00000000-0000-0000-0000-000000000013",
+    "versions": [
+      {
+        "asset": "00000000-0000-0000-0000-000000000014",
+        "commit_hash": "abcdef1234567890abcdef1234567890",
+        "commit_message": null,
+        "created_at": "2022/01/01 00-00-00 -0800",
+        "created_by": "user07",
+        "id": 7,
+        "number": "0.0.0",
+        "parent": null,
+        "patch": {
+          "added": [
+            "gs:md5_ABC567klm==::test_data/fake/data1/commands.json",
+            "gs:md5_DEF012nop==::test_data/fake/data1/sim_uw.json",
+            "gs:md5_GHI345qrs==::test_data/fake/data1/main.cir",
+            "gs:md5_JKL678tuv==::test_data/fake/data1/multi_ubf.h5",
+            "gs:md5_MNO901wxy==::test_data/fake/data1/vmzero_dark.log",
+            "gs:md5_OPQ234zab==::test_data/fake/data1/sim_uw.json",
+            "gs:md5_RST567cde==::test_data/fake/data1/vmzero_bright.log",
+            "gs:md5_UVW890fgh==::test_data/fake/data1/sim_uw.json",
+            "gs:md5_XYZ123ijk==::test_data/fake/data1/occal.log",
+            "gs:md5_ABC456lmn==::test_data/fake/data1/vmzero_bright.cir",
+            "gs:md5_DEF789opq==::test_data/fake/data1/sim_uw.json",
+            "gs:md5_GHI012rst==::test_data/fake/data1/vmzero_dark.cir",
+            "gs:md5_JKL345uvw==::test_data/fake/data1/main.log",
+            "gs:md5_MNO678xyz==::test_data/fake/data1/oc_calibration.h5",
+            "gs:md5_OPQ901abc==::test_data/fake/data1/occal.cir"
+          ],
+          "removed": []
+        },
+        "soft_delete_at": null,
+        "soft_delete_by": null,
+        "status": 1,
+        "tags": []
+      }
+    ]
+  }
+]

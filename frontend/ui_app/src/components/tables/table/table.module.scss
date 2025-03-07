@@ -1,0 +1,78 @@
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/colors";
+@use "table_mixin";
+
+.tableWrapper {
+  @include table_mixin.table_wrapper;
+}
+.tablePagination {
+  @include table_mixin.table_pagination;
+}
+.tablePaginationItem {
+  @include table_mixin.table_pagination_item;
+}
+.tablePaginationItem ~ .tablePaginationItem {
+  margin-left: 10px;
+}
+
+
+//.tableWrapper {
+//  overflow-y: auto;
+//  & > table {
+//    width: 100%;
+//    min-width: 400px;
+//    border-spacing: 0;
+//
+//    & > thead {
+//      background-color: colors.$second-bg;
+//      & > tr > th {
+//        text-transform: capitalize;
+//        padding: 15px 10px;
+//      }
+//    }
+//
+//    & > th, td {
+//      text-transform: capitalize;
+//      padding: 15px 10px;
+//    }
+//
+//    & > tbody > tr {
+//      text-align: left;
+//      &:hover {
+//        background-color: colors.$main-color;
+//        color: colors.$txt-white;
+//      }
+//    }
+//  }
+//}
+//
+//.tablePagination {
+//  display: flex;
+//  width: 100%;
+//  justify-content: flex-end;
+//  align-items: center;
+//  margin-top: 20px;
+//}
+//
+//.tablePaginationItem ~ .tablePaginationItem {
+//  margin-left: 10px;
+//}
+//
+//.tablePaginationItem {
+//  width: 30px;
+//  height: 30px;
+//  border-radius: 50%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  cursor: pointer;
+//  &:hover {
+//    color: colors.$txt-white;
+//    background-color: colors.$second-color;
+//  }
+//  &.active {
+//    background-color: colors.$main-color;
+//    color: colors.$txt-white;
+//    font-weight: 600;
+//  }
+//}

@@ -1,0 +1,99 @@
+@use "../../assets/scss/variables";
+@use "../../assets/scss/colors";
+
+.rendererContainer {
+  padding: 20px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  background-color: #fff;
+}
+
+.envContainer {
+  margin: 0px 20px 20px;
+  border: 1px transparent;
+  font-size: 15px;
+}
+
+.rowCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$second-bg;
+  transition: variables.$transition-cubic;
+  border-radius: variables.$border-radius;
+  box-shadow: 0px 2px 4px rgb(31 30 47 / 3%);
+  padding: 5px 0px 5px 15px;
+}
+
+.rowTitle {
+  color: #008080;
+  text-align: right;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.rowBody {
+  color: #0451a5;
+  text-align: left;
+}
+
+.pkgContainer {
+  margin: 10px 20px;
+}
+
+.pkgRow {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  margin-bottom: 10px;
+
+  & a {
+    width: 50%;
+    text-decoration: none; /* no underline */
+  }
+
+  &:hover {
+    font-weight: 600;
+    & .hideLink {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.pkgRowTitle {
+  width: 50%;
+  height: 100%;
+  @extend .rowCard;
+  justify-content: right;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 18px;
+  padding-right: 30px;
+  color: #008080;
+}
+
+.pkgRowBody {
+  width: 100%;
+  height: 100%;
+  @extend .rowCard;
+  @extend .rowBody;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 30px;
+}
+
+.objectItem {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.objectKey {
+  color: colors.$txt-color;
+}

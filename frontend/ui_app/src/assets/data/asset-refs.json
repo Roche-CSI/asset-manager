@@ -1,0 +1,71 @@
+[
+  {
+    "created_at": "2022/01/01 12-00-00 -0800",
+    "created_by": "user01",
+    "dst_version": {
+      "asset": "00000000-0000-0000-0000-000000000001",
+      "asset_class": "00000000-0000-0000-0000-000000000002",
+      "id": 4,
+      "name": "rnn_model/1/0.0.0"
+    },
+    "id": 1,
+    "label": "image_asset",
+    "properties": [],
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "src_version": {
+      "asset": "00000000-0000-0000-0000-000000000003",
+      "asset_class": "00000000-0000-0000-0000-000000000004",
+      "id": 2,
+      "name": "rnn_image/1/0.0.0"
+    },
+    "status": 1,
+    "tags": []
+  },
+  {
+    "created_at": "2022/01/01 12-00-00 -0800",
+    "created_by": "user01",
+    "dst_version": {
+      "asset": "00000000-0000-0000-0000-000000000001",
+      "asset_class": "00000000-0000-0000-0000-000000000002",
+      "id": 4,
+      "name": "rnn_model/1/0.0.0"
+    },
+    "id": 2,
+    "label": "mle_asset",
+    "properties": [],
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "src_version": {
+      "asset": "00000000-0000-0000-0000-000000000005",
+      "asset_class": "00000000-0000-0000-0000-000000000006",
+      "id": 1,
+      "name": "rnn_mle/1/0.0.0"
+    },
+    "status": 1,
+    "tags": []
+  },
+  {
+    "created_at": "2022/01/01 12-00-01 -0800",
+    "created_by": "user01",
+    "dst_version": {
+      "asset": "00000000-0000-0000-0000-000000000001",
+      "asset_class": "00000000-0000-0000-0000-000000000002",
+      "id": 4,
+      "name": "rnn_model/1/0.0.0"
+    },
+    "id": 3,
+    "label": "airflow_asset",
+    "properties": [],
+    "soft_delete_at": null,
+    "soft_delete_by": null,
+    "src_version": {
+      "asset": "00000000-0000-0000-0000-000000000007",
+      "asset_class": "00000000-0000-0000-0000-000000000008",
+      "id": 3,
+      "name": "rnn_airflow/1/0.0.0"
+    },
+    "status": 1,
+    "tags": []
+  }
+]

@@ -1,0 +1,14 @@
+@use "src/assets/scss/colors";
+
+.edgeLabel {
+  // background-color: rgba(#6f42c1, 0.3);
+  background-color: rgba(#b9b8b4, 0.3);
+  color: colors.$txt-color-dark;
+  fill-opacity: 0.5;
+  border-radius: 5px;
+  align-items: center;
+  padding-left: 7px;
+  display: flex;
+  font-size: 11px;
+  font-weight: bold;
+}

@@ -1,0 +1,48 @@
+@use "../../../assets/scss/colors";
+@use "../../../assets/scss/variables";
+
+.sidebarListItem {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: color 0.3s ease 0s;
+  font-size: 1rem;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  &:hover {
+    color: colors.$main-color;
+  }
+  &.active {
+    border-radius: variables.$border-radius;
+    background-image: linear-gradient(
+                    to right,
+                    colors.$main-color,
+                    colors.$second-color
+    );
+    color: colors.$txt-white;
+  }
+}
+
+.sidebarIcon{
+  margin-right: 10px;
+  font-size: 20px !important;
+}
+
+.link {
+  text-decoration: none;
+  &:link {
+    color: gray;
+  }
+  &:visited {
+    color: gray;
+  }
+  &:hover {
+    color: darkslateblue;
+  }
+  //&:active {
+  //  color: blue;
+  //}
+}

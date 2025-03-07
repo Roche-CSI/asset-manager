@@ -1,0 +1,200 @@
+@use "src/assets/scss/variables";
+@use "src/assets/scss/colors";
+
+.container {
+  & > [class="modal-dialog"] {
+    max-width: 70vw;
+    padding: 16px;
+    justify-content: center;
+
+    & > [class="modal-content"] {
+      margin: auto;
+    }
+  }
+}
+
+.footerContent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  & > button {
+    margin-left: 20px;
+  }
+}
+
+.header {
+  width: 100%;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: colors.$txt-color-dark;
+  font-weight: bold;
+
+  & > div {
+    &:first-child {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+  }
+}
+  
+.buttonContainer {
+    margin-left: auto;
+
+    & > button {
+      & > svg {
+      font-size: 40px;
+    }
+  }
+}
+
+.descriptionLabel {
+  font-weight: normal;
+  &.danger {
+    color: #dc3545;
+  }
+  &.info {
+    color: colors.$main-color-blue;
+  }
+}
+
+.versionLabel {
+  margin-left: .5rem;
+  background-color: gray;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  height: 20px;
+  margin-top: -7px;
+  border: none;
+}
+
+.pathField {
+  width: 100%;
+  padding: 5px 20px;
+  font-family: "Mulish", sans-serif !important;
+  text-align: left;
+}
+
+.formField {
+  padding: 5px 20px;
+  font-family: "Mulish", sans-serif !important;
+  text-align: left;
+}
+
+.fieldGroup {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+  &.readonly {
+    border: 1px solid gray;
+    background-color: white;
+  }
+}
+
+.yamlContainer {
+  text-align: left;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+
+  &.valid {
+    border-color: rgb(25, 135, 84)
+  }
+
+  &.invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23dc3545%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23dc3545%27 stroke=%27none%27/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  }
+}
+
+.feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+
+  &.valid {
+    color: #198754
+  }
+
+  &.invalid {
+    white-space:pre-wrap; 
+    color: #dc3545;
+  }
+
+  &.warning {
+    color: #cdac27
+  }
+}
+
+.overlayContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(#fff, 0.5);
+  z-index: 10;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.progressText {
+  color: gray;
+}
+
+.checkBox {
+  & > input {
+    margin-top: 0px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    color: #212529;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+  }
+}
+
+.fieldInfo {
+  font-style: italic;
+}
+
+.fieldLabel {
+  font-weight: bold;
+}
+
+.sectionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & > div:last-child {
+    color: colors.$second-color-blue;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.note {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 2px;
+}

@@ -1,0 +1,83 @@
+@use "src/assets/scss/colors";
+@use "src/assets/scss/variables";
+
+$borderRadius: 7px;
+
+.menuBarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  text-decoration: none;
+  height: 100%;
+
+  &:link {
+    color: gray;
+  }
+
+  &:visited {
+    color: gray;
+  }
+
+  &:hover {
+    color: colors.$main-color-blue;
+    font-weight: bold;
+  }
+
+  //&:active {
+  //  color: blue;
+  //}
+  &:first-child > div {
+    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
+  }
+
+  &:last-child > div {
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+  }
+}
+
+.menuItem {
+  font-size: 14px;
+  font-weight: 500;
+  color: colors.$txt-color-dark;
+  text-transform: capitalize;
+  height: 100%;
+  display: flex;
+  min-width: 100px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 10px 0px 5px;
+  box-sizing: border-box;
+  &.active {
+    background-color: colors.$second-color-blue;
+    color: colors.$txt-white;
+    transition: 0.25s ease-in-out;
+  }
+}
+
+.menuIcon {
+  font-size: 1.25rem !important;
+  padding: 0px 10px 0px 5px;
+}
+
+
+.menuBar {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  //background-color: #f1f5fa;
+  background-color: colors.$main-bg-light;
+  height: 32px;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: colors.$box-shadow;
+  border-radius: $borderRadius;
+  margin-bottom: 10px;
+}
+

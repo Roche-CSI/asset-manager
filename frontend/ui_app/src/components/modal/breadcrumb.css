@@ -1,0 +1,9 @@
+@use "src/assets/scss/colors";
+
+.button-primary {
+  @apply bg-primary;
+
+  &:hover {
+    @apply bg-opacity-80;
+  }
+}
