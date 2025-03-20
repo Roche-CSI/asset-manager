@@ -1,0 +1,5 @@
+user:
+  username: alice123
+  email: alice@example.com
+  role: admin
+  last_login: 2024-01-08T15:30:00

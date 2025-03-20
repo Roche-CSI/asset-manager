@@ -1,0 +1,10 @@
+recipe:
+  name: Spaghetti Bolognese
+  ingredients:
+    - spaghetti
+    - ground beef
+    - tomatoes
+  instructions:
+    - Boil spaghetti in salted water.
+    - Brown ground beef in a pan.
+    - Mix tomatoes and simmer.

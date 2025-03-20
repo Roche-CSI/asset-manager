@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=%(charset)s"/>
+    <title></title>
+    <style type="text/css">%(styles)s</style>
+</head>
+
+<body style="font-family: 'Trebuchet MS'">
+<div class="header-container">
+    <div class="page-heading">
+        <table>
+            <tbody>
+            <tr class="row">
+                <td class="first-col">{{title_name}}:</td>
+                <td><span class="title">{{title_desc}}</span></td>
+            </tr>
+            <tr class="row">
+                <td>{{subtitle_name}}:</td>
+                <td><span class="subtitle">{{subtitle_desc}}</span></td>
+            </tr>
+            <tr class="row">
+                <td class="first-col">colors:</td>
+                <td>
+                    <div style="display: flex">
+                        <span class="diff_add span-box">&nbsp;Added&nbsp;</span>
+                        <span class="diff_chg span-box">Changed</span>
+                        <span class="diff_sub span-box">Deleted
+                    </span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="row">
+                <td>links:</td>
+                <td>
+                    <div style="display: flex">
+                        <span class="span-box">(<span style="font-weight: bold">f</span>)irst change</span>
+                        <span class="span-box">(<span style="font-weight: bold">n</span>)ext change</span>
+                        <span class="span-box">(<span style="font-weight: bold">t</span>)op</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<div>
+    %(table)s
+</div>
+</body>
+
+</html>

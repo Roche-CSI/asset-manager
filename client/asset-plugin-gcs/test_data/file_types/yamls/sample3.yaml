@@ -1,0 +1,237 @@
+application:
+  name: ExampleApp
+  version: 2.1.3
+  description: This is an extended example application configuration file using YAML.
+  author: Example Author
+  license: MIT
+  homepage: https://www.exampleapp.com
+  support_email: support@exampleapp.com
+
+server:
+  host: localhost
+  port: 8080
+  environment: production
+  ssl:
+    enabled: true
+    certificate_file: /etc/ssl/certs/exampleapp.crt
+    key_file: /etc/ssl/private/exampleapp.key
+  security_headers:
+    content_security_policy: "default-src 'self'; script-src 'self' 'unsafe-inline'; object-src 'none';"
+    x_content_type_options: "nosniff"
+    x_frame_options: "DENY"
+    x_xss_protection: "1; mode=block"
+  cors:
+    enabled: true
+    allowed_origins:
+      - https://www.allowed-origin1.com
+      - https://www.allowed-origin2.com
+
+database:
+  type: postgresql
+  host: db.example.com
+  port: 5432
+  name: exampledb
+  user: dbuser
+  password: secretpassword
+  pool:
+    max_connections: 20
+    min_connections: 5
+    max_idle_time: 300
+  backup:
+    enabled: true
+    schedule: daily
+    backup_location: /backups/database
+    retention_period: 7  # days
+
+cache:
+  enabled: true
+  type: redis
+  host: cache.example.com
+  port: 6379
+  ttl: 3600  # Time-to-live for cached items (in seconds)
+  max_memory: 256MB
+
+logging:
+  level: INFO
+  file: /var/log/exampleapp.log
+  format: "[%(asctime)s] %(levelname)s in %(module)s: %(message)s"
+  rotation:
+    enabled: true
+    max_size: 10MB
+    backup_count: 5
+
+features:
+  authentication: true
+  two_factor_authentication: true
+  single_sign_on: true
+  caching: true
+  debugging: false
+  analytics: false
+  user_profiles: true
+  file_uploads: true
+  social_media_integration: true
+  internationalization: true
+  notifications: true
+  real_time_updates: true
+  dark_mode: true
+
+api_keys:
+  google_maps: "YOUR_GOOGLE_MAPS_API_KEY"
+  sendgrid: "YOUR_SENDGRID_API_KEY"
+  stripe: "YOUR_STRIPE_API_KEY"
+  github: "YOUR_GITHUB_API_KEY"
+  aws:
+    access_key_id: "YOUR_AWS_ACCESS_KEY_ID"
+    secret_access_key: "YOUR_AWS_SECRET_ACCESS_KEY"
+
+email:
+  smtp_server: smtp.example.com
+  smtp_port: 587
+  username: emailuser
+  password: emailpassword
+  use_tls: true
+  use_ssl: false
+  from_address: no-reply@example.com
+  admin_address: admin@example.com
+  templates:
+    welcome_email: /email_templates/welcome.html
+    password_reset: /email_templates/password_reset.html
+    notification: /email_templates/notification.html
+
+users:
+  - username: johndoe
+    password: johndoepassword
+    roles:
+      - admin
+      - user
+    profile:
+      full_name: John Doe
+      email: johndoe@example.com
+      phone: +1234567890
+      address:
+        street: 123 Example St
+        city: Exampleville
+        state: EX
+        postal_code: 12345
+        country: USA
+
+  - username: janedoe
+    password: janedoepassword
+    roles:
+      - user
+    profile:
+      full_name: Jane Doe
+      email: janedoe@example.com
+      phone: +0987654321
+      address:
+        street: 456 Sample Rd
+        city: Sampletown
+        state: SA
+        postal_code: 67890
+        country: USA
+
+  - username: admin
+    password: supersecurepassword
+    roles:
+      - admin
+    profile:
+      full_name: Admin User
+      email: admin@example.com
+      phone: +1122334455
+      address:
+        street: 789 Admin Blvd
+        city: Admincity
+        state: AD
+        postal_code: 11223
+        country: USA
+
+payment_providers:
+  - name: Stripe
+    api_key: "YOUR_STRIPE_API_KEY"
+    webhook_secret: "YOUR_STRIPE_WEBHOOK_SECRET"
+    currency: USD
+
+  - name: PayPal
+    client_id: "YOUR_PAYPAL_CLIENT_ID"
+    client_secret: "YOUR_PAYPAL_CLIENT_SECRET"
+    sandbox: true
+    currency: USD
+
+  - name: Square
+    application_id: "YOUR_SQUARE_APP_ID"
+    access_token: "YOUR_SQUARE_ACCESS_TOKEN"
+    currency: USD
+
+notifications:
+  email:
+    enabled: true
+    send_on_signup: true
+    send_on_password_reset: true
+    send_on_profile_update: true
+
+  sms:
+    enabled: true
+    provider: twilio
+    account_sid: "YOUR_TWILIO_ACCOUNT_SID"
+    auth_token: "YOUR_TWILIO_AUTH_TOKEN"
+    from_number: "+1234567890"
+    send_on_signup: true
+    send_on_password_reset: true
+    send_on_profile_update: true
+
+  push:
+    enabled: true
+    fcm_server_key: "YOUR_FCM_SERVER_KEY"
+    send_on_signup: true
+    send_on_password_reset: true
+    send_on_profile_update: true
+
+internationalization:
+  default_locale: en
+  supported_locales:
+    - en
+    - es
+    - fr
+    - de
+  translations:
+    en:
+      welcome_message: "Welcome to ExampleApp!"
+      password_reset: "To reset your password, click the link below."
+    es:
+      welcome_message: "¡Bienvenido a ExampleApp!"
+      password_reset: "Para restablecer su contraseña, haga clic en el enlace a continuación."
+    fr:
+      welcome_message: "Bienvenue sur ExampleApp!"
+      password_reset: "Pour réinitialiser votre mot de passe, cliquez sur le lien ci-dessous."
+    de:
+      welcome_message: "Willkommen bei ExampleApp!"
+      password_reset: "Um Ihr Passwort zurückzusetzen, klicken Sie auf den unten stehenden Link."
+
+monitoring:
+  enabled: true
+  provider: datadog
+  api_key: "YOUR_DATADOG_API_KEY"
+  metrics:
+    - name: response_time
+      type: gauge
+    - name: request_count
+      type: counter
+    - name: error_rate
+      type: gauge
+  alerts:
+    - metric: response_time
+      threshold: 500
+      comparison: gt
+      action: send_email
+      email: admin@example.com
+    - metric: error_rate
+      threshold: 0.05
+      comparison: gt
+      action: send_sms
+      phone: +1122334455
+
+thresholds:
+  warning: 75
+  critical: 90
+
+maintenance_mode: false

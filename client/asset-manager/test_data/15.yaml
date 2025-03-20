@@ -1,0 +1,36 @@
+company:
+  name: ABC Corp
+  industry: Technology
+  employees: 500
+  headquarters:
+    location: Silicon Valley
+    established: 1990
+  products:
+    - product_name: Widget X
+      description: State-of-the-art widget for various applications
+      price: 99.99
+    - product_name: Gadget Y
+      description: Innovative gadget with cutting-edge features
+      price: 149.99
+  departments:
+    - name: Research and Development
+      employees: 150
+      projects:
+        - project_name: Project Alpha
+          description: Advancing technology in the field
+        - project_name: Project Beta
+          description: Exploring new frontiers in innovation
+    - name: Sales and Marketing
+      employees: 100
+      campaigns:
+        - campaign_name: Spring Launch
+          start_date: 2024-03-01
+          end_date: 2024-04-30
+        - campaign_name: Summer Sale
+          start_date: 2024-06-01
+          end_date: 2024-08-31
+  partners:
+    - partner_name: XYZ Technologies
+      partnership_type: Strategic Alliance
+      contact_person: Jane Johnson
+      contact_email: jane@xyztech.com

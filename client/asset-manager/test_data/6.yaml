@@ -1,0 +1,7 @@
+team:
+  name: Development
+  members:
+    - John
+    - Mary
+    - Bob
+  project_count: 3

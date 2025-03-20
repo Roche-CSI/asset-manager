@@ -1,0 +1,25 @@
+name: DilatedCNN
+parameters:
+  alternate_oc: false
+  ds_layers:
+    activation: relu
+    activation1x1: relu
+    channels: 32
+    channels_list: null
+    dilations_list:
+    - 1
+    - 2
+    - 4
+    - 8
+    - 16
+    - 32
+    filter_width: 7
+    gated_convolutions: none
+    num_layers: 6
+    residual_connections: false
+    skip_connections: last_plus_1x1_conv
+    use_conv_2d: true
+    with1x1conv: false
+  num_logits_classes: 6
+  reshape_downsample_ratio: 3
+  tag_encoding: '01234'
