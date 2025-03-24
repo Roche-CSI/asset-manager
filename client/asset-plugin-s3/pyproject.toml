@@ -18,7 +18,7 @@ requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "aioboto3<=10.2.0",
     "asset-contents==0.2.*",
-    "asset-pluggy==1.1.*",
+    "asset-pluggy==1.*",
     "asset-utils==1.*",
     "backoff==2.2.*"
 ]

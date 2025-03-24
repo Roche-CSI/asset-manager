@@ -17,7 +17,7 @@ license = { text = "@2021 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "asset-contents==0.2.*",
-    "asset-pluggy==1.1.*",
+    "asset-pluggy==1.*",
     "asset-utils==1.*",
 ]
 
