@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asset-core"
-version = "1.6.3"
-description = "asset-core package for asset-manager"
+name = "ama-core"
+version = "1.0.0"
+description = "Core package for asset-manager"
 readme = "README.md"
 authors = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
@@ -16,10 +16,10 @@ maintainers = [
 license = { text = "@2021 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
-    "asset-contents==0.2.*",
-    "asset-db==0.2.*",
-    "asset-pluggy==1.1.*",
-    "asset-utils==1.*",
+    "ama-contents==1.*",
+    "ama-db==1.*",
+    "ama-pluggy==1.*",
+    "ama-utils==1.*",
     "google-auth-oauthlib==0.4.*",
     "jinja2==3.1.*",
     "packaging==23.1.*",
