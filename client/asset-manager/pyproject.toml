@@ -3,8 +3,8 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asset-manager"
-version = "2.2.15"
+name = "ama-manager"
+version = "1.0.0"
 description = "asset-manager command line tool"
 readme = "README.md"
 authors = [
@@ -16,15 +16,15 @@ maintainers = [
 license = { text = "@2021 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
-    "asset-contents==0.2.3",
-    "asset-core==1.6.3",
-    "asset-db==0.2.2",
-    "asset-pluggy==1.1.8",
-    "asset-plugin-gcr==1.1.1",
-    "asset-plugin-gcs==1.2.1",
-    "asset-plugin-posix==1.1.2",
-    "asset-plugin-s3==1.3.1",
-    "asset-utils==1.3.3",
+    "ama-contents==1.0.0",
+    "ama-core==1.0.0",
+    "ama-db==1.0.0",
+    "ama-pluggy==1.0.0",
+    "ama-plugin-gcr==1.0.0",
+    "ama-plugin-gcs==1.0.0",
+    "ama-plugin-posix==1.0.0",
+    "ama-plugin-s3==1.0.0",
+    "ama-utils==1.0.0",
     "markupsafe==2.1.*",
 ]
 
