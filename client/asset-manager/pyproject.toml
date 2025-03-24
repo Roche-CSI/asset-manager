@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ama-manager"
+name = "amapy"
 version = "1.0.0"
 description = "asset-manager command line tool"
 readme = "README.md"
@@ -13,18 +13,18 @@ authors = [
 maintainers = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
 ]
-license = { text = "@2021 Roche Sequencing Solution" }
+license = { text = "@2024 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
-    "ama-contents==1.0.0",
-    "ama-core==1.0.0",
-    "ama-db==1.0.0",
-    "ama-pluggy==1.0.0",
-    "ama-plugin-gcr==1.0.0",
-    "ama-plugin-gcs==1.0.0",
-    "ama-plugin-posix==1.0.0",
-    "ama-plugin-s3==1.0.0",
-    "ama-utils==1.0.0",
+    "amapy-contents==1.0.0",
+    "amapy-core==1.0.0",
+    "amapy-db==1.0.0",
+    "amapy-pluggy==1.0.0",
+    "amapy-plugin-gcr==1.0.0",
+    "amapy-plugin-gcs==1.0.0",
+    "amapy-plugin-posix==1.0.0",
+    "amapy-plugin-s3==1.0.0",
+    "amapy-utils==1.0.0",
     "markupsafe==2.1.*",
 ]
 

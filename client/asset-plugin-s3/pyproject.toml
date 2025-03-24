@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ama-plugin-s3"
+name = "amapy-plugin-s3"
 version = "1.0.0"
 description = "S3 backend provider for asset-manager"
 readme = "README.md"
@@ -13,13 +13,13 @@ authors = [
 maintainers = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
 ]
-license = { text = "@2021 Roche Sequencing Solution" }
+license = { text = "@2024 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "aioboto3<=10.2.0",
-    "ama-contents==1.*",
-    "ama-pluggy==1.*",
-    "ama-utils==1.*",
+    "amapy-contents==1.*",
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*",
     "backoff==2.2.*"
 ]
 
