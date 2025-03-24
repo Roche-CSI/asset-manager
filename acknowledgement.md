@@ -19,13 +19,41 @@
   - Designs and maintains the system architecture.  
   - Develops and optimizes APIs, ensuring smooth data flow and integration with external systems.  
   - Works closely with Swarup on backend architecture and performance optimization.  
-  - Provides UI/UX guidance and support.  
+  - Provides UI/UX guidance and support.
 
 ### **Lulu Zhu**  
-- **Role:** Data Pipeline Specialist  
+- **Role:** Data Pipeline Engineer  
 - **Responsibilities:**  
   - Provides feedback and suggestions for UI/UX improvements.  
   - Utilizes Asset Manager within data pipelines, resolving issues related to scaling, configurations, and reliability.   
+
+### **Saurav Dhar**
+- **Role:** Python Engineer  
+- **Responsibilities:**  
+  - Code contribution
+  - CI/CD pipelines
+  - UI/UX feedback
+  - Integrating with data pipelines, resolving issues with regard to using the python api, Cloud Storage API quota issues etc
+  - Unit tests
+  - Integration and functional testing
+
+### **Yue Huang**
+- **Role:** Full Stack Engineer
+- **Responsibilities:**
+  - Contributed and maintained the code.
+  - Gathered user feedback and debugged issues.
+  - Built the front end from UI designs, improve the database models and APIs for better architecture.
+  - Integrated the tool into Airflow pipelines.
+  - Addressed challenges related to scaling, configurations, and reliability to enhance system performance.
+
+### **Chinmaya Biswal**
+- **Role:** DevOps Engineer
+- **Responsibilities:**
+  - Developed and maintained CI/CD pipelines.
+  - Automate integration testing 
+  - Release management 
+  - Raise feature request and report bugs 
+  - Promote usage through demonstrations to internal teams
 
 ### **Sam Yadav**  
 - **Role:** Data Pipeline Integration & Issue Reporting  
@@ -49,6 +77,7 @@
   - Conducts stress testing for very large datasets to ensure performance and scalability.  
   - Reports issues encountered during integration and large-scale data processing.  
   - Identifies and fixes bugs related to pipeline performance and stability.  
+
 
 ### **John Mannion**  
 - **Role:** Project Advisor & Evangelist  
