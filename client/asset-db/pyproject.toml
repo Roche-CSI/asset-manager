@@ -3,15 +3,15 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ama-db"
+name = "amapy-db"
 version = "1.0.0"
 description = "DB Plugin for asset-manager"
 readme = "README.md"
-license = { text = "@2021 Roche Sequencing Solution" }
+license = { text = "@2024 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
-    "ama-pluggy==1.*",
-    "ama-utils==1.*"
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*"
 ]
 
 [tool.setuptools.packages.find]

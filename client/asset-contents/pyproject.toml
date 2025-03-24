@@ -3,17 +3,23 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ama-contents"
+name = "amapy-contents"
 version = "1.0.0"
 description = "Contents Plugin for asset-manager"
 readme = "README.md"
-license = { text = "@2021 Roche Sequencing Solution" }
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "@2024 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "aiohttp>=3.3.0,<4.0.0",
-    "ama-db==1.*",
-    "ama-pluggy==1.*",
-    "ama-utils==1.*",
+    "amapy-db==1.*",
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*",
     "backoff==2.2.*"
 ]
 
