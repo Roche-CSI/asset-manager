@@ -3,8 +3,8 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asset-plugin-gcr"
-version = "1.1.1"
+name = "ama-plugin-gcr"
+version = "1.0.0"
 description = "GCR backend provider for asset-manager"
 readme = "README.md"
 authors = [
@@ -16,9 +16,9 @@ maintainers = [
 license = { text = "@2021 Roche Sequencing Solution" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
-    "asset-contents==0.2.*",
-    "asset-pluggy==1.1.*",
-    "asset-utils==1.*",
+    "ama-contents==1.*",
+    "ama-pluggy==1.*",
+    "ama-utils==1.*",
     "backoff==2.2.*",
     "google-auth==2.15.*",
     "pyopenssl==24.0.*",
