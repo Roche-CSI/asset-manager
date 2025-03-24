@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'plugin-posix*.*.*'
+      - 'plugin-posix-v*.*.*'
     paths:
       - 'client/asset-client/asset-plugin-posix/**'
 

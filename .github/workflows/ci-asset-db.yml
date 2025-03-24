@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'db*.*.*'
+      - 'db-v*.*.*'
     paths:
       - 'client/asset-client/asset-db/**'
 

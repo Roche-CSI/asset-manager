@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'core*.*.*'
+      - 'core-v*.*.*'
     paths:
       - 'client/asset-client/asset-core/**'
 

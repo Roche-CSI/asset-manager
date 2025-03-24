@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'contents*.*.*'
+      - 'contents-v*.*.*'
     paths:
       - 'client/asset-client/asset-contents/**'
 

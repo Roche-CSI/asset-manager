@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'pluggy*.*.*'
+      - 'pluggy-v*.*.*'
     paths:
       - 'client/asset-client/asset-pluggy/**'
 

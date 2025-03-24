@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'plugin-s3*.*.*'
+      - 'plugin-s3-v*.*.*'
     paths:
       - 'client/asset-client/asset-plugin-s3/**'
 

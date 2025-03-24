@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
     tags:
-      - 'plugin-gcs*.*.*'
+      - 'plugin-gcs-v*.*.*'
     paths:
       - 'client/asset-client/asset-plugin-gcs/**'
 
