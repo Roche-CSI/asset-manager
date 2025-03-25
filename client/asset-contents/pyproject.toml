@@ -20,4 +20,3 @@ dependencies = [
 [tool.setuptools.packages.find]
 include = ["*"]
 namespaces = false
-
