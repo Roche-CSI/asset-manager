@@ -8,7 +8,7 @@ on:
     tags:
       - 'manager-v*.*.*'
     paths:
-      - 'client/asset-client/asset-manager/**'
+      - 'client/asset-manager/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}

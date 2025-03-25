@@ -8,7 +8,7 @@ on:
     tags:
       - 'core-v*.*.*'
     paths:
-      - 'client/asset-client/asset-core/**'
+      - 'client/asset-core/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}

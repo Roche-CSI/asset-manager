@@ -8,7 +8,7 @@ on:
     tags:
       - 'plugin-posix-v*.*.*'
     paths:
-      - 'client/asset-client/asset-plugin-posix/**'
+      - 'client/asset-plugin-posix/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}

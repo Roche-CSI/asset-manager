@@ -8,7 +8,7 @@ on:
     tags:
       - 'db-v*.*.*'
     paths:
-      - 'client/asset-client/asset-db/**'
+      - 'client/asset-db/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}

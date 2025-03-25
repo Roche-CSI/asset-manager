@@ -8,7 +8,7 @@ on:
     tags:
       - 'plugin-s3-v*.*.*'
     paths:
-      - 'client/asset-client/asset-plugin-s3/**'
+      - 'client/asset-plugin-s3/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}

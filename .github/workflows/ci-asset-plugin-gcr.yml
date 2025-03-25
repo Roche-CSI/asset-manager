@@ -8,7 +8,7 @@ on:
     tags:
       - 'plugin-gcr-v*.*.*'
     paths:
-      - 'client/asset-client/asset-plugin-gcr/**'
+      - 'client/asset-plugin-gcr/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}
