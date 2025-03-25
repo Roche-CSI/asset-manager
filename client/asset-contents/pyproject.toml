@@ -3,17 +3,17 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asset-contents"
-version = "0.2.3"
-description = "Contents Plugin for asset-manager"
+name = "amapy-contents"
+version = "1.0.0"
+description = "The Contents plugin for asset-manager project. It provides functionalities for handling and cataloging the contents of digital assets."
 readme = "README.md"
-license = { text = "@2021 Roche Sequencing Solution" }
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "aiohttp>=3.3.0,<4.0.0",
-    "asset-db==0.2.*",
-    "asset-pluggy==1.*",
-    "asset-utils==1.*",
+    "amapy-db==1.*",
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*",
     "backoff==2.2.*"
 ]
 
