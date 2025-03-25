@@ -3,15 +3,15 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asset-db"
-version = "0.2.2"
-description = "DB Plugin for asset-manager"
+name = "amapy-db"
+version = "1.0.0"
+description = "The Database plugin for asset-manager project. It provides functionalities to manage and store metadata related to digital assets, such as storing MD5 hashes of asset files and managing these records efficiently."
 readme = "README.md"
-license = { text = "@2021 Roche Sequencing Solution" }
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
-    "asset-pluggy==1.1.*",
-    "asset-utils==1.*"
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*"
 ]
 
 [tool.setuptools.packages.find]

@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0.0,<69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asset-utils"
-version = "1.3.3"
-description = "Utils toolset for asset-manager"
+name = "amapy-utils"
+version = "1.0.0"
+description = "A utility package that provides common functionality shared across the asset-manager ecosystem. It serves as a foundation library offering various helper functions and tools needed by other components in the system."
 readme = "README.md"
 authors = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
@@ -13,7 +13,7 @@ authors = [
 maintainers = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
 ]
-license = { text = "@2021 Roche Sequencing Solution" }
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "aiofiles==0.7.*",
