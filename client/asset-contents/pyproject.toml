@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "amapy-contents"
 version = "1.0.0"
-description = "Contents Plugin for asset-manager"
+description = "The Contents plugin for asset-manager project. It provides functionalities for handling and cataloging the contents of digital assets."
 readme = "README.md"
 license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
