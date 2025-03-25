@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "amapy-plugin-gcs"
 version = "1.0.0"
-description = "GCS backend provider for asset-manager"
+description = "The GCS plugin for the asset-manager project. It provides functionalities to manage and integrate Google Cloud Storage (GCS) within the asset management system."
 readme = "README.md"
 authors = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
