@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "amapy"
 version = "1.0.0"
-description = "Command line tool to help create digital assets and upload it to the asset management server, catalog it for distribution."
+description = "The client side tool for asset-manager. It provides a command-line interface and a Python API for programmatic access to manage and distribute digital assets."
 readme = "README.md"
 authors = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }

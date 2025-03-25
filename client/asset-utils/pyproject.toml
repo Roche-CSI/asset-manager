@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "amapy-utils"
 version = "1.0.0"
-description = "Utils toolset for asset-manager"
+description = "A utility package that provides common functionality shared across the asset-manager ecosystem. It serves as a foundation library offering various helper functions and tools needed by other components in the system."
 readme = "README.md"
 authors = [
     { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
