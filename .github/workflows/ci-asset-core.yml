@@ -30,7 +30,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Install dependencies
-        working-directory: client/asset-client/asset-core
+        working-directory: client/asset-core
         run: |
           #!/usr/bin/env bash
           set -x
@@ -47,20 +47,20 @@ jobs:
 
       - name: Run flake8
         continue-on-error: true
-        working-directory: client/asset-client/asset-core
+        working-directory: client/asset-core
         run: flake8 .
 
       - name: Run tests
         continue-on-error: true
-        working-directory: client/asset-client/asset-core
+        working-directory: client/asset-core
         run: pytest --cov=./ --cov-report=xml
 
       - name: Build package
-        working-directory: client/asset-client/asset-core
+        working-directory: client/asset-core
         run: python -m build
 
       - name: Check package
-        working-directory: client/asset-client/asset-core
+        working-directory: client/asset-core
         run: twine check dist/*
 
       - name: Store built package
@@ -68,11 +68,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: asset-core-dist
-          path: client/asset-client/asset-core/dist/
+          path: client/asset-core/dist/
 
       - name: Publish to PyPI
         if: startsWith(github.ref, 'refs/tags/core')
-        working-directory: client/asset-client/asset-core
+        working-directory: client/asset-core
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
