@@ -7,13 +7,7 @@ name = "amapy-contents"
 version = "1.0.0"
 description = "Contents Plugin for asset-manager"
 readme = "README.md"
-authors = [
-    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
-]
-maintainers = [
-    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
-]
-license = { text = "@2024 Roche Sequencing Solution" }
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
 requires-python = ">=3.10,<3.11"  # "==3.10.*"
 dependencies = [
     "aiohttp>=3.3.0,<4.0.0",
