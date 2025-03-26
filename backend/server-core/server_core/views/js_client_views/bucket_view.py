@@ -1,22 +1,23 @@
 import json
-
-from server_core.models.bucket import Bucket
-from flask import Blueprint, Response, request
 import logging
-from server_core.utils import json_encoder
-from peewee import DoesNotExist
-from server_core.views.js_client_views import js_client_utils
+
+from asset_pluggy.storage import BlobStoreURL
 from asset_plugin_gcs.bucket_cors import update_cors_configuration as gcs_update_cors
 from asset_plugin_s3.bucket_cors import set_bucket_cors as s3_update_cors
-from asset_pluggy.storage import BlobStoreURL
+from flask import Blueprint, Response, request
+from peewee import DoesNotExist
+
 from server_core.configs import Configs
+from server_core.models.bucket import Bucket
+from server_core.utils import json_encoder
+from server_core.views.utils import view_utils
 
 logger = logging.getLogger(__file__)
 
 view = Blueprint(name='db_bucket_view', import_name=__name__)
 
 
-@view.route('/', methods=['GET', 'POST'])
+@view.route('', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
         return get_buckets()
@@ -46,7 +47,7 @@ def get(id: str):
 
 def create_bucket():
     # create project
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         raise Exception("missing required param: user")
@@ -96,7 +97,7 @@ def update_cors(data: dict):
 
 @view.route('/<id>', methods=['PUT'])
 def update_bucket(id: str):
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         raise Exception("missing required param: user")

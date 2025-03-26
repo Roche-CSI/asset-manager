@@ -1,15 +1,17 @@
-from server_core.models import asset_version
-from flask import Blueprint, Response, request
 import logging
-from server_core.utils import json_encoder
+
+from flask import Blueprint, Response, request
 from werkzeug.datastructures import ImmutableMultiDict
+
+from server_core.models import asset_version
+from server_core.utils import json_encoder
 
 logger = logging.getLogger(__file__)
 
 asset_version_view = Blueprint(name='dashboard_asset_version_view', import_name=__name__)
 
 
-@asset_version_view.route('/', methods=['GET'])
+@asset_version_view.route('', methods=['GET'])
 def list():
     user = request.args.get('user')
     if not user:
@@ -53,7 +55,7 @@ def get(id: str):
     return Response(json_encoder.to_json(version.to_dict()), mimetype="application/json", status=200)
 
 
-@asset_version_view.route('/find/', methods=['GET'])
+@asset_version_view.route('/find', methods=['GET'])
 def find():
     args = request.args
     if not args.get('user'):

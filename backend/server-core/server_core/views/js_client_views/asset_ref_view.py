@@ -1,18 +1,20 @@
-from server_core.models import asset_ref
-from flask import Blueprint, Response, request
 import logging
-from server_core.utils import json_encoder
+
+from flask import Blueprint, Response, request
 from werkzeug.datastructures import ImmutableMultiDict
-from server_core.models.asset_ref import AssetRef
+
+from server_core.models import asset_ref
 from server_core.models.asset import Asset
+from server_core.models.asset_ref import AssetRef
 from server_core.models.asset_version import AssetVersion
+from server_core.utils import json_encoder
 
 logger = logging.getLogger(__file__)
 
 asset_ref_view = Blueprint(name='db_asset_ref_view', import_name=__name__)
 
 
-@asset_ref_view.route('/', methods=['GET'])
+@asset_ref_view.route('', methods=['GET'])
 def list():
     res_code = 200
     asset_name = request.args.get('asset_name')
@@ -33,7 +35,7 @@ def get(id: str):
     return Response(json_encoder.to_json(version.to_dict()), mimetype="application/json", status=200)
 
 
-@asset_ref_view.route('/find/', methods=['GET'])
+@asset_ref_view.route('/find', methods=['GET'])
 def find():
     args = request.args
     if not args.get('user'):

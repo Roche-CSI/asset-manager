@@ -11,7 +11,7 @@ from server_core.models.asset_class import AssetClass
 from server_core.models.asset_version import AssetVersion
 from server_core.utils.json_encoder import to_json
 from server_core.views.utils.asset_updater import update_asset_record
-from .js_client_utils import compress_data, data_from_request
+from server_core.views.utils.view_utils import compress_data, data_from_request
 
 logger = logging.getLogger(__file__)
 
@@ -21,7 +21,7 @@ MAX_ALLOWED_TAGS = 10
 MAX_TAG_LENGTH = 20
 
 
-@asset_view.route('/', methods=['GET'])
+@asset_view.route('', methods=['GET'])
 def list_assets():
     result = get_assets(args=request.args)
     compressed = compress_data(result)

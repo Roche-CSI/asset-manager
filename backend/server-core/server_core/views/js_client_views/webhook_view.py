@@ -1,18 +1,19 @@
 import json
+import logging
+
+from flask import Blueprint, Response, request
+from peewee import DoesNotExist
 
 from server_core.models import Webhook
-from flask import Blueprint, Response, request
-import logging
 from server_core.utils import json_encoder
-from peewee import DoesNotExist
-from server_core.views.js_client_views import js_client_utils
+from server_core.views.utils import view_utils
 
 logger = logging.getLogger(__file__)
 
 view = Blueprint(name='db_webhook_view', import_name=__name__)
 
 
-@view.route('/', methods=['GET', 'POST'])
+@view.route('', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
         return get_webhooks()
@@ -58,7 +59,7 @@ def get(id: str):
 
 def create_webhook():
     # create project
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         return Response(
@@ -86,7 +87,7 @@ def create_webhook():
 
 @view.route('/<id>', methods=['PUT'])
 def update_webhook(id: str):
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         return Response(
@@ -111,7 +112,7 @@ def update_webhook(id: str):
 
 @view.route('/<id>', methods=['DELETE'])
 def delete_webhook(id: str):
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         return Response(

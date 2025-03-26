@@ -1,23 +1,24 @@
+import logging
+
+from asset_pluggy.storage import BlobStoreURL
+from asset_plugin_gcs.bucket_cors import update_cors_configuration as gcs_update_cors
+from asset_plugin_s3.bucket_cors import set_bucket_cors as s3_update_cors
+from flask import Blueprint, Response, request
+from peewee import DoesNotExist
+
+from server_core.configs import Configs
 from server_core.models.project import Project
 from server_core.models.role import Role
 from server_core.models.user_role import UserRole
-from flask import Blueprint, Response, request
-import logging
 from server_core.utils import json_encoder
-from peewee import DoesNotExist
-
-from server_core.views.js_client_views import js_client_utils
-from asset_plugin_gcs.bucket_cors import update_cors_configuration as gcs_update_cors
-from asset_plugin_s3.bucket_cors import set_bucket_cors as s3_update_cors
-from asset_pluggy.storage import BlobStoreURL
-from server_core.configs import Configs
+from server_core.views.utils import view_utils
 
 logger = logging.getLogger(__file__)
 
 project_view = Blueprint(name='db_project_view', import_name=__name__)
 
 
-@project_view.route('/', methods=['GET', 'POST'])
+@project_view.route('', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
         return get_projects()
@@ -30,7 +31,8 @@ def get_projects():
     user = request.args.get('user')
     if not user:
         raise Exception("required param missing: user")
-    result = [record.to_dict() for record in Project.public()]
+    project_fields = ["id", "name", "title", "description", "is_active", "staging_url", "remote_url", "status"]
+    result = [record.to_dict(fields=project_fields) for record in Project.public()]
     return Response(json_encoder.to_json(result), mimetype="application/json", status=200)
 
 
@@ -40,12 +42,13 @@ def get(id: str):
     if not user:
         raise Exception("required param missing: user")
     proj = Project.get(Project.id == id)
-    return Response(json_encoder.to_json(proj.to_dict()), mimetype="application/json", status=200)
+    project_fields = ["id", "name", "title", "description", "is_active", "staging_url", "remote_url", "status"]
+    return Response(json_encoder.to_json(proj.to_dict(fields=project_fields)), mimetype="application/json", status=200)
 
 
 def create_project():
     # create project
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     project_name = data.get("name")
     user = data.get("user")
     if not user:
@@ -109,7 +112,7 @@ def update_cors(data: dict):
 
 @project_view.route('/<id>', methods=['PUT'])
 def update_project(id: str):
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         raise Exception("missing required param: user")
@@ -125,4 +128,3 @@ def update_project(id: str):
         res_code = 404  # not found
         result = {}
     return Response(json_encoder.to_json(result), mimetype="application/json", status=res_code)
-

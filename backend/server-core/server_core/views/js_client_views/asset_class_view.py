@@ -1,17 +1,19 @@
-from server_core.models import AssetClass, Project, User
-from flask import Blueprint, Response, request
-import logging
 import json
-from server_core.utils.json_encoder import to_json
+import logging
+
+from flask import Blueprint, Response, request
 from peewee import DoesNotExist
-from server_core.views.js_client_views import js_client_utils
+
+from server_core.models import AssetClass, Project
+from server_core.utils.json_encoder import to_json
+from server_core.views.utils import view_utils
 
 logger = logging.getLogger(__file__)
 
 asset_class_view = Blueprint(name='db_asset_class_view', import_name=__name__)
 
 
-@asset_class_view.route('/', methods=['GET', 'POST'])
+@asset_class_view.route('', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
         return list_classes()
@@ -21,7 +23,7 @@ def index():
 
 def create_asset_class():
     # create asset_class
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     class_name = data.get("name")
 
     if not data.get("project_id"):
