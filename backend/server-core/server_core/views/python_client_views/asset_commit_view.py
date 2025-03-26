@@ -1,4 +1,3 @@
-import json
 import logging
 import os
 
@@ -11,14 +10,14 @@ from server_core.models.asset import Asset as AssetModel
 from server_core.utils import time_it
 from server_core.utils.json_encoder import to_json
 from server_core.views.utils.asset_commit import AssetCommit, CommitData
-from server_core.views.js_client_views.js_client_utils import data_from_request
+from server_core.views.utils.view_utils import data_from_request
 
 logger = logging.getLogger(__file__)
 
 asset_commit_view = Blueprint(name='asset_commit_view', import_name=__name__)
 
 
-@asset_commit_view.route('/', methods=['GET', ])
+@asset_commit_view.route('', methods=['GET', ])
 def list_assets():
     result = [AssetWriter().retrieve_from_db(asset) for asset in AssetModel.public()]
     return Response(to_json(result), mimetype="application/json", status=200)

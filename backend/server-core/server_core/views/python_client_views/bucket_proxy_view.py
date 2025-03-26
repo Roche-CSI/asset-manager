@@ -10,7 +10,7 @@ view = Blueprint('bucket_proxy', __name__)
 # proxy to perform bucket operations, where client can't access s3/gcs directly
 
 
-@view.route('/', methods=['GET'])
+@view.route('', methods=['GET'])
 def index():
     return jsonify({'message': 's3 proxy'})
 

@@ -1,9 +1,10 @@
 import json
-from flask import Blueprint, Response, request
 import logging
 
+from flask import Blueprint, Response, request
+
 from server_core.utils.json_encoder import to_json
-from server_core.views.js_client_views.js_client_utils import data_from_request
+from server_core.views.utils.view_utils import data_from_request
 
 logger = logging.getLogger(__file__)
 
