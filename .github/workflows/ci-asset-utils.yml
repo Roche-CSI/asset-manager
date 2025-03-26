@@ -9,6 +9,7 @@ on:
       - 'utils-v*.*.*'
     paths:
       - 'client/asset-client/asset-utils/**'
+      - '.github/workflows/ci-asset-utils.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}
@@ -29,21 +30,17 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Install dependencies
-        working-directory: client/asset-client/asset-utils
+      - name: Setup CI environment
+        working-directory: client
         run: |
           #!/usr/bin/env bash
           set -x
           python -m pip install --upgrade pip
-          python -m pip install \
-            build \
-            flake8 \
-            pytest \
-            pytest-cov \
-            setuptools \
-            twine \
-            wheel
-          python -m pip install -e .
+          python -m pip install -r requirements.txt
+
+      - name: Install dependencies
+        working-directory: client/asset-client/asset-utils
+        run: python -m pip install -e .
 
       - name: Run flake8
         continue-on-error: true
