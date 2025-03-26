@@ -1,20 +1,21 @@
-from server_core.models import asset_ref
-from flask import Blueprint, Response, request
 import logging
-from server_core.utils import json_encoder
+
+from flask import Blueprint, Response, request
 from werkzeug.datastructures import ImmutableMultiDict
-import json
-from server_core.models.asset_version import AssetVersion
-from server_core.models.asset_ref import AssetRef
+
 from server_core.asset_client.exceptions import AssetException
-from server_core.views.js_client_views.js_client_utils import data_from_request
+from server_core.models import asset_ref
+from server_core.models.asset_ref import AssetRef
+from server_core.models.asset_version import AssetVersion
+from server_core.utils import json_encoder
+from server_core.views.utils.view_utils import data_from_request
 
 logger = logging.getLogger(__file__)
 
 asset_ref_view = Blueprint(name='asset_ref_view', import_name=__name__)
 
 
-@asset_ref_view.route('/', methods=['GET', 'POST'])
+@asset_ref_view.route('', methods=['GET', 'POST'])
 def list():
     data: dict = data_from_request(request)
     user = data.get('user')
@@ -85,7 +86,6 @@ def create_remove_refs(user, data: dict) -> [AssetRef]:
     # return the final list of refs
     return AssetRef.public().where(AssetRef.dst_version == target_ver) if target_ver else []
 
-
     # # the destination versions are same for all to_add and to_remove
     # # because from the client side, upload happens version wise
     # target = None
@@ -118,7 +118,7 @@ def get(id: str):
     return Response(json_encoder.to_json(version.to_dict()), mimetype="application/json", status=200)
 
 
-@asset_ref_view.route('/find/', methods=['GET'])
+@asset_ref_view.route('/find', methods=['GET'])
 def find():
     data: dict = data_from_request(request)
     user = data.get('user')

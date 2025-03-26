@@ -1,14 +1,17 @@
-from server_core.models import content
-from flask import Blueprint, Response, request
 import logging
-from server_core.utils import json_encoder
+
+from flask import Blueprint, Response, request
 from werkzeug.datastructures import ImmutableMultiDict
+
+from server_core.models import content
+from server_core.utils import json_encoder
 
 logger = logging.getLogger(__file__)
 
 content_view = Blueprint(name='db_content_view', import_name=__name__)
 
-@content_view.route('/', methods=['GET'])
+
+@content_view.route('', methods=['GET'])
 def list():
     user = request.args.get('user')
     if not user:

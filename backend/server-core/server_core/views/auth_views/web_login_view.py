@@ -10,16 +10,15 @@ from server_core import models
 from server_core.configs import Configs
 from server_core.utils.json_encoder import to_json
 from server_core.views.auth_views import auth_utils
+from server_core.views.utils import view_utils
 
 # bypass http
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
-BACKEND_URL = Configs.shared().host_url
-FRONTEND_URL = Configs.shared().frontend_url
 
 view = Blueprint(name='auth_view', import_name=__name__)
 
 
-@view.route("/", methods=['GET'])
+@view.route("", methods=['GET'])
 def index():
     return "works"
 
@@ -110,7 +109,8 @@ def callback():
         }
 
     jwt_token = auth_utils.generate_jwt(login_info)
-    client_url = session.get("client_url", FRONTEND_URL)
+    DEFAULT_FRONTEND_URL = Configs.shared().frontend_url
+    client_url = session.get("client_url", DEFAULT_FRONTEND_URL)
     decoded_client_url = unquote(client_url)
     # print("decoded_client_url", decoded_client_url)
     response = make_response(redirect(f"{decoded_client_url}"))
@@ -164,7 +164,7 @@ def logout():
     )
 
 
-@view.route('/token_login', methods=['GET'])
+@view.route('/token_login', methods=['POST'])
 def token_login():
     """
     Authenticate a user and return user info using a JWT token.
@@ -178,7 +178,8 @@ def token_login():
         indicates success (200) or failure (401 or 500).
     Note: jwt cookie should be set secure=True for production, False for dev
     """
-    jwt_token = request.args.get('jwt') or request.cookies.get('jwt')
+    request_data: dict = view_utils.data_from_request(request)
+    jwt_token: str = request_data.get('jwt') or request.cookies.get('jwt')
     status_code = 200
     if not jwt_token:
         response_data = {"error": "No token provided"}
@@ -192,7 +193,7 @@ def token_login():
             response_data = {"error": "Failed decoding user token"}
             status_code = 500
     response = make_response(json.dumps(response_data), status_code)
-    from_cli = bool(request.args.get('jwt'))
+    from_cli = bool(request_data.get('jwt'))
     if from_cli:
         response.set_cookie('jwt', jwt_token, httponly=True, secure=True, samesite=None)
     return response

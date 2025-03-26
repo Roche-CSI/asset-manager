@@ -1,18 +1,20 @@
-from server_core.models import AssetVersion, AssetClass, Project, Asset
-from server_core.models.asset import Asset
-from flask import Blueprint, Response, request, g
 import logging
-import json
-from server_core.utils import json_encoder
+
+from flask import Blueprint, Response, request
 from werkzeug.datastructures import ImmutableMultiDict, MultiDict
-from server_core.views.js_client_views.js_client_utils import data_from_request
+
+from server_core.models import AssetVersion
+from server_core.models.asset import Asset
+from server_core.utils import json_encoder
+from server_core.views.utils.view_utils import data_from_request
 
 logger = logging.getLogger(__file__)
 
 asset_version_view = Blueprint(name='asset_version_view', import_name=__name__)
 
+
 # validate either request.args.get('user') or g.user
-@asset_version_view.route('/', methods=['GET'])
+@asset_version_view.route('', methods=['GET'])
 def list_versions():
     data = data_from_request(request)
     user = data.get('user')
@@ -70,7 +72,8 @@ def get(id: str):
     else:
         raise Exception("method not allowed")
 
-@asset_version_view.route('/find/', methods=['GET'])
+
+@asset_version_view.route('/find', methods=['GET'])
 def find():
     args = request.args
     if not args.get('user'):
@@ -86,7 +89,7 @@ def find_versions_with_names(args: ImmutableMultiDict) -> dict:
     for ver_name in version_names:
         # refs are asset names
         version = AssetVersion.find(project_id=args.get("project_id"),
-                                                  name=ver_name)
+                                    name=ver_name)
         if version:
             results[ver_name] = version.to_dict()
 

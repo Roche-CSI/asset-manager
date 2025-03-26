@@ -1,6 +1,8 @@
-from server_core.models import asset, object as asset_object
-from flask import Blueprint, Response, request
 import logging
+
+from flask import Blueprint, Response, request
+
+from server_core.models import asset, object as asset_object
 from server_core.utils import json_encoder
 
 logger = logging.getLogger(__file__)
@@ -8,8 +10,8 @@ logger = logging.getLogger(__file__)
 asset_object_view = Blueprint(name='db_asset_object_view', import_name=__name__)
 
 
-@asset_object_view.route('/', methods=['GET'])
-def list():
+@asset_object_view.route('', methods=['GET'])
+def list_objects():
     user = request.args.get('user')
     if not user:
         raise Exception("required param missing: user")

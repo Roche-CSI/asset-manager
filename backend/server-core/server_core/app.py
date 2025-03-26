@@ -1,18 +1,18 @@
 import os
+
 from flask import Flask, abort, request, g
 from flask_cors import CORS
-from server_core.models import create_tables
-from server_core.db import get_db
-from server_core.views import register_blueprints
-from server_core.views.auth_views.auth_utils import get_user_from_token
+
 from server_core.configs import Configs
 from server_core.configs.configs import ConfigModes
-from server_core.plugins import register_plugins
-from server_core.views.admin_views.login_admin import init_login
-from server_core.elastic.vector_search import ElasticVectorSearch
+from server_core.db import get_db
 from server_core.elastic.asset_entry import AssetEntry
-
-APP_SECRET = 'your-app-secret'
+from server_core.elastic.vector_search import ElasticVectorSearch
+from server_core.models import create_tables
+from server_core.plugins import register_plugins
+from server_core.views import register_blueprints
+from server_core.views.admin_views.login_admin import init_login
+from server_core.views.auth_views.auth_utils import get_user_from_token
 
 
 def create_app() -> Flask:
@@ -37,10 +37,12 @@ def create_app() -> Flask:
 
 def configure_app(app: Flask):
     """Configures the application settings."""
+    if not os.getenv('APP_SECRET'):
+        raise ValueError("APP_SECRET environment variable is required")
     app.config.update(
         SESSION_COOKIE_HTTPONLY=True,
         SESSION_COOKIE_SAMESITE=None,  # cross site allowed
-        SECRET_KEY=os.getenv('APP_SECRET', APP_SECRET)
+        SECRET_KEY=os.getenv('APP_SECRET')
     )
 
 
@@ -103,17 +105,28 @@ def configure_auth(app: Flask):
         if any(request.endpoint.startswith(prefix) for prefix in public_prefixes):
             return
 
+        request_type = type_of_request(request)
+        if request_type == 'default':
+            print("Message: request from older client version or local dashboard")
+            return
 
         token = extract_token(request)
         if not token:
             abort(401, "Missing or invalid Authorization token")
-
         try:
             user = get_user_from_token(token)
             g.user = user.username or request.args.get('user')
         except Exception as e:
             abort(401, f"Invalid token: {str(e)}")
 
+
+def type_of_request(request):
+    """Returns the type of request."""
+    if request.cookies.get('jwt'):
+        return 'web'
+    if request.headers.get("Authorization"):
+        return "api"
+    return 'default'
 
 
 def extract_token(request):
@@ -126,6 +139,7 @@ def extract_token(request):
 
 def configure_routes(app: Flask):
     """Registers the application routes."""
+
     @app.route('/')
     def hello_world():
         return 'Hello World!'
@@ -152,9 +166,38 @@ def configure_elastic(app: Flask):
 
 def configure_cors(app: Flask):
     """Configures CORS for the application."""
-    is_production: bool = Configs.shared().MODE == ConfigModes.PRODUCTION
-    allowed_origins = [Configs.shared().frontend_url] if is_production else '*'
+    # Retrieve extra allowed origins from an environment variable and split to get a list
+    extra_allowed_origins_var = os.getenv('ASSET_EXTRA_ALLOWED_ORIGINS', '')
+    extra_allowed_origins = extra_allowed_origins_var.split(',') if extra_allowed_origins_var else []
+
+    allowed_origins = [
+        Configs.shared().frontend_url,
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
+        *extra_allowed_origins
+    ]
     CORS(app, supports_credentials=True, resources={r"/*": {"origins": allowed_origins}})
+
+    @app.after_request
+    def add_security_headers(response):
+        origin = request.headers.get('Origin')
+        headers_to_remove = [
+            'Access-Control-Allow-Origin',
+            'Access-Control-Allow-Credentials',
+            'Access-Control-Allow-Headers',
+            'Access-Control-Allow-Methods'
+        ]
+        for header in headers_to_remove:  # avoid duplicate headers
+            if header in response.headers:
+                del response.headers[header]
+
+        if origin in allowed_origins:
+            response.headers.set('Access-Control-Allow-Origin', origin)
+            response.headers.set('Access-Control-Allow-Credentials', 'true')
+            response.headers.set('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+            response.headers.set('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+
+        return response
 
 
 def run():

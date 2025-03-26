@@ -1,15 +1,17 @@
+import logging
+
 from flask import Blueprint, Response, request
+
 from server_core.models.object import Object as ObjectModel
 from server_core.utils import json_encoder
 from server_core.views.utils import signed_url_for_content
-import logging
 
 logger = logging.getLogger(__file__)
 
 url_view = Blueprint(name='gcs_url_view', import_name=__name__)
 
 
-@url_view.route('/', methods=['GET'])
+@url_view.route('', methods=['GET'])
 def get_signed_url():
     class_id, object_id = request.args.get("class_id"), request.args.get("object_id")
     object_record = ObjectModel.get_if_exists(ObjectModel.id == object_id)

@@ -1,6 +1,5 @@
 DATABASE:
-  database: asset_dev
-  #  database: asset_sb_copy
+  database: asset_sandbox
   user: postgres
   password: postgres
   host: localhost
@@ -14,4 +13,4 @@ FRONTEND:
   BASE_URL: http://localhost:3000
 
 DOMAIN:
-  DOMAIN_NAME: my-domain.com
+  DOMAIN_NAME: .com

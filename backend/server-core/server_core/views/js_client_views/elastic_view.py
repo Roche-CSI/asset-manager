@@ -1,17 +1,19 @@
 import json
-from flask import Blueprint, Response, request, current_app
-from urllib.parse import unquote
 import logging
-from server_core.utils import json_encoder
+from urllib.parse import unquote
+
+from flask import Blueprint, Response, request, current_app
+
 from server_core.elastic.asset_entry import AssetEntry
 from server_core.elastic.vector_search import ElasticVectorSearch
+from server_core.utils import json_encoder
 
 logger = logging.getLogger(__file__)
 
 view = Blueprint(name='elastic_search_view', import_name=__name__)
 
 
-@view.route('/', methods=['GET'])
+@view.route('', methods=['GET'])
 def search():
     """Perform a global search in Elasticsearch based on query params"""
     # Extract query parameters
@@ -62,7 +64,7 @@ def search():
         )
 
 
-@view.route('/', methods=['POST'])
+@view.route('', methods=['POST'])
 def create():
     """Create or update a document in Elasticsearch"""
     user = request.args.get('user')
@@ -105,4 +107,3 @@ def create():
             mimetype="application/json",
             status=500
         )
-

@@ -1,17 +1,19 @@
+import logging
+
+from flask import Blueprint, Response, request
+
 from server_core.models.role import Role
 from server_core.models.user import User
 from server_core.models.user_role import UserRole
-from flask import Blueprint, Response, request
-import logging
 from server_core.utils import json_encoder
-from server_core.views.js_client_views import js_client_utils
+from server_core.views.utils import view_utils
 
 logger = logging.getLogger(__file__)
 
 user_role_view = Blueprint(name='db_user_role_view', import_name=__name__)
 
 
-@user_role_view.route('/', methods=['GET'])
+@user_role_view.route('', methods=['GET'])
 def list():
     user = request.args.get('user')
     if not user:
@@ -59,10 +61,10 @@ def list_by_project(project_name: str):
     return result
 
 
-@user_role_view.route('/', methods=['POST'])
+@user_role_view.route('', methods=['POST'])
 def create_user_role():
     """Create member user role using project_name and username"""
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     created_by = data.get("created_by")
     project_name = data.get("project_name")
     if not created_by or not project_name:
@@ -72,7 +74,8 @@ def create_user_role():
 
     # check if user has admin role
     if not is_admin_for_project(created_by, project_name):
-        result = {"error": "Cannot add user because {} is not an admin for the {} project".format(created_by, project_name)}
+        result = {
+            "error": "Cannot add user because {} is not an admin for the {} project".format(created_by, project_name)}
         res_code = 400
         return Response(json_encoder.to_json(result), mimetype="application/json", status=res_code)
     try:
@@ -120,7 +123,8 @@ def get_or_create_user_role(project_name, username, asset_user, is_admin=False):
         role: Role = Role.get_if_exists(Role.project_name == project_name, ~Role.can_admin_project)
     if not role:
         # create a new role
-        role = Role.create_if_not_exists_for_project(project_name=project_name, username=username, can_admin_project=is_admin)
+        role = Role.create_if_not_exists_for_project(project_name=project_name, username=username,
+                                                     can_admin_project=is_admin)
 
     new_user_role: UserRole = UserRole.create_if_not_exists_for_role(
         role_id=role.id,
@@ -132,7 +136,7 @@ def get_or_create_user_role(project_name, username, asset_user, is_admin=False):
 @user_role_view.route('/<id>', methods=['PUT'])
 def update_user_role(id: str):
     """Update user role using id"""
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     updated_by, project_name = data.get("modified_by"), data.get("project_name")
     if not updated_by or not project_name:
         result = {"error": "required params missing: updated_by or project_name"}
@@ -160,7 +164,8 @@ def update_user_role(id: str):
                 # update the user role
                 role = Role.get_if_exists(Role.project_name == project_name, Role.can_admin_project == is_admin)
                 if not role:
-                    role = Role.create_if_not_exists_for_project(project_name=project_name, username=updated_by, can_admin_project=is_admin)
+                    role = Role.create_if_not_exists_for_project(project_name=project_name, username=updated_by,
+                                                                 can_admin_project=is_admin)
                 user_role.role = role
                 user_role.save(user=updated_by, only=[UserRole.role_id])
                 result = {

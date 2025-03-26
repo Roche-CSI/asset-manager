@@ -5,7 +5,7 @@ from flask import Blueprint, Response, request
 from server_core import models
 from server_core.utils.json_encoder import to_json
 from server_core.views.auth_views import auth_utils
-from server_core.configs.configs import Configs
+
 view = Blueprint(name='cli_auth_view', import_name=__name__)
 
 
@@ -41,8 +41,7 @@ def response_login():
 @view.route('/login', methods=['POST'])
 def login():
     data = json.loads(request.data.decode("utf-8"))  # ascii doesn't work for readme
-    return login_response(client_id=data.get("client_id"),
-                          token=data.get("id_token"))
+    return login_response(client_id=data.get("client_id"), token=data.get("id_token"))
 
 
 @view.route('/token_login', methods=['POST'])
@@ -54,20 +53,6 @@ def token_login():
         status=200,
         mimetype='application/json'
     )
-
-
-def validate_user_data(data: dict):
-    """
-    Checks the data returned by google auth
-    :param data:
-    :return:
-    """
-    domain = Configs.shared().get_domain()
-    if domain not in data.get('hd'):
-        return False
-    if not data.get('email_verified', False):
-        return False
-    return True
 
 
 def login_response(client_id: str, token: str) -> Response:

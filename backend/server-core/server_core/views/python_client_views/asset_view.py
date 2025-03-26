@@ -1,4 +1,3 @@
-import json
 import logging
 
 from asset_utils.common import exceptions
@@ -8,14 +7,14 @@ from server_core.models.asset import Asset
 from server_core.models.asset_class import AssetClass
 from server_core.utils.json_encoder import to_json
 from server_core.views.utils.asset_updater import update_asset_record
-from server_core.views.js_client_views.js_client_utils import data_from_request
+from server_core.views.utils.view_utils import data_from_request
 
 logger = logging.getLogger(__file__)
 
 asset_view = Blueprint(name='asset_view', import_name=__name__)
 
 
-@asset_view.route('/', methods=['GET', 'POST'])
+@asset_view.route('', methods=['GET', 'POST'])
 def list_assets():
     if request.method == 'GET':
         result = get_assets(args=request.args)

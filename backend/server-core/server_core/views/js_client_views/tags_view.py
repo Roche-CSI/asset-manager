@@ -1,23 +1,24 @@
-from server_core.models.tags import Tags
-from server_core.models.tag_refs import TagRefs
-from server_core.models.tag_queries import TagQueries
-from server_core.models.asset_class import AssetClass
-from server_core.models.asset import Asset
-from server_core.models.asset_version import AssetVersion
-from flask import Blueprint, Response, request
+import json
 import logging
 
+from flask import Blueprint, Response, request
+
+from server_core.models.asset import Asset
+from server_core.models.asset_class import AssetClass
+from server_core.models.asset_version import AssetVersion
+from server_core.models.tag_queries import TagQueries
+from server_core.models.tag_refs import TagRefs
+from server_core.models.tags import Tags
 from server_core.utils import json_encoder
 from server_core.utils.json_encoder import to_json
-from server_core.views.js_client_views import js_client_utils
-import json
+from server_core.views.utils import view_utils
 
 logger = logging.getLogger(__file__)
 
 tags_view = Blueprint(name='db_tags_view', import_name=__name__)
 
 
-@tags_view.route('/', methods=['GET', 'POST', 'PUT'])
+@tags_view.route('', methods=['GET', 'POST', 'PUT'])
 def index():
     if request.method == 'GET':
         return get_tags()
@@ -37,7 +38,7 @@ def create_tags():
     table_name: table name (asset_class/asset/asset_version) of the record to which the tag dictionary is attached
     record_id: record id in its corresponding table
     """
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     table_name = data.get("table_name")
     record_id = data.get("record_id")
@@ -113,7 +114,7 @@ def get_tags():
 
 
 def update_tags():
-    data: dict = js_client_utils.data_from_request(request)
+    data: dict = view_utils.data_from_request(request)
     user = data.get("user")
     if not user:
         raise Exception("missing required param: user")

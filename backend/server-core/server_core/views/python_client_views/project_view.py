@@ -1,6 +1,8 @@
-from server_core import models
-from flask import Blueprint, Response, request
 import logging
+
+from flask import Blueprint, Response, request
+
+from server_core import models
 from server_core.utils.json_encoder import to_json
 
 logger = logging.getLogger(__file__)
@@ -8,7 +10,7 @@ logger = logging.getLogger(__file__)
 view = Blueprint(name='project_view', import_name=__name__)
 
 
-@view.route('/', methods=['GET'])
+@view.route('', methods=['GET'])
 def index():
     result = [project.to_dict(fields=models.Project.public_fields()) for project in models.Project.public()]
     return Response(to_json(result), mimetype="application/json", status=200)

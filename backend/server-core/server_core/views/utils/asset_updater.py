@@ -62,6 +62,9 @@ def update_asset_record(asset: Asset, data: dict) -> dict:
     if "phase" in data:
         asset.phase = data.get("phase")
         updates.append(Asset.phase)
+    if "status" in data:
+        asset.status = data.get("status")
+        updates.append(Asset.status)
 
     if "alias" in data:
         alias = data.get("alias")
@@ -98,11 +101,12 @@ def update_asset_record(asset: Asset, data: dict) -> dict:
         updates.append(Asset.tags)
 
     if updates:
-        try:
-            # add to elastic-search index, will rollback if error occurs later
-            update_elastic(asset=asset, updates=updates, user=data["user"])
-        except Exception as e:
-            raise exceptions.AssetException(f"failed to update elastic search index: {e}")
+        if has_search_engine():
+            try:
+                # add to elastic-search index, will rollback if error occurs later
+                update_elastic(asset=asset, updates=updates, user=data["user"])
+            except Exception as e:
+                raise exceptions.AssetException(f"failed to update elastic search index: {e}")
 
         # use atomic transaction so db doesn't get updated if error occurs
         with db.atomic():
@@ -117,6 +121,10 @@ def update_asset_record(asset: Asset, data: dict) -> dict:
                 raise exceptions.AssetException(f"failed to update asset: {e}")
 
     return asset.to_dict()
+
+
+def has_search_engine():
+    return hasattr(current_app, 'search_engine') and current_app.search_engine is not None
 
 
 def update_elastic(asset: Asset, updates: list, user: str):
