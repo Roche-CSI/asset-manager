@@ -2,10 +2,13 @@ from __future__ import annotations
 
 import enum
 import json
+import logging
 import os
 
 from server_core.utils.file_utils import FileUtils
 from server_core.utils.logging import LoggingMixin
+
+logger = logging.getLogger(__file__)
 
 CONFIG_FILES = {
     "DEV": "dev_configs.yaml",
@@ -159,12 +162,14 @@ class Configs(LoggingMixin):
     @classmethod
     def config_data(cls):
         # check for json string in env variable
-        if os.getenv("CONFIG_DATA"):
-            return json.loads(os.getenv("CONFIG_DATA"))
+        config_data = os.getenv("ASSET_CONFIG_DATA")
+        if config_data:
+            return json.loads(config_data)
+        logger.critical("missing ASSET_CONFIG_DATA, reading configs from file")
         return FileUtils.read_yaml(os.path.join(cls.configs_dir(), CONFIG_FILES[cls.MODE]))
 
     @staticmethod
-    def shared(mode=None) -> Configs:
+    def shared(mode: ConfigModes = None):
         mode = mode or DEFAULT_MODE
         if not Configs._instance:
             Configs._instance = Configs._initialize(mode=mode)
