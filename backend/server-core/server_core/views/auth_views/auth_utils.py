@@ -10,6 +10,7 @@ from flask.globals import request
 from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
 from werkzeug.exceptions import abort
+
 from server_core.configs.configs import Configs
 from server_core import models
 from server_core.models.base.base import db_proxy as db
@@ -17,20 +18,20 @@ from server_core.models.base.base import db_proxy as db
 algorithm = "HS256"  # os.getenv("ALGORITHM")
 
 
-def user_signup(data: dict, DOMAIN_VERIFICATION_REQUIRED:bool=True):
+def user_signup(data: dict, DOMAIN_VERIFICATION_REQUIRED: bool = True):
     if not data.get("username") or not data.get("email"):
         raise Exception("both email and username is required")
     # create user table entry
-    
+
     DOMAIN = Configs.shared().get_domain()
     if DOMAIN_VERIFICATION_REQUIRED and DOMAIN is None:
         raise Exception("Domain can not be null")
     elif DOMAIN is None:
         print("Warning: Domain should be set before deploying to production")
-    
+
     if DOMAIN not in data.get("email"):
         raise Exception("invalid email, only valid org emails are allowed")
-    
+
     with db.atomic() as txn:
         user = models.User.get_if_exists(models.User.username == data.get("username"))
         if not user:
@@ -60,6 +61,15 @@ def verify_oauth2_token(token: str, client_id: str):
 
 
 def get_flow(configs: dict = None, redirect_uri: str = None):
+    """
+    Get flow object for google auth
+    First check if configs are provided, if not, fetch from db
+    the auth config is set in AuthProvider table, named `google_auth`
+    in the configs, the web key should have the `client_id, client_secret, redirect_uris, scopes`
+    :param configs: dict
+    :param redirect_uri: str
+    :return: Flow, dict
+    """
     if not configs:
         auth = models.AuthProvider.get(models.AuthProvider.name == "google_auth")
         configs = auth.configs
@@ -142,13 +152,13 @@ def validate_and_refresh_jwt(token: str):
     )
 
 
-def validate_user_data(data: dict, DOMAIN_VERIFICATION_REQUIRED:bool = True):
+def validate_user_data(data: dict, DOMAIN_VERIFICATION_REQUIRED: bool = True):
     """
     Checks the data returned by google auth
     :param data:
     :return:
     """
-    DOMAIN= Configs.shared().get_domain()
+    DOMAIN = Configs.shared().get_domain()
     if DOMAIN_VERIFICATION_REQUIRED and DOMAIN is None:
         raise ValueError("Domain cannot be null when DOMAIN_VERIFICATION_REQUIRED is enabled.")
     elif DOMAIN is None:
@@ -177,9 +187,11 @@ def home_page_user():
         mimetype='application/json'
     )
 
+
 def get_login_info(token: str, credentials: bool = True):
     user = models.user.User.get_if_exists(models.user.User.token == token)
     default_project = models.AssetSettings.default_project()
+    asset_dashboard_settings = models.AssetSettings.get_if_exists(models.AssetSettings.name == "dashboard_settings")
     if user:
         login_info = {
             "user": {
@@ -190,11 +202,11 @@ def get_login_info(token: str, credentials: bool = True):
             },
             "roles": user.get_roles(credentials=credentials),
             "default_project": str(default_project.id) if default_project else None,
-            "redirect_url": "/projects"
+            "redirect_url": "/projects",
+            "dashboard_settings": json.loads(asset_dashboard_settings.value) if asset_dashboard_settings else None
         }
     else:
         login_info = {
             "error": "invalid user"
         }
     return login_info
-
