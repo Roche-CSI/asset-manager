@@ -1,1 +1,1 @@
-# asset_server
+asset-server
