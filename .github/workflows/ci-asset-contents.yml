@@ -1,0 +1,76 @@
+name: ci-asset-contents
+run-name: GROUP - ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - 'contents-v*.*.*'
+    paths:
+      - 'client/asset-contents/**'
+      - '.github/workflows/ci-asset-contents.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.actor }}
+  cancel-in-progress: true
+
+jobs:
+  ci-pip:
+    runs-on: [ ubuntu-latest ]
+    timeout-minutes: 10
+    env:
+      PYTHON_VERSION: "3.10"
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Setup CI environment
+        working-directory: client
+        run: |
+          #!/usr/bin/env bash
+          set -x
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Install dependencies
+        working-directory: client/asset-contents
+        run: python -m pip install -e .
+
+      - name: Run flake8
+        continue-on-error: true
+        working-directory: client/asset-contents
+        run: flake8 .
+
+      - name: Run tests
+        continue-on-error: true
+        working-directory: client/asset-contents
+        run: pytest --cov=./ --cov-report=xml
+
+      - name: Build package
+        working-directory: client/asset-contents
+        run: python -m build
+
+      - name: Check package
+        working-directory: client/asset-contents
+        run: twine check dist/*
+
+      - name: Store built package
+        if: startsWith(github.ref, 'refs/tags/contents')
+        uses: actions/upload-artifact@v4
+        with:
+          name: asset-contents-dist
+          path: client/asset-contents/dist/
+
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/contents')
+        working-directory: client/asset-contents
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: twine upload dist/*
