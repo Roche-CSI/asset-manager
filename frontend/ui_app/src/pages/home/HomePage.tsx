@@ -53,7 +53,7 @@ const LockIcon = ({ className }) => (
 	</svg>
 );
 
-const TopBar = () => (
+const TopBar = ({repoUrl, docsUrl}) => (
 	<nav className="flex justify-between items-center py-3">
 		<a href="/" className="flex items-center space-x-2">
 			<Logo className="w-8 h-8" />
@@ -61,7 +61,7 @@ const TopBar = () => (
 		</a>
 		<div className="flex items-center space-x-6 pr-16">
 			<a
-				href=""
+				href={repoUrl}
 				target="_blank"
 				rel="noopener noreferrer"
 				className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition duration-300"
@@ -70,7 +70,7 @@ const TopBar = () => (
 				<span className="hidden md:inline font-semibold">GitHub</span>
 			</a>
 			<a
-				href=""
+				href={docsUrl}
 				target="_blank"
 				rel="noopener noreferrer"
 				className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition duration-300"
@@ -87,17 +87,19 @@ export const HomePage = () => {
 	const navigate = useNavigate();
 	const params = new URLSearchParams(location.search);
 	const token = params.get('token');
+	const repoUrl: string = import.meta.env.VITE_REPO_URL || '';
+	const docsUrl: string = import.meta.env.VITE_DOCS_URL || '';
 
 	/**
 	 * Redirect from cli `open asset dashboard`, to be used for authentication in PrivateRoute
 	 */
 	if (token) {
-		navigate(`${"/assets/all"}?token=${token}`);
+		navigate(`${"/projects"}?token=${token}`);
 	}
 
 	return (
 		<div className="w-full bg-gradient-to-b from-slate-100 to-white px-32">
-			<TopBar />
+			<TopBar repoUrl={repoUrl} docsUrl={docsUrl} />
 			<main className="container mx-auto py-16">
 				<div className="flex flex-col md:flex-row items-center">
 					<div className="md:w-1/2 text-left md:text-left mb-8 md:mb-0">
@@ -151,7 +153,7 @@ export const HomePage = () => {
 						<p className="mb-4">&copy; 2024 Asset Manager. All rights reserved.</p>
 						<div className="flex justify-center space-x-6">
 							<a
-								href=""
+								href={docsUrl}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition duration-300"
@@ -160,7 +162,7 @@ export const HomePage = () => {
 								<span>GitHub Repository</span>
 							</a>
 							<a
-								href=""
+								href={repoUrl}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition duration-300"

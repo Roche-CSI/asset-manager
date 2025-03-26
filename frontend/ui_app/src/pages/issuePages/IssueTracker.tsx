@@ -9,7 +9,6 @@ import useLoadingState, { DataState } from "../../components/commonHooks/useLoad
 
 interface FormState {
     title?: string;
-    repo_name?: string;
     description?: string;
 }
 
@@ -24,7 +23,6 @@ const initialState: IssueTrackerState = {
     formData: {
         title: '',
         description: '',
-        repo_name: repos[0].value,
     },
     formErrors: {},
 };
@@ -85,7 +83,6 @@ export default function IssueTracker() {
                         onFieldChanged={onFormFieldChange}
                         title={state.formData.title!}
                         description={state.formData.description!}
-                        repo_name={state.formData.repo_name!}
                         errors={state.formErrors}
                         loadingState={loadingState}
                         validated={state.validated} />
@@ -117,12 +114,13 @@ export default function IssueTracker() {
         let data = {
             title: state.formData.title,
             user: userName,
-            description: `${state.formData.description} - Repo: ${state.formData.repo_name} - Submitted By: ${userName}`
+            description: `${state.formData.description} - Submitted By: ${userName}`
         };
         // console.log(data)
         startFetchingState();
         fetchPost(new AssetURLs().issues_route(), data).then((data: any) => {
             completeFetchingState();
+            handleFormDataChange({ title: '', description: '' });
         }).catch((err) => {
             catchFetchingError(err);
             handleFormErrorsChange(err.message);

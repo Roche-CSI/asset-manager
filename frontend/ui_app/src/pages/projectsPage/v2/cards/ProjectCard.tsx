@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { UserCircle2, Mail } from "lucide-react";
 import DigitalAssetIcons from "pages/projectsPage/v2/DigitalAssetIcons.tsx";
+import { StoreNames, useStore } from '../../../../stores';
 
 interface CardProps {
 	project: {
@@ -26,8 +27,12 @@ const handleProjectLinkClick = (event: React.MouseEvent) => {
 
 const ProjectCard: React.FC<CardProps> = ({project, isActive, hasAccess, onClick, index}) => {
 	const [isHovered, setIsHovered] = useState(false);
+	const userStore = useStore(StoreNames.userStore);
 	
-	project.admin = {email: "abc@gmail.com", name: "abc"};
+	project.admin = {
+		email: userStore.get('dashboard_settings')?.admin_email || "joe@gmail.com", 
+		name: userStore.get('dashboard_settings')?.admin_name || "Joe"
+	};
 	
 	return (
 		<div

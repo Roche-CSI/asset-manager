@@ -17,6 +17,7 @@ export function save_user(store: any, userInfo: any) {
     store.set("projects", projects_data.projects);
     store.set("active_project", projects_data.active)
     store.set("redirect_url", userInfo.redirect_url)
+    store.set("dashboard_settings", userInfo.dashboard_settings)
     return userInfo.user.token;
 }
 
@@ -66,7 +67,6 @@ export function PrivateRoute({ children }: any) {
             }
             let token = save_user(userStore, data);
             setToken(token);
-            // navigate(userStore.get('redirect_url')); // Redirect to project
         }).catch((err) => {
             setError(JSON.stringify(err.message))
             // urlStack.set('redirect_from', `${window.location.pathname}${window.location.search}`)

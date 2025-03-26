@@ -175,7 +175,7 @@ export default function ProjectsListPage() {
 						}/>
 				</div>
 				<div className={"pb-2 flex text-xs"}>
-					<p>To obtain access please contact admins on Slack:</p>
+					<p>{`To obtain access please contact admins on Slack ${userStore.get('dashboard_settings')?.slack_channel || ''}`}</p>
 					<p className='ml-1.5 italic'></p>
 				</div>
 			</div>

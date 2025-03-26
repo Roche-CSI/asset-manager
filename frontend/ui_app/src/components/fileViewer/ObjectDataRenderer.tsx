@@ -8,14 +8,15 @@ import DocumentScannerOutlinedIcon from '@mui/icons-material/DocumentScannerOutl
 import PatternOutlinedIcon from '@mui/icons-material/PatternOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
-import {Link} from "react-router-dom";
-import {resolveSrv} from "dns";
+import { StoreNames, useStore } from "../../stores";
 
 interface Props {
     objectData: object;
 }
 
 export default function ObjectDataRenderer(props: Props) {
+    const userStore = useStore(StoreNames.userStore);
+
     if(!props.objectData) {
         return null;
     }
@@ -78,7 +79,7 @@ export default function ObjectDataRenderer(props: Props) {
             return "";
         }
         if (src.startsWith("us.gcr.io") || src.startsWith("gcr.io")) {
-            const prefix = "https://console.cloud.google.com/gcr/images/";
+            const prefix = userStore.get('dashboard_settings')?.gcr_prefix || "https://console.cloud.google.com/gcr/images/";
             let model: string = (src.split("/").pop() as string);
             let shaId = "sha256:";
             if (model.includes(shaId)) {

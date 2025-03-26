@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa6';
+import { BadgeAlert, Layers, Box, Github, BookOpen, Search } from "lucide-react";
 import { StoreNames, useStore } from '../../stores';
 import { BadgedDropDown } from '../dropDown';
 import { UserMenu } from './userMenu';
@@ -8,17 +9,73 @@ import ProjectsDropdown from './ProjectsDropdown';
 import { Logo } from '../logo';
 import { MenuItem } from "../common";
 import { CircularAvatar } from "../../pages/projectsPage/v2/cards/UserCard"
-import { LEFT_MENU, RIGHT_MENU } from './NavConfig';
+
+interface NavItem {
+    name: string;
+    route: string;
+    icon: any;
+    label: string;
+    pattern?: string;
+    isJwtProtected?: boolean; // If the route is protected by JWT
+}
 
 export const TopNavV2 = () => {
     const userStore = useStore(StoreNames.userStore, true);
+    const activeProjectId = userStore.get("active_project");
+    const activeProject = userStore.get("projects")?.[activeProjectId];
     const [currentUser, setCurrentUser] = useState({ username: null, picture: null });
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
     const active: string = location.pathname.split("/")[1];
 
+    const LEFT_MENU: Record<string, NavItem> = {
+        asset: {
+            name: "assets",
+            route: `/assets?project_id=${activeProject?.id}`,
+            icon: <Layers className="size-3.5 text-neutral-400" />,
+            label: "Assets",
+            pattern: "asset"
+        },
+        pipelines: {
+            name: "pipelines",
+            route: userStore.get('dashboard_settings')?.pipeline_url || '',
+            isJwtProtected: true,
+            icon: <Box className="size-3" />,
+            label: "Pipelines",
+            pattern: "pipeline"
+        },
+        issue: {
+            name: "issue",
+            route: "/issue",
+            label: "Issues",
+            icon: <BadgeAlert className="size-4 text-neutral-400" />,
+            pattern: "issue"
+        }
+    }
+    
+    const RIGHT_MENU: Record<string, any> = {
+        search: {
+            name: "search",
+            route: "/search",
+            icon: <Search className="size-4 text-neutral-400" />,
+            label: "Search"
+        },
+        github: {
+            name: "github",
+            route: import.meta.env.VITE_REPO_URL || '',
+            label: "Github",
+            icon: <Github className="size-4 text-neutral-400" />,
+            pattern: "github"
+        },
+        documentation: {
+            name: "documentation",
+            route: import.meta.env.VITE_DOCS_URL || '',
+            label: "Docs",
+            icon: <BookOpen className="size-4 text-neutral-400" />,
+            pattern: "documentation"
+        },
+    };
 
 
     useEffect(() => {
@@ -34,7 +91,6 @@ export const TopNavV2 = () => {
     }, []);
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-    const toggleProfileMenu = () => setIsProfileMenuOpen(!isProfileMenuOpen);
 
     const onUserMenuClick = (item: Record<string, any>) => {
         if (item.name === "logout" || item.name === "switch") {
@@ -43,25 +99,26 @@ export const TopNavV2 = () => {
         navigate(item.route);
     };
 
-    const renderNavLink = (item: Record<string, any>) => {
+    const renderNavLink = (item: NavItem) => {
         const isExternal = item.route.startsWith('http');
         const baseClasses = `flex items-center px-3 py-2 text-sm font-medium
-            ${active.includes(item.pattern) ? "border border-base-300 rounded-md" : ""}`;
+            ${active.includes(item?.pattern || '') ? "border border-base-300 rounded-md" : ""}`;
 
         // Add subtle styling for external links
         const externalClasses = isExternal ? "after:content-['↗'] after:ml-1 after:text-neutral-400 hover:after:text-primary" : "";
 
         if (isExternal) {
+            const route: string = item.isJwtProtected? `${item.route}?token=${userStore.get("user").token}` : item.route;
             return (
                 <a
                     key={item.name}
-                    href={item.route}
+                    href={route}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${baseClasses} ${externalClasses} hover:text-primary transition-colors`}
                 >
                     <span className="mr-2">{item.icon}</span>
-                    <span className={active.includes(item.pattern) ? "font-bold" : ""}>
+                    <span className={active.includes(item?.pattern || '') ? "font-bold" : ""}>
                         {item.label}
                     </span>
                 </a>
@@ -75,7 +132,7 @@ export const TopNavV2 = () => {
                 className={baseClasses}
             >
                 <span className="mr-2">{item.icon}</span>
-                <span className={active.includes(item.pattern) ? "font-bold" : ""}>
+                <span className={active.includes(item?.pattern || '') ? "font-bold" : ""}>
                     {item.label}
                 </span>
             </Link>

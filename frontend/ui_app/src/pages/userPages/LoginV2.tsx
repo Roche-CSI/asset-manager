@@ -86,3 +86,5 @@ export const LoginV2 = () => {
 		</div>
 	);
 };
+
+export default LoginV2;
