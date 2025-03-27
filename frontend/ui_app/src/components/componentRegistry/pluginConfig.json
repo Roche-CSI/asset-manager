@@ -1,7 +1,2 @@
 [
-    {
-        "name": "my-app-plugin",
-        "modulePath": "../../plugins/my-app-plugin",
-        "metadataPath": "../../plugins/my-app-plugin/metadata.json"
-    }
 ]
