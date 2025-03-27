@@ -19,6 +19,11 @@ You will also see any lint errors in the console.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To use a different server: 
+run `VITE_API_URL=http://your-server-domain.com/ npm start`
+
+check `vite-env.d.ts` for other configurable environment variables.
+
 #### `npm test`
 
 Launches the test runner in the interactive watch mode.\
