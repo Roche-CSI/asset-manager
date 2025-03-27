@@ -8,10 +8,10 @@ version = "1.0.0"
 description = "The server-side component of the Asset Manager system that provides backend services for managing digital assets. It functions as a centralized server that handles asset storage, retrieval, and management across different storage backends."
 readme = "README.md"
 authors = [
-    "swarup.mahanti@roche.com"
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
 ]
 maintainers = [
-    "swarup.mahanti@roche.com"
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
 ]
 license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
 requires-python = "==3.10.*"
@@ -27,9 +27,9 @@ dependencies = [
     "Flask-Cors==3.0.10",
     "Flask-Dance==7.0.0",
     "Flask-Login==0.6.3",
-    "google-auth-oauthlib==0.5.2",
+    "google-auth-oauthlib==0.4.*",
     "gunicorn==20.1.0",
-    "Jinja2==3.0.1",
+    "Jinja2==3.1.*",
     "packaging==23.1",
     "peewee==3.14.8",
     "psycopg2==2.9.2",
