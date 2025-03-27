@@ -20,8 +20,8 @@ dependencies = [
     "amapy-db==1.*",
     "amapy-pluggy==1.*",
     "amapy-utils==1.*",
-    "google-auth-oauthlib==0.4.*",
-    "jinja2==3.1.*",
+    "google-auth-oauthlib==0.5.*",
+    "jinja2==3.0.*",
     "packaging==23.1.*",
     "pathspec==0.12.*"
 ]
