@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amapy-plugin-gcs"
+version = "1.0.0"
+description = "The GCS plugin for the asset-manager project. It provides functionalities to manage and integrate Google Cloud Storage (GCS) within the asset management system."
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "amapy-contents==1.*",
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*",
+    "backoff==2.2.*",
+    "gcloud-aio-storage==9.3.*",
+    "google-cloud-storage==2.10.*"
+]
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false

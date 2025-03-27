@@ -1,0 +1,1 @@
+# gdm_asset_manager

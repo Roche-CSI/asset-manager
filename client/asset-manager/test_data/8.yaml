@@ -1,0 +1,6 @@
+employee:
+  id: 1001
+  name: Sam
+  department: HR
+  salary: 50000
+  hire_date: 2023-03-01

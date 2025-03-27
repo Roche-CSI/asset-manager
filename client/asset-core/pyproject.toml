@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amapy-core"
+version = "1.0.0"
+description = "The Core package for asset-manager. It provides the core functionalities like creating, midifying, downloading and uploading of the digital assets."
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "amapy-contents==1.*",
+    "amapy-db==1.*",
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*",
+    "google-auth-oauthlib==0.5.*",
+    "jinja2==3.0.*",
+    "packaging==23.1.*",
+    "pathspec==0.12.*"
+]
+
+# flat layout: https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#flat-layout
+# disable implicit namespaces.
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"asset_core.configs.yamls" = ["*.yaml"]
+"asset_core.api.templates" = ["*.html"]

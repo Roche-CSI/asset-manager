@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amapy-pluggy"
+version = "1.0.0"
+description = "A Plugin handler for asset-manager project.  It provides functionalities to manage and integrate various plugins within the asset management system."
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "amapy-utils==1.*",
+    "pluggy==1.5.*",
+]
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false

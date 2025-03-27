@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amapy-utils"
+version = "1.0.0"
+description = "A utility package that provides common functionality shared across the asset-manager ecosystem. It serves as a foundation library offering various helper functions and tools needed by other components in the system."
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "aiofiles==0.7.*",
+    "cached_property==1.5.*",
+    "colorama==0.4.*",
+    "crcmod==1.*",
+    "psutil==5.9.*",
+    "pyopenssl==24.0.*",
+    "pypager==3.0.1",
+    "pytz==2021.3",
+    "pyyaml==6.0.*",
+    "requests==2.32.*",
+    "ruamel.yaml==0.18.*",
+    "speedtest-cli==2.1.*",
+    "tabulate==0.9.*",
+    "tqdm==4.62.*"
+]
+
+[project.scripts]
+utils = "asset_utils.utils.pager:run"
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false

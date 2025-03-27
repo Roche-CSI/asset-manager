@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amapy-db"
+version = "1.0.0"
+description = "The Database plugin for asset-manager project. It provides functionalities to manage and store metadata related to digital assets, such as storing MD5 hashes of asset files and managing these records efficiently."
+readme = "README.md"
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "amapy-pluggy==1.*",
+    "amapy-utils==1.*"
+]
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false

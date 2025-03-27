@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Asset Report</title>
+    <style>
+        #asset_style {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #asset_style table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #asset_style td, #asset_style th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #asset_style tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #asset_style tr:hover {
+            background-color: #ddd;
+        }
+
+        #asset_style th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #007AC2;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="asset_style">
+<!--List the asset information:-->
+<h2>Information about the asset</h2>
+<table id>
+    <tr>
+        <td>Project</td>
+        {% set p_dict = asset.asset_class.project|project_info %}
+        <td>{{ p_dict.get("name") }}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{ asset.name }}</td>
+    </tr>
+    <tr>
+        <td>Version</td>
+        <td>{{ asset.version.number or "None" }}</td>
+    </tr>
+    <tr>
+        <td>Created by</td>
+        <td>{{ asset.created_by }}</td>
+    </tr>
+    <tr>
+        <td>Created at</td>
+        <td>{{ asset.created_at }}</td>
+    </tr>
+    <tr>
+        <td>Asset id</td>
+        <td>{{ asset.id }}</td>
+    </tr>
+    <tr>
+        <td>Asset class</td>
+        <td>{{ asset.asset_class.name }}</td>
+    </tr>
+    <tr>
+        <td>Alias</td>
+        <td>{{ asset.alias or 'None' }}</td>
+    </tr>
+    <tr>
+        <td>URL</td>
+        <td>{{ asset.remote_url or "not assigned yet" }}</td>
+    </tr>
+</table>
+
+<!--List the files in the asset directory:-->
+<h2>Status of all the files within the asset</h2>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Location</th>
+        <th>Content-Type</th>
+        <th>Size</th>
+        <th>Hash</th>
+        <th>Storage</th>
+        <th>Added-By</th>
+    </tr>
+    {% for i, obj in asset.objects|enumerate %}
+    <tr>
+        <td>{{ i+1 }}</td>
+        <td>{{ obj.linked_path|relpath }}</td>
+        <td>{{ obj.content.mime_type }}</td>
+        <td>{{ obj.content.size|kilo_byte }} KB</td>
+        <td>{{ obj.content.hash_type, obj.content.hash_value }}</td>
+        <td>{{ obj.content.storage_id }}</td>
+        <td>{{ obj.created_by }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!--List the input refs of the asset:-->
+<h2>Input refs of the asset</h2>
+{% if asset.refs|length > 0 %}
+<table>
+    <tr>
+        <th>Ref ID</th>
+        <th>Input Asset</th>
+        <th>Label</th>
+        <th>Created By</th>
+        <th>Created At</th>
+        <th>Status</th>
+    </tr>
+    {% for ref in asset.refs %}
+    <tr>
+        <td>{{ ref.id or 'None' }}</td>
+        <td>{{ ref.src_version.get("name") }}</td>
+        <td>{{ ref.label }}</td>
+        <td>{{ ref.created_by }}</td>
+        <td>{{ ref.created_at }}</td>
+        <td>{{ ref._state }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No inputs found for this asset.</p>
+{% endif %}
+
+{# Read the asset file and display the content:
+<h2>Reading asset files</h2>
+{% set model=asset.objects.get_with_path('model.yml').file() %}
+<h3>Model Details from model.yaml</h3>
+<table id>
+    <tr>
+        <td>Name</td>
+        <td>{{ model.name }}</td>
+    </tr>
+    <tr>
+        <td>alternate_oc</td>
+        <td>{{ model.parameters.alternate_oc }}</td>
+    </tr>
+    <tr>
+        <td>ds_layers activation</td>
+        <td>{{ model.parameters.ds_layers.activation }}</td>
+    </tr>
+    <tr>
+        <td>ds_layers channels</td>
+        <td>{{ model.parameters.ds_layers.channels }}</td>
+    </tr>
+    <tr>
+        <td>ds_layers num layers</td>
+        <td>{{ model.parameters.ds_layers.num_layers }}</td>
+    </tr>
+</table>
+#}
+
+</body>
+</html>

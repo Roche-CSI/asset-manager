@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0.0,<69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amapy"
+version = "1.0.0"
+description = "The client side tool for asset-manager. It provides a command-line interface and a Python API for programmatic access to manage and distribute digital assets."
+readme = "README.md"
+authors = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+maintainers = [
+    { name = "Swarup Mahanti", email = "swarup.mahanti@roche.com" }
+]
+license = { text = "Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics" }
+requires-python = ">=3.10,<3.11"  # "==3.10.*"
+dependencies = [
+    "amapy-contents==1.0.0",
+    "amapy-core==1.0.0",
+    "amapy-db==1.0.0",
+    "amapy-pluggy==1.0.0",
+    "amapy-plugin-gcr==1.0.0",
+    "amapy-plugin-gcs==1.0.0",
+    "amapy-plugin-posix==1.0.0",
+    "amapy-plugin-s3==1.0.0",
+    "amapy-utils==1.0.0",
+    "markupsafe==2.1.*",
+]
+
+[tool.setuptools.packages.find]
+include = ["*"]
+namespaces = false
+
+[project.scripts]
+asset = "asset_manager.app:run"
+ama = "asset_manager.app:run"
