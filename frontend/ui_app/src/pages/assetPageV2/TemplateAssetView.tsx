@@ -11,7 +11,7 @@ import { useLoadingState } from "../../components/commonHooks";
 import { ParsedObject } from "../../components/objectBrowser/ObjectBrowser";
 import { milliSecondsAgo } from "../../utils/dateUtils";
 import { DownloadWithProgress } from "../../components/progressBars";
-import { ComponentContainer } from '../../components/componentRegistry/componentContainer';
+import ComponentContainer from '../../components/componentRegistry/componentContainer';
 
 function parseURL(pathName: string) {
 	const pathSegments = pathName.split('/').filter(segment => segment);
