@@ -1,31 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import ComponentRegistry, { PluginComponent } from './componentRegistry';
+import React, { Suspense, LazyExoticComponent } from 'react';
+import { pluginComponents } from './pluginComponents';
+
 interface ComponentContainerProps {
     category: string;
     componentProps?: Record<string, any>;
 }
-const registry = new ComponentRegistry();
+
 const ComponentContainer: React.FC<ComponentContainerProps> = ({
     category,
     componentProps = {}
 }) => {
-    const [components, setComponents] = useState<PluginComponent[]>([]);
-    useEffect(() => {
-        const loadComponents = async () => {
-            await registry.discoverComponents();
-            const discovered = registry.getComponentsByCategory(category);
-            setComponents(discovered);
-        };
-        loadComponents();
-    }, [category]);
+    const LazyPluginComponent: LazyExoticComponent<any> = pluginComponents[category]
+
     return (
-        <div className="component-container">
-            {components.map(({ component: Component, metadata }) => (
-                <div key={metadata.name}>
-                    <Component {...componentProps} />
-                </div>
-            ))}
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+            <div className="component-container">
+                <LazyPluginComponent {...componentProps} />
+            </div>
+        </Suspense>
     );
 };
 
